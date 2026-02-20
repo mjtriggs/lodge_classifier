@@ -1,0 +1,48 @@
+[project]
+name = "lodge-classifier"
+version = "0.1.0"
+description = "Lodge name classification pipeline (Ontology + Theme + Strict Option A Language)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2.0",
+  "pyarrow>=16.0.0",
+  "pydantic>=2.7.0",
+  "pyyaml>=6.0.0",
+  "loguru>=0.7.2",
+  "rapidfuzz>=3.9.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+  "ruff>=0.6.0",
+  "black>=24.0.0",
+  "mypy>=1.10.0",
+  "types-PyYAML>=6.0.12.20240808",
+  "pandas-stubs>=2.2.0.240603",
+]
+
+[project.scripts]
+lodge-classify = "lodge_classifier.cli:main"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E203"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+ignore_missing_imports = true

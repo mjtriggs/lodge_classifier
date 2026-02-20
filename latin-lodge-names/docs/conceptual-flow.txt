@@ -1,0 +1,15 @@
+Raw Names
+    ↓
+Cleaning
+    ↓
+Tokenisation
+    ↓
+Gazetteer + Authority Enrichment
+    ↓
+Feature Flags
+    ↓
+Hierarchical Rule Engine
+    ↓
+Confidence Score
+    ↓
+Manual Review Loop
