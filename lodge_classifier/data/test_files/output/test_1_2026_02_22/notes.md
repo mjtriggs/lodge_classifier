@@ -26,13 +26,10 @@ Concept: Freedom, Cosmopolitan,
 - Add Maori Language
 - Add nationality terms
 - Sort dictionaries into folders
-
-To Do: 
 - Add research Lodges
 - Add temporal category (ABS_TMP)
 - Add objects (building terms)
-- Add bulidings/estates
+- Add buildings/estates
 
 ### Theme
-
 - Not considered at this point.
