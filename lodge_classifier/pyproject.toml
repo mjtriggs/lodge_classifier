@@ -25,6 +25,7 @@ dev = [
 
 [project.scripts]
 lodge-classify = "lodge_classifier.cli:main"
+lodge-normalise-names = "lodge_classifier.io.cli_normalise_lodge_names:main"
 
 [tool.black]
 line-length = 100

@@ -1,17 +1,10 @@
-from pathlib import Path
-from typing import Any
-import pandas as pd
+from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Any
 
-
-def _load_csv_set(path: Path, column: str = "token") -> set[str]:
-    """Load a lowercased token set from a CSV dictionary file."""
-    df = pd.read_csv(path)
-    if column not in df.columns:
-        raise ValueError(f"Expected column '{column}' in {path}")
-    return set(df[column].astype(str).str.strip().str.lower())
+from lodge_classifier.dicts.cache import DictCache
 
 
 @dataclass(frozen=True)
@@ -36,6 +29,8 @@ _PRIORITY_ORDER: list[str] = [
     "Clubs / Association",
     "Mythological / Classical",
     "Geographic / Civic",
+    "Nature",
+    "Symbolic / Esoteric",
 ]
 
 
@@ -44,23 +39,11 @@ def resolve_theme_v1(
     ontology_secondary: str | None,
     tokens: list[str],
     language_primary: str,
+    dicts_dir: Path,
     curated_theme_hint: str | None = None,
+    cache: DictCache | None = None,
 ) -> ThemeResult:
-    """Resolve theme using ontology (primary + secondary) and token signals.
-
-    Adds Religious theme when tokens include religious place terms
-    (church, cathedral, chapel, temple, etc).
-
-    Args:
-        ontology_primary: Primary ontology code.
-        ontology_secondary: Optional secondary ontology code.
-        tokens: Normalised tokens.
-        language_primary: Strict language detection output.
-        curated_theme_hint: Optional override.
-
-    Returns:
-        ThemeResult
-    """
+    """Resolve theme using ontology and token signals."""
     flags: list[str] = []
     token_set = {t.strip().lower() for t in tokens if t and t.strip()}
 
@@ -78,7 +61,7 @@ def resolve_theme_v1(
             theme_secondary=None,
             confidence_theme=0.99,
             flags=flags,
-            evidence={**evidence, "reason": "curated_theme_hint"},
+            evidence={**evidence, "reason": "curated_theme_hint", "rule_ids": ["THEME_OVERRIDE"]},
         )
 
     candidates: set[str] = set()
@@ -86,7 +69,7 @@ def resolve_theme_v1(
     def add_from_ontology(code: str) -> None:
         if code.startswith("ABS_"):
             candidates.add("Virtue / Moral Ideal")
-        if code == "PRS_REL" or code == "REL_TEM":
+        if code in {"PRS_REL", "REL_TEM", "LOC_REL"}:
             candidates.add("Religious")
         if code == "PRS_ROY":
             candidates.add("Royal / Aristocratic")
@@ -113,15 +96,15 @@ def resolve_theme_v1(
     if ontology_secondary:
         add_from_ontology(ontology_secondary)
 
-    # --- Token-level religious place signal ---
-    dict_path = Path(__file__).resolve().parents[3] / "data" / "dicts" / "religious_place_terms.csv"
-    religious_place_terms = _load_csv_set(dict_path)
-
+    cache = cache or DictCache(dicts_dir=dicts_dir)
+    religious_place_terms = cache.load_set("religious_place_terms.csv", column="token")
     religious_hits = sorted(token_set.intersection(religious_place_terms))
     if religious_hits:
         candidates.add("Religious")
         flags.append("TOKEN_RELIGIOUS_PLACE")
         evidence["religious_place_hits"] = religious_hits
+        evidence["rule_ids"] = ["THEME_TOKEN_RELIGIOUS_PLACE"]
+        evidence["sources"] = ["religious_place_terms.csv"]
 
     if not candidates:
         candidates.add("Unknown")

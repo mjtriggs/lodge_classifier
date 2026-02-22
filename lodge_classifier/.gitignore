@@ -31,3 +31,7 @@ outputs/
 
 # OS
 .DS_Store
+
+# Data Inputs
+data/input/
+data/processed/

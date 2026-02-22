@@ -4,7 +4,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
+from lodge_classifier.dicts.cache import DictCache
+from lodge_classifier.matching.ngrams import build_ngrams
 
 
 @dataclass(frozen=True)
@@ -17,159 +18,239 @@ class LanguageResult:
     evidence: dict[str, Any]
 
 
-def _load_csv_set(path: Path, column: str) -> set[str]:
-    """Load a CSV file and return a lowercased set of values from a column."""
-    if not path.exists():
-        raise FileNotFoundError(f"Missing required dictionary file: {path}")
+def _as_nonempty_str(value: Any) -> str | None:
+    """Return a stripped string if value is a non-empty string; otherwise None.
 
-    df = pd.read_csv(path)
-    if column not in df.columns:
-        raise ValueError(f"Expected column '{column}' in {path}")
-
-    return set(df[column].astype(str).str.strip().str.lower())
-
-
-def _try_load_csv_set(path: Path, column: str) -> set[str]:
-    """Load a CSV set if the file exists, otherwise return an empty set.
-
-    This allows optional language dictionaries (e.g. French) without breaking the pipeline.
+    This avoids pandas NaN values (floats) being treated as truthy.
     """
-    if not path.exists():
-        return set()
+    if not isinstance(value, str):
+        return None
 
-    df = pd.read_csv(path)
-    if column not in df.columns:
-        raise ValueError(f"Expected column '{column}' in {path}")
+    s = value.strip()
+    if not s or s.lower() == "nan":
+        return None
 
-    return set(df[column].astype(str).str.strip().str.lower())
+    return s
 
 
 def detect_language_strict(
     tokens: list[str],
     dicts_dir: Path,
     curated_language_override: str | None = None,
+    cache: DictCache | None = None,
 ) -> LanguageResult:
-    """Detect primary language using strict lexical-origin rules (Option A).
+    """Detect language using strict dictionary rules (Option A), with UK-place boosts.
 
-    Strict rule:
-        - Classical names are classified by origin even if anglicised.
-          e.g. "polaris" -> Latin, "zeus" -> Greek.
+    Behaviour (precedence):
+        1) Manual override (if provided) -> high confidence.
+        2) Non-English dictionary evidence (French/German/Italian/etc.) -> high confidence.
+        3) UK place evidence via gazetteer dictionaries (cities/towns, regions, landmarks)
+           -> English with high confidence (cities/towns highest).
+        4) English dictionary evidence -> English with high confidence.
+        5) Otherwise -> English fallback with low confidence.
 
-    Precedence:
-        1) curated_language_override (if present and non-empty)
-        2) classical lexicon (Latin, Greek) [required dictionaries]
-        3) Welsh markers [required dictionary]
-        4) French token lexicon [optional dictionary]
-        5) fallback English if tokens exist, else Unknown
+    Notes:
+        - UK place matches are checked using n-grams to support multi-word places.
+        - UK place evidence is only used when no stronger non-English evidence exists.
 
-    Required dictionary files in dicts_dir:
-        - classical_latin.csv with column: token
-        - classical_greek.csv with column: token
-        - welsh_markers.csv with column: marker
+    Args:
+        tokens: Normalised token list for the lodge name.
+        dicts_dir: Directory containing dictionary CSVs.
+        curated_language_override: Optional manual override for language.
+        cache: Optional DictCache instance for reuse.
 
-    Optional dictionary files in dicts_dir:
-        - french_tokens.csv with column: token
+    Returns:
+        LanguageResult with language_primary, confidence, flags, and evidence.
     """
     flags: list[str] = []
     evidence: dict[str, Any] = {"tokens": tokens}
 
-    if curated_language_override and curated_language_override.strip():
+    curated_language_override = _as_nonempty_str(curated_language_override)
+    if curated_language_override:
         flags.append("OVERRIDE_APPLIED")
         return LanguageResult(
-            language_primary=curated_language_override.strip(),
+            language_primary=curated_language_override,
             confidence_language=0.99,
             flags=flags,
-            evidence={**evidence, "reason": "curated_language_override"},
+            evidence={
+                **evidence,
+                "reason": "curated_language_override",
+                "rule_ids": ["LANG_OVERRIDE"],
+            },
         )
 
-    latin = _load_csv_set(dicts_dir / "classical_latin.csv", column="token")
-    greek = _load_csv_set(dicts_dir / "classical_greek.csv", column="token")
-    welsh_markers = _load_csv_set(dicts_dir / "welsh_markers.csv", column="marker")
+    cache = cache or DictCache(dicts_dir=dicts_dir)
+    token_set = {t.lower() for t in tokens if t and t.strip()}
+    phrases = build_ngrams(tokens, max_n=5)
 
-    # Optional dictionaries
-    french_tokens = _try_load_csv_set(dicts_dir / "french_tokens.csv", column="token")
-    german_tokens = _try_load_csv_set(dicts_dir / "german_tokens.csv", column="token")
-    italian_tokens = _try_load_csv_set(dicts_dir / "italians_tokens.csv", column="token")
+    # Language token dictionaries (existing)
+    french_tokens = cache.load_set("french_tokens.csv", column="token")
+    german_tokens = cache.load_set("german_tokens.csv", column="token")
+    italian_tokens = cache.load_set("italian_tokens.csv", column="token")
+    latin_tokens = cache.load_set("latin_tokens.csv", column="token")
+    greek_tokens = cache.load_set("greek_tokens.csv", column="token")
 
-    token_set = {t.strip().lower() for t in tokens if t and str(t).strip()}
+    # Optional English token dictionary (if you have it)
+    # If you don't yet, keep the file small/high-signal as discussed.
+    try:
+        english_tokens = cache.load_set("english_tokens.csv", column="token")
+    except FileNotFoundError:
+        english_tokens = set()
 
-    # Latin (strict classical)
-    latin_hits = sorted(token_set.intersection(latin))
-    if latin_hits:
-        flags.append("CLASSICAL_OVERRIDE")
-        return LanguageResult(
-            language_primary="Latin",
-            confidence_language=0.95,
-            flags=flags,
-            evidence={**evidence, "latin_hits": latin_hits},
-        )
+    fr_hits = sorted(token_set.intersection(french_tokens))
+    de_hits = sorted(token_set.intersection(german_tokens))
+    it_hits = sorted(token_set.intersection(italian_tokens))
+    la_hits = sorted(token_set.intersection(latin_tokens))
+    gr_hits = sorted(token_set.intersection(greek_tokens))
+    en_hits = sorted(token_set.intersection(english_tokens)) if english_tokens else []
 
-    # Greek (strict classical)
-    greek_hits = sorted(token_set.intersection(greek))
-    if greek_hits:
-        flags.append("CLASSICAL_OVERRIDE")
-        return LanguageResult(
-            language_primary="Greek",
-            confidence_language=0.95,
-            flags=flags,
-            evidence={**evidence, "greek_hits": greek_hits},
-        )
+    evidence.update(
+        {
+            "french_hits": fr_hits,
+            "german_hits": de_hits,
+            "italian_hits": it_hits,
+            "latin_hits": la_hits,
+            "greek_hits": gr_hits,
+            "english_hits": en_hits,
+        }
+    )
 
-    # Welsh markers
-    welsh_hits = sorted(token_set.intersection(welsh_markers))
-    if welsh_hits:
-        return LanguageResult(
-            language_primary="Welsh",
-            confidence_language=0.90,
-            flags=flags,
-            evidence={**evidence, "welsh_hits": welsh_hits},
-        )
-
-    # French lexicon (optional)
-    french_hits = sorted(token_set.intersection(french_tokens))
-    if french_hits:
-        flags.append("DICT_MATCH")
+    # 1) Non-English wins on any positive evidence (tune thresholds later if needed)
+    if fr_hits:
         return LanguageResult(
             language_primary="French",
             confidence_language=0.90,
-            flags=flags,
-            evidence={**evidence, "french_hits": french_hits},
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_FRENCH_DICT"],
+                "sources": ["french_tokens.csv"],
+            },
         )
 
-    # German lexicon (optional)
-    german_hits = sorted(token_set.intersection(german_tokens))
-    if german_hits:
-        flags.append("DICT_MATCH")
+    if de_hits:
         return LanguageResult(
             language_primary="German",
             confidence_language=0.90,
-            flags=flags,
-            evidence={**evidence, "german_hits": german_hits},
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_GERMAN_DICT"],
+                "sources": ["german_tokens.csv"],
+            },
         )
 
-    # Italian lexicon (optional)
-    italian_hits = sorted(token_set.intersection(italian_tokens))
-    if italian_hits:
-        flags.append("DICT_MATCH")
+    if it_hits:
         return LanguageResult(
             language_primary="Italian",
             confidence_language=0.90,
-            flags=flags,
-            evidence={**evidence, "italian_hits": italian_hits},
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_ITALIAN_DICT"],
+                "sources": ["italian_tokens.csv"],
+            },
         )
 
-    # Fallbacks
-    if token_set:
+    if la_hits:
+        return LanguageResult(
+            language_primary="Latin",
+            confidence_language=0.90,
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_LATIN_DICT"],
+                "sources": ["latin_tokens.csv"],
+            },
+        )
+
+    if gr_hits:
+        return LanguageResult(
+            language_primary="Greek",
+            confidence_language=0.90,
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_GREEK_DICT"],
+                "sources": ["greek_tokens.csv"],
+            },
+        )
+
+    # 2) UK place evidence boosts English confidence (cities/towns strongest)
+    # These files already exist in your dicts folder.
+    uk_cities_towns = cache.load_set("cities_and_towns.csv", column="token")
+    uk_regions = cache.load_set("regions.csv", column="token")
+    uk_landmarks = cache.load_set("landmarks.csv", column="token")
+
+    uk_cty_hits = sorted(phrases.intersection(uk_cities_towns))
+    uk_reg_hits = sorted(phrases.intersection(uk_regions))
+    uk_lan_hits = sorted(phrases.intersection(uk_landmarks))
+
+    evidence.update(
+        {
+            "uk_city_town_hits": uk_cty_hits,
+            "uk_region_hits": uk_reg_hits,
+            "uk_landmark_hits": uk_lan_hits,
+        }
+    )
+
+    if uk_cty_hits:
         return LanguageResult(
             language_primary="English",
-            confidence_language=0.60,
-            flags=flags,
-            evidence={**evidence, "reason": "fallback_non_empty"},
+            confidence_language=0.95,
+            flags=["DICT_MATCH", "UK_PLACE_BOOST"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_ENGLISH_UK_CITY_TOWN"],
+                "sources": ["cities_and_towns.csv"],
+                "uk_place_hits": uk_cty_hits,
+            },
         )
 
+    if uk_reg_hits:
+        return LanguageResult(
+            language_primary="English",
+            confidence_language=0.90,
+            flags=["DICT_MATCH", "UK_PLACE_BOOST"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_ENGLISH_UK_REGION"],
+                "sources": ["regions.csv"],
+                "uk_place_hits": uk_reg_hits,
+            },
+        )
+
+    if uk_lan_hits:
+        return LanguageResult(
+            language_primary="English",
+            confidence_language=0.88,
+            flags=["DICT_MATCH", "UK_PLACE_BOOST"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_ENGLISH_UK_LANDMARK"],
+                "sources": ["landmarks.csv"],
+                "uk_place_hits": uk_lan_hits,
+            },
+        )
+
+    # 3) English dictionary evidence (if present)
+    if en_hits:
+        return LanguageResult(
+            language_primary="English",
+            confidence_language=0.90,
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_ENGLISH_DICT"],
+                "sources": ["english_tokens.csv"],
+            },
+        )
+
+    # 4) Fallback English with low confidence
+    flags.append("ENGLISH_FALLBACK_LOW_CONF")
     return LanguageResult(
-        language_primary="Unknown",
-        confidence_language=0.40,
+        language_primary="English",
+        confidence_language=0.55,
         flags=flags,
-        evidence={**evidence, "reason": "no_tokens"},
+        evidence={**evidence, "rule_ids": ["LANG_ENGLISH_FALLBACK"]},
     )

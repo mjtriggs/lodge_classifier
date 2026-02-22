@@ -4,7 +4,8 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-import pandas as pd
+from lodge_classifier.dicts.cache import DictCache
+from lodge_classifier.matching.ngrams import build_ngrams
 
 
 @dataclass(frozen=True)
@@ -18,41 +19,14 @@ class OntologyResult:
     evidence: dict[str, Any]
 
 
-def _load_set(path: Path, column: str = "token") -> set[str]:
-    """Load a lowercased token set from a CSV dictionary file."""
-    df = pd.read_csv(path)
-    if column not in df.columns:
-        raise ValueError(f"Expected column '{column}' in {path}")
-    return set(df[column].astype(str).str.strip().str.lower())
-
-
 def classify_ontology_v1(
     tokens: list[str],
     dicts_dir: Path,
     language_primary: str | None = None,
     curated_ontology_hint: str | None = None,
+    cache: DictCache | None = None,
 ) -> OntologyResult:
-    """Classify ontology using deterministic dictionary rules (v1).
-
-    Primary ontology is mutually exclusive. Secondary ontology captures a strong
-    co-signal (e.g. GRP_EDU for "University", or LOC_BDG for "Fort").
-
-    Precedence:
-        1) curated_ontology_hint (if provided)
-        2) High-signal dictionaries for primary ontology
-        3) Secondary ontology capture for strong co-signals
-        4) Strict fallback: Latin single-token -> ABS_LAT (unless already matched)
-        5) Fallback UNK_
-
-    Args:
-        tokens: Normalised tokens (excluding "lodge").
-        dicts_dir: Directory containing dictionary CSV files.
-        language_primary: Detected primary language (Strict Option A).
-        curated_ontology_hint: Optional forced ontology from manual curation layer.
-
-    Returns:
-        OntologyResult with primary/secondary, confidence, flags, and evidence.
-    """
+    """Classify ontology using deterministic dictionary rules (v1)."""
     flags: list[str] = []
     evidence: dict[str, Any] = {"tokens": tokens, "language_primary": language_primary}
 
@@ -63,46 +37,75 @@ def classify_ontology_v1(
             ontology_secondary=None,
             confidence_ontology=0.99,
             flags=flags,
-            evidence={**evidence, "reason": "curated_ontology_hint"},
+            evidence={**evidence, "reason": "curated_ontology_hint", "rule_ids": ["ONT_OVERRIDE"]},
         )
 
-    token_set = {t.lower() for t in tokens}
+    cache = cache or DictCache(dicts_dir=dicts_dir)
 
-    # Dictionaries
-    religious_person_terms = _load_set(dicts_dir / "religious_person_terms.csv")
-    religious_place_terms = _load_set(dicts_dir / "religious_place_terms.csv")
-    royal_titles = _load_set(dicts_dir / "royal_titles.csv")
-    military_terms = _load_set(dicts_dir / "military_terms.csv")
-    masonic_terms = _load_set(dicts_dir / "masonic_terms.csv")
-    virtues = _load_set(dicts_dir / "virtues.csv")
-    fraternal_terms = _load_set(dicts_dir / "fraternal_terms.csv")
-    philosophical_terms = _load_set(dicts_dir / "philosophical_terms.csv")
-    botanical = _load_set(dicts_dir / "botanical.csv")
-    animals = _load_set(dicts_dir / "animals.csv")
-    astronomical = _load_set(dicts_dir / "astronomical.csv")
+    # Tokens are already normalised upstream; build phrase candidates (1..5-grams)
+    phrases = build_ngrams(tokens, max_n=5)
+    token_set = {t.lower() for t in tokens if t and t.strip()}
 
-    # Composite secondary signals
-    edu_terms = _load_set(dicts_dir / "edu_terms.csv")
-    myth_terms = _load_set(dicts_dir / "myth_terms.csv")
-    building_terms = _load_set(dicts_dir / "building_terms.csv")
+    animals = cache.load_set("animals.csv", column="token")
+    astronomical = cache.load_set("astronomical.csv", column="token")
+    botanical = cache.load_set("botanical.csv", column="token")
+    building_terms = cache.load_set("building_terms.csv", column="token")
+    edu_terms = cache.load_set("edu_terms.csv", column="token")
+    fraternal_terms = cache.load_set("fraternal_terms.csv", column="token")
+    global_places = cache.load_set("global_places.csv", column="token")
+    job_terms = cache.load_set("job_terms.csv", column="token")
+    masonic_terms = cache.load_set("masonic_terms.csv", column="token")
+    military_terms = cache.load_set("military_terms.csv", column="token")
+    myth_terms = cache.load_set("myth_terms.csv", column="token")
+    philosophical_terms = cache.load_set("philosophical_terms.csv", column="token")
+    religious_person_terms = cache.load_set("religious_person_terms.csv", column="token")
+    religious_place_terms = cache.load_set("religious_place_terms.csv", column="token")
+    royal_titles = cache.load_set("royal_titles.csv", column="token")
+    special_interests = cache.load_set("special_interests.csv", column="token")
+    virtues = cache.load_set("virtues.csv", column="token")
 
-    # Prevent double-counting
+    # UK place dictionaries (your existing filenames)
+    uk_loc_reg = cache.load_set("regions.csv", column="token")
+    uk_loc_cty = cache.load_set("cities_and_towns.csv", column="token")
+    uk_loc_lan = cache.load_set("landmarks.csv", column="token")
+
+    loc_hits_cty = sorted(phrases.intersection(uk_loc_cty))
+    loc_hits_reg = sorted(phrases.intersection(uk_loc_reg))
+    loc_hits_lan = sorted(phrases.intersection(uk_loc_lan))
+
+    # Choose a single UK location secondary for abstract concepts (precedence)
+    loc_secondary_uk: str | None = None
+    loc_hits_uk_any: list[str] = []
+    if loc_hits_cty:
+        loc_secondary_uk = "LOC_CTY"
+        loc_hits_uk_any = loc_hits_cty
+    elif loc_hits_reg:
+        loc_secondary_uk = "LOC_REG"
+        loc_hits_uk_any = loc_hits_reg
+    elif loc_hits_lan:
+        loc_secondary_uk = "LOC_LAN"
+        loc_hits_uk_any = loc_hits_lan
+
+    # Prevent double-counting religious buildings as generic buildings
     building_terms = building_terms.difference(religious_place_terms)
 
     edu_hits = sorted(token_set.intersection(edu_terms))
     bdg_hits = sorted(token_set.intersection(building_terms))
 
-    # Secondary ontology selection (single slot)
-    # Priority: education first (for "X University"), then civic building.
+    # Global places: phrase matching (1..5 grams)
+    loc_hits_global = sorted(phrases.intersection(global_places))
+    loc_secondary_global = "LOC_REG" if loc_hits_global else None
+
+    # Default secondary ontology (single slot)
     ontology_secondary: str | None = None
     if edu_hits:
         ontology_secondary = "GRP_EDU"
     elif bdg_hits:
         ontology_secondary = "LOC_BDG"
 
-    # PRS_REL
-    rel_hits = sorted(token_set.intersection(religious_person_terms))
-    if rel_hits:
+    # --- High-signal primaries ---
+    rel_person_hits = sorted(token_set.intersection(religious_person_terms))
+    if rel_person_hits:
         return OntologyResult(
             ontology_primary="PRS_REL",
             ontology_secondary=ontology_secondary,
@@ -111,13 +114,14 @@ def classify_ontology_v1(
             evidence={
                 **evidence,
                 "rule": "prs_rel_terms",
-                "hits": rel_hits,
+                "hits": rel_person_hits,
                 "edu_hits": edu_hits,
                 "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_PRS_REL_TERMS"],
+                "sources": ["religious_person_terms.csv"],
             },
         )
 
-    # PRS_ROY
     roy_hits = sorted(token_set.intersection(royal_titles))
     if roy_hits:
         return OntologyResult(
@@ -131,10 +135,11 @@ def classify_ontology_v1(
                 "hits": roy_hits,
                 "edu_hits": edu_hits,
                 "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_PRS_ROY_TITLES"],
+                "sources": ["royal_titles.csv"],
             },
         )
 
-    # PRS_MYTH
     myth_hits = sorted(token_set.intersection(myth_terms))
     if myth_hits:
         return OntologyResult(
@@ -148,10 +153,11 @@ def classify_ontology_v1(
                 "hits": myth_hits,
                 "edu_hits": edu_hits,
                 "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_PRS_MYTH_TERMS"],
+                "sources": ["myth_terms.csv"],
             },
         )
 
-    # GRP_MIL
     mil_hits = sorted(token_set.intersection(military_terms))
     if mil_hits:
         return OntologyResult(
@@ -165,12 +171,13 @@ def classify_ontology_v1(
                 "hits": mil_hits,
                 "edu_hits": edu_hits,
                 "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_GRP_MIL_TERMS"],
+                "sources": ["military_terms.csv"],
             },
         )
 
-    # LOC_REL
-    rel_hits = sorted(token_set.intersection(religious_place_terms))
-    if rel_hits:
+    rel_place_hits = sorted(token_set.intersection(religious_place_terms))
+    if rel_place_hits:
         return OntologyResult(
             ontology_primary="LOC_REL",
             ontology_secondary=ontology_secondary,
@@ -179,13 +186,14 @@ def classify_ontology_v1(
             evidence={
                 **evidence,
                 "rule": "loc_rel_terms",
-                "hits": rel_hits,
+                "hits": rel_place_hits,
                 "edu_hits": edu_hits,
                 "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_LOC_REL_TERMS"],
+                "sources": ["religious_place_terms.csv"],
             },
         )
 
-    # GRP_MAS
     mas_hits = sorted(token_set.intersection(masonic_terms))
     if mas_hits:
         return OntologyResult(
@@ -199,53 +207,123 @@ def classify_ontology_v1(
                 "hits": mas_hits,
                 "edu_hits": edu_hits,
                 "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_GRP_MAS_TERMS"],
+                "sources": ["masonic_terms.csv"],
             },
         )
 
-    # GRP_EDU (primary only if nothing else matched)
+    # Match special interests against phrases (supports multi-word entries)
+    int_hits = sorted(phrases.intersection(special_interests))
+    if not int_hits:
+        int_hits = sorted(token_set.intersection(special_interests))
+
+    if int_hits:
+        return OntologyResult(
+            ontology_primary="GRP_INT",
+            ontology_secondary=ontology_secondary,
+            confidence_ontology=0.88,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "grp_int_terms",
+                "hits": int_hits,
+                "edu_hits": edu_hits,
+                "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_GRP_INT_TERMS"],
+                "sources": ["special_interests.csv"],
+            },
+        )
+
+    job_hits = sorted(token_set.intersection(job_terms))
+    if job_hits:
+        return OntologyResult(
+            ontology_primary="GRP_JOB",
+            ontology_secondary=None,
+            confidence_ontology=0.82,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "grp_job_terms",
+                "hits": edu_hits,
+                "rule_ids": ["ONT_GRP_JOB_TERMS"],
+                "sources": ["job_terms.csv"],
+            },
+        )
+
     if edu_hits:
         return OntologyResult(
             ontology_primary="GRP_EDU",
             ontology_secondary=None,
             confidence_ontology=0.82,
             flags=flags,
-            evidence={**evidence, "rule": "grp_edu_terms", "hits": edu_hits},
+            evidence={
+                **evidence,
+                "rule": "grp_edu_terms",
+                "hits": edu_hits,
+                "rule_ids": ["ONT_GRP_EDU_TERMS"],
+                "sources": ["edu_terms.csv"],
+            },
         )
 
-    # ABS_VRT
+    # --- Abstract concepts ---
     vrt_hits = sorted(token_set.intersection(virtues))
     if vrt_hits:
+        secondary = ontology_secondary or loc_secondary_uk or loc_secondary_global
         return OntologyResult(
             ontology_primary="ABS_VRT",
-            ontology_secondary=None,
+            ontology_secondary=secondary,
             confidence_ontology=0.85,
             flags=flags,
-            evidence={**evidence, "rule": "abs_vrt_terms", "hits": vrt_hits},
+            evidence={
+                **evidence,
+                "rule": "abs_vrt_terms",
+                "hits": vrt_hits,
+                "loc_hits_uk": loc_hits_uk_any,
+                "loc_hits_global": loc_hits_global,
+                "rule_ids": ["ONT_ABS_VRT_TERMS"],
+                "sources": ["virtues.csv"],
+            },
         )
 
-    # ABS_FRAT
     frat_hits = sorted(token_set.intersection(fraternal_terms))
     if frat_hits:
+        secondary = ontology_secondary or loc_secondary_uk or loc_secondary_global
         return OntologyResult(
             ontology_primary="ABS_FRAT",
-            ontology_secondary=None,
+            ontology_secondary=secondary,
             confidence_ontology=0.80,
             flags=flags,
-            evidence={**evidence, "rule": "abs_frat_terms", "hits": frat_hits},
+            evidence={
+                **evidence,
+                "rule": "abs_frat_terms",
+                "hits": frat_hits,
+                "loc_hits_uk": loc_hits_uk_any,
+                "loc_hits_global": loc_hits_global,
+                "rule_ids": ["ONT_ABS_FRAT_TERMS"],
+                "sources": ["fraternal_terms.csv"],
+            },
         )
 
-    # ABS_PHI
     phi_hits = sorted(token_set.intersection(philosophical_terms))
     if phi_hits:
+        secondary = ontology_secondary or loc_secondary_uk or loc_secondary_global
         return OntologyResult(
             ontology_primary="ABS_PHI",
-            ontology_secondary=None,
+            ontology_secondary=secondary,
             confidence_ontology=0.80,
             flags=flags,
-            evidence={**evidence, "rule": "abs_phi_terms", "hits": phi_hits},
+            evidence={
+                **evidence,
+                "rule": "abs_phi_terms",
+                "hits": phi_hits,
+                "loc_hits_uk": loc_hits_uk_any,
+                "loc_hits_global": loc_hits_global,
+                "rule_ids": ["ONT_ABS_PHI_TERMS"],
+                "sources": ["philosophical_terms.csv"],
+            },
         )
 
-    # NAT_BOT
+    # --- Nature ---
     bot_hits = sorted(token_set.intersection(botanical))
     if bot_hits:
         return OntologyResult(
@@ -253,10 +331,15 @@ def classify_ontology_v1(
             ontology_secondary=None,
             confidence_ontology=0.75,
             flags=flags,
-            evidence={**evidence, "rule": "nat_bot_terms", "hits": bot_hits},
+            evidence={
+                **evidence,
+                "rule": "nat_bot_terms",
+                "hits": bot_hits,
+                "rule_ids": ["ONT_NAT_BOT_TERMS"],
+                "sources": ["botanical.csv"],
+            },
         )
 
-    # NAT_ANI
     ani_hits = sorted(token_set.intersection(animals))
     if ani_hits:
         return OntologyResult(
@@ -264,10 +347,15 @@ def classify_ontology_v1(
             ontology_secondary=None,
             confidence_ontology=0.75,
             flags=flags,
-            evidence={**evidence, "rule": "nat_ani_terms", "hits": ani_hits},
+            evidence={
+                **evidence,
+                "rule": "nat_ani_terms",
+                "hits": ani_hits,
+                "rule_ids": ["ONT_NAT_ANI_TERMS"],
+                "sources": ["animals.csv"],
+            },
         )
 
-    # NAT_AST
     ast_hits = sorted(token_set.intersection(astronomical))
     if ast_hits:
         return OntologyResult(
@@ -275,10 +363,78 @@ def classify_ontology_v1(
             ontology_secondary=None,
             confidence_ontology=0.75,
             flags=flags,
-            evidence={**evidence, "rule": "nat_ast_terms", "hits": ast_hits},
+            evidence={
+                **evidence,
+                "rule": "nat_ast_terms",
+                "hits": ast_hits,
+                "rule_ids": ["ONT_NAT_AST_TERMS"],
+                "sources": ["astronomical.csv"],
+            },
         )
 
-    # Strict fallback: Latin single-token -> ABS_LAT
+    # --- UK place fallback (primary) ---
+    if loc_hits_cty:
+        return OntologyResult(
+            ontology_primary="LOC_CTY",
+            ontology_secondary=ontology_secondary,
+            confidence_ontology=0.86,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "loc_uk_cty",
+                "hits": loc_hits_cty,
+                "rule_ids": ["ONT_LOC_UK_CTY"],
+                "sources": ["cities_and_towns.csv"],
+            },
+        )
+
+    if loc_hits_reg:
+        return OntologyResult(
+            ontology_primary="LOC_REG",
+            ontology_secondary=ontology_secondary,
+            confidence_ontology=0.84,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "loc_uk_reg",
+                "hits": loc_hits_reg,
+                "rule_ids": ["ONT_LOC_UK_REG"],
+                "sources": ["regions.csv"],
+            },
+        )
+
+    if loc_hits_lan:
+        return OntologyResult(
+            ontology_primary="LOC_LAN",
+            ontology_secondary=ontology_secondary,
+            confidence_ontology=0.82,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "loc_uk_lan",
+                "hits": loc_hits_lan,
+                "rule_ids": ["ONT_LOC_UK_LAN"],
+                "sources": ["landmarks.csv"],
+            },
+        )
+
+    # --- Global place fallback (primary) ---
+    if loc_hits_global:
+        return OntologyResult(
+            ontology_primary="LOC_REG",
+            ontology_secondary=ontology_secondary,
+            confidence_ontology=0.85,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "loc_global_places",
+                "hits": loc_hits_global,
+                "rule_ids": ["ONT_LOC_GLOBAL_PLACES"],
+                "sources": ["global_places.csv"],
+            },
+        )
+
+    # --- Strict Latin fallback ---
     stopwords = {"of", "the", "and"}
     meaningful = [t for t in tokens if t.lower() not in stopwords]
 
@@ -289,13 +445,19 @@ def classify_ontology_v1(
             ontology_secondary=None,
             confidence_ontology=0.70,
             flags=flags,
-            evidence={**evidence, "rule": "abs_lat_single_token", "meaningful": meaningful},
+            evidence={
+                **evidence,
+                "rule": "abs_lat_single_token",
+                "meaningful": meaningful,
+                "rule_ids": ["ONT_ABS_LAT_SINGLE_TOKEN"],
+            },
         )
 
+    flags.append("REVIEW_REQUIRED")
     return OntologyResult(
         ontology_primary="UNK_",
         ontology_secondary=None,
         confidence_ontology=0.20,
-        flags=["REVIEW_REQUIRED"],
-        evidence={**evidence, "rule": "fallback"},
+        flags=flags,
+        evidence={**evidence, "rule": "fallback", "rule_ids": ["ONT_FALLBACK_UNKNOWN"]},
     )

@@ -26,7 +26,7 @@ def normalise_lodge_name(raw_name: str) -> NormalisedName:
         - Strips leading/trailing whitespace.
         - Standardises apostrophes to ASCII.
         - Removes the token "lodge" (case-insensitive).
-        - Removes punctuation except apostrophes.
+        - Removes punctuation (including apostrophes).
         - Lowercases and collapses repeated whitespace.
         - Tokenises on spaces.
 
@@ -40,6 +40,7 @@ def normalise_lodge_name(raw_name: str) -> NormalisedName:
 
     text = clean.lower()
     text = text.replace("’", "'").replace("`", "'")
+    text = text.replace("'", " ")
     text = _LODGE_TOKEN_RE.sub(" ", text)
     text = _PUNCT_RE.sub(" ", text)
     text = _MULTI_SPACE_RE.sub(" ", text).strip()
