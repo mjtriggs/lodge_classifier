@@ -48,36 +48,38 @@ def classify_ontology_v1(
 
     # Load Dictionaries
     ## Person (PRS)
-    myth_terms = cache.load_set("myth_terms.csv", column="token")
-    religious_person_terms = cache.load_set("religious_person_terms.csv", column="token")
-    royal_titles = cache.load_set("royal_titles.csv", column="token")
+    people = cache.load_set("prs/people.csv", column="token")
+    myth_terms = cache.load_set("prs/myth_terms.csv", column="token")
+    religious_person_terms = cache.load_set("prs/religious_person_terms.csv", column="token")
+    royal_titles = cache.load_set("prs/royal_titles.csv", column="token")
 
     ## Location (LOC)
-    global_places = cache.load_set("global_places.csv", column="token")
-    religious_place_terms = cache.load_set("religious_place_terms.csv", column="token")
-    uk_loc_reg = cache.load_set("regions.csv", column="token")
-    uk_loc_cty = cache.load_set("cities_and_towns.csv", column="token")
-    uk_loc_lan = cache.load_set("landmarks.csv", column="token")
+    global_places = cache.load_set("loc/global_places.csv", column="token")
+    religious_place_terms = cache.load_set("loc/religious_place_terms.csv", column="token")
+    uk_loc_reg = cache.load_set("loc/regions.csv", column="token")
+    uk_loc_cty = cache.load_set("loc/cities_and_towns.csv", column="token")
+    uk_loc_lan = cache.load_set("loc/landmarks.csv", column="token")
 
     ## Collective / Body (GRP)
-    edu_terms = cache.load_set("edu_terms.csv", column="token")
-    job_terms = cache.load_set("job_terms.csv", column="token")
-    masonic_terms = cache.load_set("masonic_terms.csv", column="token")
-    military_terms = cache.load_set("military_terms.csv", column="token")
-    special_interests = cache.load_set("special_interests.csv", column="token")
+    edu_terms = cache.load_set("grp/edu_terms.csv", column="token")
+    job_terms = cache.load_set("grp/job_terms.csv", column="token")
+    masonic_terms = cache.load_set("grp/masonic_terms.csv", column="token")
+    military_terms = cache.load_set("grp/military_terms.csv", column="token")
+    special_interests = cache.load_set("grp/special_interests.csv", column="token")
+    nationality_terms = cache.load_set("grp/nationality_terms.csv", column="token")
 
     ## Nature (NAT)
-    animals = cache.load_set("animals.csv", column="token")
-    astronomical = cache.load_set("astronomical.csv", column="token")
-    botanical = cache.load_set("botanical.csv", column="token")
+    animals = cache.load_set("nat/animals.csv", column="token")
+    astronomical = cache.load_set("nat/astronomical.csv", column="token")
+    botanical = cache.load_set("nat/botanical.csv", column="token")
 
     ## Object (OBJ)
-    building_terms = cache.load_set("building_terms.csv", column="token")
+    building_terms = cache.load_set("obj/building_terms.csv", column="token")
 
     ## Abstract Concept (ABS)
-    fraternal_terms = cache.load_set("fraternal_terms.csv", column="token")
-    philosophical_terms = cache.load_set("philosophical_terms.csv", column="token")
-    virtues = cache.load_set("virtues.csv", column="token")
+    fraternal_terms = cache.load_set("abs/fraternal_terms.csv", column="token")
+    philosophical_terms = cache.load_set("abs/philosophical_terms.csv", column="token")
+    virtues = cache.load_set("abs/virtues.csv", column="token")
 
     # UK place dictionaries
     loc_hits_cty = sorted(phrases.intersection(uk_loc_cty))
@@ -102,6 +104,7 @@ def classify_ontology_v1(
 
     edu_hits = sorted(token_set.intersection(edu_terms))
     bdg_hits = sorted(token_set.intersection(building_terms))
+    nationality_hits = sorted(token_set.intersection(nationality_terms))
 
     # Global places: phrase matching (1..5 grams)
     loc_hits_global = sorted(phrases.intersection(global_places))
@@ -113,6 +116,8 @@ def classify_ontology_v1(
         ontology_secondary = "GRP_EDU"
     elif bdg_hits:
         ontology_secondary = "LOC_BDG"
+    elif nationality_hits:
+        ontology_secondary = "GRP_NAT"
 
     # --- High-signal primaries ---
     rel_person_hits = sorted(token_set.intersection(religious_person_terms))
@@ -166,6 +171,28 @@ def classify_ontology_v1(
                 "bdg_hits": bdg_hits,
                 "rule_ids": ["ONT_PRS_MYTH_TERMS"],
                 "sources": ["myth_terms.csv"],
+            },
+        )
+
+    # People list: phrase-first to support multi-word names, with token fallback
+    people_hits = sorted(phrases.intersection(people))
+    if not people_hits:
+        people_hits = sorted(token_set.intersection(people))
+
+    if people_hits:
+        return OntologyResult(
+            ontology_primary="PRS_HIS",
+            ontology_secondary=ontology_secondary,
+            confidence_ontology=0.86,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "prs_people_list",
+                "hits": people_hits,
+                "edu_hits": edu_hits,
+                "bdg_hits": bdg_hits,
+                "rule_ids": ["ONT_PRS_PEOPLE_LIST"],
+                "sources": ["people.csv"],
             },
         )
 
@@ -255,7 +282,7 @@ def classify_ontology_v1(
             evidence={
                 **evidence,
                 "rule": "grp_job_terms",
-                "hits": edu_hits,
+                "hits": job_hits,
                 "rule_ids": ["ONT_GRP_JOB_TERMS"],
                 "sources": ["job_terms.csv"],
             },
@@ -273,6 +300,21 @@ def classify_ontology_v1(
                 "hits": edu_hits,
                 "rule_ids": ["ONT_GRP_EDU_TERMS"],
                 "sources": ["edu_terms.csv"],
+            },
+        )
+
+    if nationality_hits:
+        return OntologyResult(
+            ontology_primary="GRP_NAT",
+            ontology_secondary=None,
+            confidence_ontology=0.82,
+            flags=flags,
+            evidence={
+                **evidence,
+                "rule": "grp_nat_terms",
+                "hits": edu_hits,
+                "rule_ids": ["ONT_GRP_NAT_TERMS"],
+                "sources": ["nationality_terms.csv"],
             },
         )
 

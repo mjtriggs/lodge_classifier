@@ -22,14 +22,15 @@ Concept: Freedom, Cosmopolitan,
 - Groups: Club
 - Nationality: Cambrensis
 
-
-- Add research Lodges
+- Add people 
 - Add Maori Language
 - Add nationality terms
-- Add temporal category (ABS_TMP)
-- Add people
-- Add objects (building terms)
 - Sort dictionaries into folders
+
+To Do: 
+- Add research Lodges
+- Add temporal category (ABS_TMP)
+- Add objects (building terms)
 - Add bulidings/estates
 
 ### Theme

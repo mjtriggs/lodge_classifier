@@ -39,7 +39,7 @@ def detect_language_strict(
     curated_language_override: str | None = None,
     cache: DictCache | None = None,
 ) -> LanguageResult:
-    """Detect language using strict dictionary rules (Option A), with UK-place boosts.
+    """Detect language using strict dictionary rules (Option A), with UK-place and person boosts.
 
     Behaviour (precedence):
         1) Manual override (if provided) -> high confidence.
@@ -49,9 +49,13 @@ def detect_language_strict(
         4) English dictionary evidence -> English with high confidence.
         5) Otherwise -> English fallback with low confidence.
 
+    Enhancements:
+        - If a recognised person is present (people.csv), boost English confidence for (3)-(5).
+        - Person evidence never overrides non-English evidence.
+
     Notes:
         - UK place matches are checked using n-grams to support multi-word places.
-        - UK place evidence is only used when no stronger non-English evidence exists.
+        - Person matches are checked using n-grams first, then token fallback.
 
     Args:
         tokens: Normalised token list for the lodge name.
@@ -83,17 +87,29 @@ def detect_language_strict(
     token_set = {t.lower() for t in tokens if t and t.strip()}
     phrases = build_ngrams(tokens, max_n=5)
 
+    # --- Person dictionary (used as an English confidence boost only) ---
+    # Phrase-first for multi-word names; token fallback.
+    # NOTE: if your file is actually named people.csv, change "people.csv" below.
+    try:
+        person_terms = cache.load_set("prs/people.csv", column="token")
+    except FileNotFoundError:
+        person_terms = set()
+
+    person_hits = sorted(phrases.intersection(person_terms)) if person_terms else []
+    if not person_hits and person_terms:
+        person_hits = sorted(token_set.intersection(person_terms))
+
     # Language token dictionaries (existing)
-    french_tokens = cache.load_set("french_tokens.csv", column="token")
-    german_tokens = cache.load_set("german_tokens.csv", column="token")
-    italian_tokens = cache.load_set("italian_tokens.csv", column="token")
-    latin_tokens = cache.load_set("latin_tokens.csv", column="token")
-    greek_tokens = cache.load_set("greek_tokens.csv", column="token")
+    french_tokens = cache.load_set("language/french_tokens.csv", column="token")
+    german_tokens = cache.load_set("language/german_tokens.csv", column="token")
+    italian_tokens = cache.load_set("language/italian_tokens.csv", column="token")
+    latin_tokens = cache.load_set("language/latin_tokens.csv", column="token")
+    greek_tokens = cache.load_set("language/greek_tokens.csv", column="token")
+    maori_tokens = cache.load_set("language/maori_tokens.csv", column="token")
 
     # Optional English token dictionary (if you have it)
-    # If you don't yet, keep the file small/high-signal as discussed.
     try:
-        english_tokens = cache.load_set("english_tokens.csv", column="token")
+        english_tokens = cache.load_set("language/english_tokens.csv", column="token")
     except FileNotFoundError:
         english_tokens = set()
 
@@ -102,6 +118,7 @@ def detect_language_strict(
     it_hits = sorted(token_set.intersection(italian_tokens))
     la_hits = sorted(token_set.intersection(latin_tokens))
     gr_hits = sorted(token_set.intersection(greek_tokens))
+    ma_hits = sorted(token_set.intersection(maori_tokens))
     en_hits = sorted(token_set.intersection(english_tokens)) if english_tokens else []
 
     evidence.update(
@@ -111,11 +128,13 @@ def detect_language_strict(
             "italian_hits": it_hits,
             "latin_hits": la_hits,
             "greek_hits": gr_hits,
+            "maori_hits": ma_hits,
             "english_hits": en_hits,
+            "person_hits": person_hits,
         }
     )
 
-    # 1) Non-English wins on any positive evidence (tune thresholds later if needed)
+    # 1) Non-English wins on any positive evidence
     if fr_hits:
         return LanguageResult(
             language_primary="French",
@@ -124,7 +143,7 @@ def detect_language_strict(
             evidence={
                 **evidence,
                 "rule_ids": ["LANG_FRENCH_DICT"],
-                "sources": ["french_tokens.csv"],
+                "sources": ["language/french_tokens.csv"],
             },
         )
 
@@ -136,7 +155,7 @@ def detect_language_strict(
             evidence={
                 **evidence,
                 "rule_ids": ["LANG_GERMAN_DICT"],
-                "sources": ["german_tokens.csv"],
+                "sources": ["language/german_tokens.csv"],
             },
         )
 
@@ -148,7 +167,7 @@ def detect_language_strict(
             evidence={
                 **evidence,
                 "rule_ids": ["LANG_ITALIAN_DICT"],
-                "sources": ["italian_tokens.csv"],
+                "sources": ["language/italian_tokens.csv"],
             },
         )
 
@@ -160,7 +179,7 @@ def detect_language_strict(
             evidence={
                 **evidence,
                 "rule_ids": ["LANG_LATIN_DICT"],
-                "sources": ["latin_tokens.csv"],
+                "sources": ["language/latin_tokens.csv"],
             },
         )
 
@@ -172,15 +191,26 @@ def detect_language_strict(
             evidence={
                 **evidence,
                 "rule_ids": ["LANG_GREEK_DICT"],
-                "sources": ["greek_tokens.csv"],
+                "sources": ["language/greek_tokens.csv"],
+            },
+        )
+
+    if ma_hits:
+        return LanguageResult(
+            language_primary="Maori",
+            confidence_language=0.90,
+            flags=["DICT_MATCH"],
+            evidence={
+                **evidence,
+                "rule_ids": ["LANG_MAORI_DICT"],
+                "sources": ["language/maori_tokens.csv"],
             },
         )
 
     # 2) UK place evidence boosts English confidence (cities/towns strongest)
-    # These files already exist in your dicts folder.
-    uk_cities_towns = cache.load_set("cities_and_towns.csv", column="token")
-    uk_regions = cache.load_set("regions.csv", column="token")
-    uk_landmarks = cache.load_set("landmarks.csv", column="token")
+    uk_cities_towns = cache.load_set("loc/cities_and_towns.csv", column="token")
+    uk_regions = cache.load_set("loc/regions.csv", column="token")
+    uk_landmarks = cache.load_set("loc/landmarks.csv", column="token")
 
     uk_cty_hits = sorted(phrases.intersection(uk_cities_towns))
     uk_reg_hits = sorted(phrases.intersection(uk_regions))
@@ -195,62 +225,136 @@ def detect_language_strict(
     )
 
     if uk_cty_hits:
+        conf = 0.95
+        out_flags = ["DICT_MATCH", "UK_PLACE_BOOST"]
+        out_evidence = {
+            **evidence,
+            "rule_ids": ["LANG_ENGLISH_UK_CITY_TOWN"],
+            "sources": ["loc/cities_and_towns.csv"],
+            "uk_place_hits": uk_cty_hits,
+        }
+
+        if person_hits:
+            out_flags.append("PERSON_BOOST")
+            conf_before = conf
+            conf = min(0.99, conf + 0.02)
+            out_evidence = {
+                **out_evidence,
+                "rule_ids": [*out_evidence["rule_ids"], "LANG_ENGLISH_PERSON_BOOST"],
+                "sources": [*out_evidence["sources"], "people.csv"],
+                "person_boost": {"before": conf_before, "after": conf, "boost": 0.02, "cap": 0.99},
+            }
+
         return LanguageResult(
             language_primary="English",
-            confidence_language=0.95,
-            flags=["DICT_MATCH", "UK_PLACE_BOOST"],
-            evidence={
-                **evidence,
-                "rule_ids": ["LANG_ENGLISH_UK_CITY_TOWN"],
-                "sources": ["cities_and_towns.csv"],
-                "uk_place_hits": uk_cty_hits,
-            },
+            confidence_language=conf,
+            flags=out_flags,
+            evidence=out_evidence,
         )
 
     if uk_reg_hits:
+        conf = 0.90
+        out_flags = ["DICT_MATCH", "UK_PLACE_BOOST"]
+        out_evidence = {
+            **evidence,
+            "rule_ids": ["LANG_ENGLISH_UK_REGION"],
+            "sources": ["loc/regions.csv"],
+            "uk_place_hits": uk_reg_hits,
+        }
+
+        if person_hits:
+            out_flags.append("PERSON_BOOST")
+            conf_before = conf
+            conf = min(0.97, conf + 0.03)
+            out_evidence = {
+                **out_evidence,
+                "rule_ids": [*out_evidence["rule_ids"], "LANG_ENGLISH_PERSON_BOOST"],
+                "sources": [*out_evidence["sources"], "people.csv"],
+                "person_boost": {"before": conf_before, "after": conf, "boost": 0.03, "cap": 0.97},
+            }
+
         return LanguageResult(
             language_primary="English",
-            confidence_language=0.90,
-            flags=["DICT_MATCH", "UK_PLACE_BOOST"],
-            evidence={
-                **evidence,
-                "rule_ids": ["LANG_ENGLISH_UK_REGION"],
-                "sources": ["regions.csv"],
-                "uk_place_hits": uk_reg_hits,
-            },
+            confidence_language=conf,
+            flags=out_flags,
+            evidence=out_evidence,
         )
 
     if uk_lan_hits:
+        conf = 0.88
+        out_flags = ["DICT_MATCH", "UK_PLACE_BOOST"]
+        out_evidence = {
+            **evidence,
+            "rule_ids": ["LANG_ENGLISH_UK_LANDMARK"],
+            "sources": ["loc/landmarks.csv"],
+            "uk_place_hits": uk_lan_hits,
+        }
+
+        if person_hits:
+            out_flags.append("PERSON_BOOST")
+            conf_before = conf
+            conf = min(0.95, conf + 0.04)
+            out_evidence = {
+                **out_evidence,
+                "rule_ids": [*out_evidence["rule_ids"], "LANG_ENGLISH_PERSON_BOOST"],
+                "sources": [*out_evidence["sources"], "people.csv"],
+                "person_boost": {"before": conf_before, "after": conf, "boost": 0.04, "cap": 0.95},
+            }
+
         return LanguageResult(
             language_primary="English",
-            confidence_language=0.88,
-            flags=["DICT_MATCH", "UK_PLACE_BOOST"],
-            evidence={
-                **evidence,
-                "rule_ids": ["LANG_ENGLISH_UK_LANDMARK"],
-                "sources": ["landmarks.csv"],
-                "uk_place_hits": uk_lan_hits,
-            },
+            confidence_language=conf,
+            flags=out_flags,
+            evidence=out_evidence,
         )
 
     # 3) English dictionary evidence (if present)
     if en_hits:
+        conf = 0.90
+        out_flags = ["DICT_MATCH"]
+        out_evidence = {
+            **evidence,
+            "rule_ids": ["LANG_ENGLISH_DICT"],
+            "sources": ["language/english_tokens.csv"],
+        }
+
+        if person_hits:
+            out_flags.append("PERSON_BOOST")
+            conf_before = conf
+            conf = min(0.97, conf + 0.05)
+            out_evidence = {
+                **out_evidence,
+                "rule_ids": [*out_evidence["rule_ids"], "LANG_ENGLISH_PERSON_BOOST"],
+                "sources": [*out_evidence["sources"], "people.csv"],
+                "person_boost": {"before": conf_before, "after": conf, "boost": 0.05, "cap": 0.97},
+            }
+
         return LanguageResult(
             language_primary="English",
-            confidence_language=0.90,
-            flags=["DICT_MATCH"],
-            evidence={
-                **evidence,
-                "rule_ids": ["LANG_ENGLISH_DICT"],
-                "sources": ["english_tokens.csv"],
-            },
+            confidence_language=conf,
+            flags=out_flags,
+            evidence=out_evidence,
         )
 
-    # 4) Fallback English with low confidence
+    # 4) Fallback English with low confidence (+ person boost if present)
     flags.append("ENGLISH_FALLBACK_LOW_CONF")
+    conf = 0.55
+    out_evidence = {**evidence, "rule_ids": ["LANG_ENGLISH_FALLBACK"]}
+
+    if person_hits:
+        flags.append("PERSON_BOOST")
+        conf_before = conf
+        conf = min(0.70, conf + 0.10)
+        out_evidence = {
+            **out_evidence,
+            "rule_ids": [*out_evidence["rule_ids"], "LANG_ENGLISH_PERSON_BOOST"],
+            "sources": ["people.csv"],
+            "person_boost": {"before": conf_before, "after": conf, "boost": 0.10, "cap": 0.70},
+        }
+
     return LanguageResult(
         language_primary="English",
-        confidence_language=0.55,
+        confidence_language=conf,
         flags=flags,
-        evidence={**evidence, "rule_ids": ["LANG_ENGLISH_FALLBACK"]},
+        evidence=out_evidence,
     )
