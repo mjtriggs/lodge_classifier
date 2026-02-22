@@ -77,6 +77,7 @@
 | ABS_VRT | Virtue / moral quality |
 | ABS_PHI | Philosophical / intellectual concept |
 | ABS_FRAT | Fraternal / relational ideal |
+| ABS_TMP | Temporal / Commemorative Concept |
 | ABS_LAT | Untranslated Latin phrase (structural classification only) |
 
 ---

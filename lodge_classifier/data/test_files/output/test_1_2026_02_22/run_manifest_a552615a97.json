@@ -1,0 +1,271 @@
+{
+  "run_id": "a552615a97",
+  "created_at": "2026-02-22T07:27:59+00:00",
+  "pipeline_version": "0.1.0",
+  "input_path": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/test_files/input/lodge_name_sample_01_n100_seed12345.csv",
+  "manual_curation_path": null,
+  "row_count_input": 100,
+  "dicts_dir": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/dicts",
+  "dict_hashes": {
+    "animals.csv": "880795f16fc68cfecd4e9c74a9e2cc9f5a6e366a41c2a81209236487f80c6357",
+    "astronomical.csv": "7b21494ee7ed1128ea3bd36cc09e4a35e0155afedddcbba8fb9be64f92ed0cbb",
+    "botanical.csv": "57f34a0f6e66099ae2d9f5d916c2786d1614137d943435535e8e73d1f24889b2",
+    "building_terms.csv": "50cdaca4fe7161d5b253c98041faea1cf85b4e9cb63b46c9467ac631acab9a92",
+    "cities_and_towns.csv": "e8273a4c2ad191d96235fe2d0ddb83adce5817cccfa6e4afb202f091b8a7e08b",
+    "edu_terms.csv": "c58f82bd739afbef7a654521c4de94ec858254f5ee588141cf8082bdc0d89e4e",
+    "english_tokens.csv": "07670ab8f19a9d7efa9867b9cb5afb9bb54ff2741f538705191e2abdbb28cd33",
+    "fraternal_terms.csv": "6cd9f278c2e25bc1c4d5241668e6d6e4fa925c945abe3767e303f2a6f278106f",
+    "french_tokens.csv": "3915055276b49432a8352ad30b0b020ebe24ea6bbc1ea48eb5c159e5444b7317",
+    "german_tokens.csv": "99d492ff82a63b543cbabf5380a5878ce14d7a8538096f27b00ceb7cc3096a4d",
+    "global_places.csv": "a6532d434f1040af166cfaf8a289228b28e2ae74b0ae68e5c69bbc3b9df54825",
+    "greek_tokens.csv": "8a61c83ba2c30d2fceec6f3b06083028b7a08ded24fbe0ab36c30f89bd1d5a13",
+    "italian_tokens.csv": "98c3472c71c46db57fafb8f50d4090d6fa61b71f45be1d04d8b71ba3d284232a",
+    "job_terms.csv": "999de2878e510d42fd26a65555f1fb86ee5f5c153337d88a40b0e336d59a4c4c",
+    "landmarks.csv": "dc6b994dad496fcebb8ded815c917959c4387a1bad1d2b2271ac0f6c0a4e8aef",
+    "latin_tokens.csv": "4893a68d35627e1227892fc9807350761e6bfb657f770f19df771229c8323772",
+    "masonic_terms.csv": "c1487920ee328f62c4e71fb581df2320ec77666e053e891f8714bab91a1d099f",
+    "military_terms.csv": "7d50bb8e65038349aaecd7a2f17ef811934f3e6ff882256e4e22e5e91b8f5f51",
+    "myth_terms.csv": "07da514f158b59e7eb978433874520c91866f63485b1f6c85ef7591f42f1caed",
+    "philosophical_terms.csv": "a9cca8de3f1b9f6f773f3d2c88e555a5578295e6d4a8a4edf8343a477aa7a5a0",
+    "regions.csv": "f97bd23b157e55b4d957acd502d25e8748cb5bf3e6760a1149801147513cb41b",
+    "religious_person_terms.csv": "eb5510db5e8f1dc0bb3d893869290de7e4b27e3ec5df1213eb80bfe6620ac0c2",
+    "religious_place_terms.csv": "02e43d4c1280d51c69fa92174a4282915b3cd51c63e9db3b13fd5909d93f396a",
+    "royal_titles.csv": "7c4f1e39650602804c5a0a74c3b2706d554a17d7dde359e190815d9adfcaf03b",
+    "saints.csv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "special_interests.csv": "0a5f02bada1dc1593d5f6ffc36e1e14f70a1359f3dfd5ae43c8f5b435129d3df",
+    "virtues.csv": "8747b6d3c060f9d9bbf5ee90d0eaed912af97cdfba87a27b576e20243ee9cbe2",
+    "welsh_markers.csv": "897768a46458afdfe4f47366dd15ae5eab2bdd82f187fc473c2ae6f6bdf2d640"
+  },
+  "review_confidence_threshold_language": 0.7,
+  "summary": {
+    "rows": 100,
+    "review_required_rows": 66,
+    "top_ontology_primary": [
+      {
+        "value": "UNK_",
+        "count": 61
+      },
+      {
+        "value": "LOC_CTY",
+        "count": 21
+      },
+      {
+        "value": "GRP_MAS",
+        "count": 4
+      },
+      {
+        "value": "PRS_ROY",
+        "count": 3
+      },
+      {
+        "value": "ABS_VRT",
+        "count": 3
+      },
+      {
+        "value": "NAT_AST",
+        "count": 2
+      },
+      {
+        "value": "GRP_EDU",
+        "count": 2
+      },
+      {
+        "value": "PRS_REL",
+        "count": 2
+      },
+      {
+        "value": "LOC_REG",
+        "count": 1
+      },
+      {
+        "value": "NAT_BOT",
+        "count": 1
+      }
+    ],
+    "top_theme_primary": [
+      {
+        "value": "Unknown",
+        "count": 61
+      },
+      {
+        "value": "Geographic / Civic",
+        "count": 22
+      },
+      {
+        "value": "Masonic / Administrative",
+        "count": 4
+      },
+      {
+        "value": "Nature",
+        "count": 3
+      },
+      {
+        "value": "Royal / Aristocratic",
+        "count": 3
+      },
+      {
+        "value": "Virtue / Moral Ideal",
+        "count": 3
+      },
+      {
+        "value": "Educational / Institutional",
+        "count": 2
+      },
+      {
+        "value": "Religious",
+        "count": 2
+      }
+    ],
+    "top_language_primary": [
+      {
+        "value": "English",
+        "count": 100
+      }
+    ],
+    "top_review_reason": [
+      {
+        "value": "LOW_LANGUAGE_CONFIDENCE",
+        "count": 51
+      },
+      {
+        "value": "ONTOLOGY_UNKNOWN",
+        "count": 15
+      }
+    ]
+  },
+  "cache_meta": {
+    "dicts_dir": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/dicts",
+    "loaded_sets": [
+      {
+        "filename": "french_tokens.csv",
+        "column": "token",
+        "size": 11
+      },
+      {
+        "filename": "german_tokens.csv",
+        "column": "token",
+        "size": 1
+      },
+      {
+        "filename": "italian_tokens.csv",
+        "column": "token",
+        "size": 1
+      },
+      {
+        "filename": "latin_tokens.csv",
+        "column": "token",
+        "size": 8
+      },
+      {
+        "filename": "greek_tokens.csv",
+        "column": "token",
+        "size": 5
+      },
+      {
+        "filename": "english_tokens.csv",
+        "column": "token",
+        "size": 27
+      },
+      {
+        "filename": "cities_and_towns.csv",
+        "column": "token",
+        "size": 35424
+      },
+      {
+        "filename": "regions.csv",
+        "column": "token",
+        "size": 152
+      },
+      {
+        "filename": "landmarks.csv",
+        "column": "token",
+        "size": 16524
+      },
+      {
+        "filename": "animals.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "astronomical.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "botanical.csv",
+        "column": "token",
+        "size": 5
+      },
+      {
+        "filename": "building_terms.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "edu_terms.csv",
+        "column": "token",
+        "size": 9
+      },
+      {
+        "filename": "fraternal_terms.csv",
+        "column": "token",
+        "size": 6
+      },
+      {
+        "filename": "global_places.csv",
+        "column": "token",
+        "size": 8
+      },
+      {
+        "filename": "job_terms.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "masonic_terms.csv",
+        "column": "token",
+        "size": 6
+      },
+      {
+        "filename": "military_terms.csv",
+        "column": "token",
+        "size": 9
+      },
+      {
+        "filename": "myth_terms.csv",
+        "column": "token",
+        "size": 7
+      },
+      {
+        "filename": "philosophical_terms.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "religious_person_terms.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "religious_place_terms.csv",
+        "column": "token",
+        "size": 15
+      },
+      {
+        "filename": "royal_titles.csv",
+        "column": "token",
+        "size": 10
+      },
+      {
+        "filename": "special_interests.csv",
+        "column": "token",
+        "size": 6
+      },
+      {
+        "filename": "virtues.csv",
+        "column": "token",
+        "size": 9
+      }
+    ]
+  }
+}

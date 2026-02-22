@@ -46,29 +46,40 @@ def classify_ontology_v1(
     phrases = build_ngrams(tokens, max_n=5)
     token_set = {t.lower() for t in tokens if t and t.strip()}
 
-    animals = cache.load_set("animals.csv", column="token")
-    astronomical = cache.load_set("astronomical.csv", column="token")
-    botanical = cache.load_set("botanical.csv", column="token")
-    building_terms = cache.load_set("building_terms.csv", column="token")
-    edu_terms = cache.load_set("edu_terms.csv", column="token")
-    fraternal_terms = cache.load_set("fraternal_terms.csv", column="token")
-    global_places = cache.load_set("global_places.csv", column="token")
-    job_terms = cache.load_set("job_terms.csv", column="token")
-    masonic_terms = cache.load_set("masonic_terms.csv", column="token")
-    military_terms = cache.load_set("military_terms.csv", column="token")
+    # Load Dictionaries
+    ## Person (PRS)
     myth_terms = cache.load_set("myth_terms.csv", column="token")
-    philosophical_terms = cache.load_set("philosophical_terms.csv", column="token")
     religious_person_terms = cache.load_set("religious_person_terms.csv", column="token")
-    religious_place_terms = cache.load_set("religious_place_terms.csv", column="token")
     royal_titles = cache.load_set("royal_titles.csv", column="token")
-    special_interests = cache.load_set("special_interests.csv", column="token")
-    virtues = cache.load_set("virtues.csv", column="token")
 
-    # UK place dictionaries (your existing filenames)
+    ## Location (LOC)
+    global_places = cache.load_set("global_places.csv", column="token")
+    religious_place_terms = cache.load_set("religious_place_terms.csv", column="token")
     uk_loc_reg = cache.load_set("regions.csv", column="token")
     uk_loc_cty = cache.load_set("cities_and_towns.csv", column="token")
     uk_loc_lan = cache.load_set("landmarks.csv", column="token")
 
+    ## Collective / Body (GRP)
+    edu_terms = cache.load_set("edu_terms.csv", column="token")
+    job_terms = cache.load_set("job_terms.csv", column="token")
+    masonic_terms = cache.load_set("masonic_terms.csv", column="token")
+    military_terms = cache.load_set("military_terms.csv", column="token")
+    special_interests = cache.load_set("special_interests.csv", column="token")
+
+    ## Nature (NAT)
+    animals = cache.load_set("animals.csv", column="token")
+    astronomical = cache.load_set("astronomical.csv", column="token")
+    botanical = cache.load_set("botanical.csv", column="token")
+
+    ## Object (OBJ)
+    building_terms = cache.load_set("building_terms.csv", column="token")
+
+    ## Abstract Concept (ABS)
+    fraternal_terms = cache.load_set("fraternal_terms.csv", column="token")
+    philosophical_terms = cache.load_set("philosophical_terms.csv", column="token")
+    virtues = cache.load_set("virtues.csv", column="token")
+
+    # UK place dictionaries
     loc_hits_cty = sorted(phrases.intersection(uk_loc_cty))
     loc_hits_reg = sorted(phrases.intersection(uk_loc_reg))
     loc_hits_lan = sorted(phrases.intersection(uk_loc_lan))

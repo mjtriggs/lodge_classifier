@@ -35,3 +35,4 @@ outputs/
 # Data Inputs
 data/input/
 data/processed/
+data/test_files/input/
