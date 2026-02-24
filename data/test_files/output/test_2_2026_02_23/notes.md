@@ -36,10 +36,9 @@
 
 # TODO
 - Blank Names?
+- Refactor the city (global) list into regions and cities. Merge the global regions and region list, and the global cities and cities list.
 - Add:
     - ABS_CON (Constructs)
     - OBJ_MAS
-    - ABS_EMB?
-- ABS_CON to Ontology and Classifier
-- ABS_EMB
+    - ABS_EMB
 - Mottos

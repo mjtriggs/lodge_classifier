@@ -269,43 +269,40 @@ def classify_ontology_v1(
     # Dictionaries
     # --------------------
     # PRS
-    people = cache.load_set("prs/people.csv", column="token")
-    myth_terms = cache.load_set("prs/myth_terms.csv", column="token")
-    religious_person_terms = cache.load_set("prs/religious_person_terms.csv", column="token")
-    royal_titles = cache.load_set("prs/royal_titles.csv", column="token")
+    people = cache.load_set("prs/prs_his.csv", column="token")
+    myth_terms = cache.load_set("prs/prs_myth.csv", column="token")
+    religious_person_terms = cache.load_set("prs/prs_rel.csv", column="token")
+    royals = cache.load_set("prs/prs_roy.csv", column="token")
 
     # LOC
-    global_places = cache.load_set("loc/global_places.csv", column="token")
-    religious_place_terms = cache.load_set("loc/religious_place_terms.csv", column="token")
-    uk_loc_reg = cache.load_set("loc/regions.csv", column="token")
-    uk_loc_cty = cache.load_set("loc/cities_and_towns.csv", column="token")
-    uk_loc_lan = cache.load_set("loc/landmarks.csv", column="token")
-
-    # Per your rule: buildings_estates.csv always maps to LOC_BDG
-    loc_buildings_estates = cache.load_set("loc/buildings_estates.csv", column="token")
+    global_places = cache.load_set("loc/loc_cty_global_other.csv", column="token")
+    religious_place_terms = cache.load_set("loc/loc_rel.csv", column="token")
+    uk_loc_reg = cache.load_set("loc/loc_reg.csv", column="token")
+    uk_loc_cty = cache.load_set("loc/loc_cty_auto.csv", column="token")
+    uk_loc_lan = cache.load_set("loc/loc_lan.csv", column="token")
+    loc_buildings_estates = cache.load_set("loc/loc_est.csv", column="token")
 
     # GRP
-    edu_terms = cache.load_set("grp/edu_terms.csv", column="token")
-    job_terms = cache.load_set("grp/job_terms.csv", column="token")
-    masonic_terms = cache.load_set("grp/masonic_terms.csv", column="token")
-    military_terms = cache.load_set("grp/military_terms.csv", column="token")
-    special_interests = cache.load_set("grp/special_interests.csv", column="token")
-    nationality_terms = cache.load_set("grp/nationality_terms.csv", column="token")
+    edu_terms = cache.load_set("grp/grp_edu.csv", column="token")
+    job_terms = cache.load_set("grp/grp_job.csv", column="token")
+    masonic_terms = cache.load_set("grp/grp_mas.csv", column="token")
+    military_terms = cache.load_set("grp/grp_mil.csv", column="token")
+    special_interests = cache.load_set("grp/grp_int.csv", column="token")
+    nationality_terms = cache.load_set("grp/grp_nat.csv", column="token")
 
     # NAT
-    animals = cache.load_set("nat/animals.csv", column="token")
-    astronomical = cache.load_set("nat/astronomical.csv", column="token")
-    botanical = cache.load_set("nat/botanical.csv", column="token")
+    animals = cache.load_set("nat/nat_ani.csv", column="token")
+    astronomical = cache.load_set("nat/nat_ast.csv", column="token")
+    botanical = cache.load_set("nat/nat_bot.csv", column="token")
 
     # OBJ
-    # Per your rule: building_terms.csv always maps to OBJ_STR
-    obj_structure_terms = cache.load_set("obj/building_terms.csv", column="token")
+    obj_structure_terms = cache.load_set("obj/obj_str.csv", column="token")
 
     # ABS
-    fraternal_terms = cache.load_set("abs/fraternal_terms.csv", column="token")
-    philosophical_terms = cache.load_set("abs/philosophical_terms.csv", column="token")
-    virtues = cache.load_set("abs/virtues.csv", column="token")
-    temporal_terms = cache.load_set("abs/temporal_terms.csv", column="token")
+    fraternal_terms = cache.load_set("abs/abs_frat.csv", column="token")
+    philosophical_terms = cache.load_set("abs/abs_phi.csv", column="token")
+    virtues = cache.load_set("abs/abs_vrt.csv", column="token")
+    temporal_terms = cache.load_set("abs/abs_vrt.csv", column="token")
 
     # --------------------
     # Precompute hits used across candidates (for evidence convenience)
@@ -339,12 +336,12 @@ def classify_ontology_v1(
             confidence=0.90,
             rule="prs_rel_terms",
             rule_ids=["ONT_PRS_REL_TERMS"],
-            sources=["religious_person_terms.csv"],
+            sources=["prs_rel.csv"],
             hits=rel_person_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
 
-    roy_hits = _hits(royal_titles, token_only=True)
+    roy_hits = _hits(royals, token_only=True)
     if roy_hits:
         _add_candidate(
             candidates,
@@ -352,7 +349,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="prs_roy_titles",
             rule_ids=["ONT_PRS_ROY_TITLES"],
-            sources=["royal_titles.csv"],
+            sources=["prs_roy.csv"],
             hits=roy_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -365,7 +362,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="prs_myth_terms",
             rule_ids=["ONT_PRS_MYTH_TERMS"],
-            sources=["myth_terms.csv"],
+            sources=["prs_myth.csv"],
             hits=myth_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -378,7 +375,7 @@ def classify_ontology_v1(
             confidence=0.86,
             rule="prs_people_list",
             rule_ids=["ONT_PRS_PEOPLE_LIST"],
-            sources=["people.csv"],
+            sources=["prs_his.csv"],
             hits=people_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -391,7 +388,7 @@ def classify_ontology_v1(
             confidence=0.90,
             rule="grp_mil_terms",
             rule_ids=["ONT_GRP_MIL_TERMS"],
-            sources=["military_terms.csv"],
+            sources=["grp_mil.csv"],
             hits=mil_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -404,7 +401,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="loc_rel_terms",
             rule_ids=["ONT_LOC_REL_TERMS"],
-            sources=["religious_place_terms.csv"],
+            sources=["loc_rel.csv"],
             hits=rel_place_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -417,7 +414,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="grp_mas_terms",
             rule_ids=["ONT_GRP_MAS_TERMS"],
-            sources=["masonic_terms.csv"],
+            sources=["grp_mas.csv"],
             hits=mas_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -430,7 +427,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="grp_int_terms",
             rule_ids=["ONT_GRP_INT_TERMS"],
-            sources=["special_interests.csv"],
+            sources=["grp_int.csv"],
             hits=int_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -444,7 +441,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="grp_job_terms",
             rule_ids=["ONT_GRP_JOB_TERMS"],
-            sources=["job_terms.csv"],
+            sources=["grp_job.csv"],
             hits=job_hits,
         )
 
@@ -455,7 +452,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="grp_edu_terms",
             rule_ids=["ONT_GRP_EDU_TERMS"],
-            sources=["edu_terms.csv"],
+            sources=["grp_edu.csv"],
             hits=edu_hits,
         )
 
@@ -466,7 +463,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="grp_nat_terms",
             rule_ids=["ONT_GRP_NAT_TERMS"],
-            sources=["nationality_terms.csv"],
+            sources=["grp_nat.csv"],
             hits=natl_hits,
         )
 
@@ -478,7 +475,7 @@ def classify_ontology_v1(
             confidence=0.83,
             rule="abs_tmp_terms",
             rule_ids=["ONT_ABS_TMP_TERMS"],
-            sources=["temporal_terms.csv"],
+            sources=["abs_tmp.csv"],
             hits=tmp_hits,
             extra={
                 "tmp_hits_phrase": tmp_hits_phrase,
@@ -499,7 +496,7 @@ def classify_ontology_v1(
             confidence=0.85,
             rule="abs_vrt_terms",
             rule_ids=["ONT_ABS_VRT_TERMS"],
-            sources=["virtues.csv"],
+            sources=["abs_vrt.csv"],
             hits=vrt_hits,
             extra={"loc_hits_global": loc_hits_global},
         )
@@ -512,7 +509,7 @@ def classify_ontology_v1(
             confidence=0.80,
             rule="abs_frat_terms",
             rule_ids=["ONT_ABS_FRAT_TERMS"],
-            sources=["fraternal_terms.csv"],
+            sources=["abs_frat.csv"],
             hits=frat_hits,
             extra={"loc_hits_global": loc_hits_global},
         )
@@ -525,7 +522,7 @@ def classify_ontology_v1(
             confidence=0.80,
             rule="abs_phi_terms",
             rule_ids=["ONT_ABS_PHI_TERMS"],
-            sources=["philosophical_terms.csv"],
+            sources=["abs_phi.csv"],
             hits=phi_hits,
             extra={"loc_hits_global": loc_hits_global},
         )
@@ -539,7 +536,7 @@ def classify_ontology_v1(
             confidence=0.75,
             rule="nat_bot_terms",
             rule_ids=["ONT_NAT_BOT_TERMS"],
-            sources=["botanical.csv"],
+            sources=["abs_bot.csv"],
             hits=bot_hits,
         )
 
@@ -551,7 +548,7 @@ def classify_ontology_v1(
             confidence=0.75,
             rule="nat_ani_terms",
             rule_ids=["ONT_NAT_ANI_TERMS"],
-            sources=["animals.csv"],
+            sources=["abs_ani.csv"],
             hits=ani_hits,
         )
 
@@ -563,7 +560,7 @@ def classify_ontology_v1(
             confidence=0.75,
             rule="nat_ast_terms",
             rule_ids=["ONT_NAT_AST_TERMS"],
-            sources=["astronomical.csv"],
+            sources=["abs_ast.csv"],
             hits=ast_hits,
         )
 
@@ -575,7 +572,7 @@ def classify_ontology_v1(
             confidence=0.70,
             rule="obj_str_terms",
             rule_ids=["ONT_OBJ_STR_TERMS"],
-            sources=["building_terms.csv"],
+            sources=["obj_str.csv"],
             hits=obj_str_hits,
         )
 
@@ -587,7 +584,7 @@ def classify_ontology_v1(
             confidence=0.86,
             rule="loc_uk_cty",
             rule_ids=["ONT_LOC_UK_CTY"],
-            sources=["cities_and_towns.csv"],
+            sources=["loc_cty_auto.csv"],
             hits=loc_hits_cty,
         )
 
@@ -598,7 +595,7 @@ def classify_ontology_v1(
             confidence=0.84,
             rule="loc_uk_reg",
             rule_ids=["ONT_LOC_UK_REG"],
-            sources=["regions.csv"],
+            sources=["loc_reg.csv"],
             hits=loc_hits_reg,
         )
 
@@ -609,7 +606,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="loc_uk_lan",
             rule_ids=["ONT_LOC_UK_LAN"],
-            sources=["landmarks.csv"],
+            sources=["loc_lan.csv"],
             hits=loc_hits_lan,
         )
 
@@ -620,7 +617,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="loc_uk_bdg",
             rule_ids=["ONT_LOC_UK_BDG"],
-            sources=["buildings_estates.csv"],
+            sources=["loc_bdg.csv"],
             hits=loc_hits_bdg,
         )
 
@@ -631,7 +628,7 @@ def classify_ontology_v1(
             confidence=0.85,
             rule="loc_global_places",
             rule_ids=["ONT_LOC_GLOBAL_PLACES"],
-            sources=["global_places.csv"],
+            sources=["loc_cty_global_other.csv"],
             hits=loc_hits_global,
         )
 

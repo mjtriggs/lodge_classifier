@@ -97,14 +97,14 @@ def resolve_theme_v1(
         add_from_ontology(ontology_secondary)
 
     cache = cache or DictCache(dicts_dir=dicts_dir)
-    religious_place_terms = cache.load_set("loc/religious_place_terms.csv", column="token")
+    religious_place_terms = cache.load_set("loc/loc_rel.csv", column="token")
     religious_hits = sorted(token_set.intersection(religious_place_terms))
     if religious_hits:
         candidates.add("Religious")
         flags.append("TOKEN_RELIGIOUS_PLACE")
         evidence["religious_place_hits"] = religious_hits
         evidence["rule_ids"] = ["THEME_TOKEN_RELIGIOUS_PLACE"]
-        evidence["sources"] = ["religious_place_terms.csv"]
+        evidence["sources"] = ["loc_rel.csv"]
 
     if not candidates:
         candidates.add("Unknown")
