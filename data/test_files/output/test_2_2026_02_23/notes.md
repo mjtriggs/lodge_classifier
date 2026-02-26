@@ -33,12 +33,6 @@
 # Other Changes
 - Add Rivers to Natural Landmarks
 - Add Japanese
-
-# TODO
-- Blank Names?
+- Blank Names
 - Refactor the city (global) list into regions and cities. Merge the global regions and region list, and the global cities and cities list.
-- Add:
-    - ABS_CON (Constructs)
-    - OBJ_MAS
-    - ABS_EMB
-- Mottos
+- Merge Estates and Buildings?

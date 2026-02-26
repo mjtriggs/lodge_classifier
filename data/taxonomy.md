@@ -29,8 +29,7 @@
 | LOC_CTY | City, town, village |
 | LOC_REG | Region, county, territory |
 | LOC_LAN | Natural landmark |
-| LOC_EST | Estate, manor, priory, abbey |
-| LOC_BDG + | Historic building / civic structure |
+| LOC_BDG | Historic building / civic structure, Estate, Manor, Priory, etc. |
 | LOC_REL | Religious building / structure |
 
 ---
@@ -55,7 +54,7 @@
 | NAT_ANI | Animal |
 | NAT_AST | Astronomical body |
 | NAT_BOT | Botanical |
-| NAT_GEO + | Natural feature (if not clearly named place) |
+| NAT_GEO | Natural feature (if not clearly named place) |
 
 ---
 
@@ -64,9 +63,9 @@
 | Code | Definition |
 |------|------------|
 | OBJ_STR | Physical structure |
-| OBJ_EMB + | Emblem / symbolic object |
-| OBJ_SCI + | Scientific instrument or technical term |
-| OBJ_MYTH + | Mythic object |
+| OBJ_EMB | Emblem / symbolic object |
+| OBJ_SCI | Scientific instrument or technical term |
+| OBJ_MYTH | Mythic object |
 
 ---
 
@@ -75,10 +74,10 @@
 | Code | Definition |
 |------|------------|
 | ABS_VRT | Virtue / moral quality |
-| ABS_PHI | Philosophical / intellectual concept |
+| ABS_PHI | Philosophical / intellectual concept, mottos |
 | ABS_FRAT | Fraternal / relational ideal |
 | ABS_TMP | Temporal / Commemorative Concept |
-| ABS_LAT + | Untranslated Latin phrase (structural classification only) |
+| ABS_LAT | Untranslated Latin phrase (structural classification only) |
 
 ---
 

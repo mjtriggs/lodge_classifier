@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import uuid
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -166,6 +167,89 @@ def _make_join_key(raw_name: Any) -> str:
     return clean.lower().strip()
 
 
+def _is_blank_like(value: Any) -> bool:
+    """Return True if the value should be treated as a blank input.
+
+    This includes:
+    - None
+    - NaN/NA values
+    - empty/whitespace-only strings
+    - common string placeholders: "nan", "null", "none"
+    """
+    if value is None:
+        return True
+
+    try:
+        if pd.isna(value):
+            return True
+    except Exception:
+        # pd.isna can raise on some exotic objects; treat those as not blank here.
+        pass
+
+    if isinstance(value, str):
+        s = value.strip()
+        if not s:
+            return True
+        if s.lower() in {"nan", "null", "none"}:
+            return True
+
+    return False
+
+
+_NON_DESCRIPTIVE_STOPWORDS = {
+    "lodge",
+    "loge",
+    "no",
+    "n",
+    "nr",
+    "number",
+    "numero",
+    "num",
+    "nº",
+    "n°",
+    "provincial",
+    "prov",
+    "district",
+    "distr",
+}
+
+
+_ORDINAL_RE = re.compile(r"^\d+(st|nd|rd|th)$", flags=re.IGNORECASE)
+
+
+def _is_non_descriptive_tokens(tokens: list[str]) -> bool:
+    """Return True if tokens contain no meaningful description.
+
+    Intended to catch cases like:
+    - "lodge no. 2"
+    - "no. 2 provincial"
+    - "loge n° 17"
+
+    Approach:
+    - remove boilerplate tokens (lodge/no/number/etc.)
+    - if the remainder is empty, or only numbers/ordinals -> non-descriptive
+    """
+    if not tokens:
+        return True
+
+    stripped: list[str] = []
+    for t in tokens:
+        tt = t.strip().lower()
+        if not tt:
+            continue
+        if tt in _NON_DESCRIPTIVE_STOPWORDS:
+            continue
+        stripped.append(tt)
+
+    if not stripped:
+        return True
+
+    def _is_numeric_or_ordinal(tok: str) -> bool:
+        return tok.isdigit() or bool(_ORDINAL_RE.match(tok))
+
+    return all(_is_numeric_or_ordinal(t) for t in stripped)
+
+
 def run_pipeline(
     cfg: PipelineConfig,
     lodge_names_path: Path,
@@ -185,6 +269,7 @@ def run_pipeline(
     if missing:
         raise ValueError(f"Input must include columns: {sorted(missing)}")
 
+    # Keep as-is for now; we handle NaN/"nan"/whitespace robustly later.
     df["lodge_name_raw"] = df["lodge_name_raw"].astype(str)
 
     if manual_curation_path and manual_curation_path.exists():
@@ -251,6 +336,122 @@ def run_pipeline(
 
         norm = normalise_lodge_name(raw)
 
+        has_any_manual_hint = bool(curated_lang or curated_ontology_hint or curated_theme_hint)
+
+        # Pipeline-level defaulting for blank / non-descriptive names.
+        # Manual hints override this by design.
+        default_reason: str | None = None
+        if not has_any_manual_hint:
+            if _is_blank_like(raw) or _is_blank_like(norm.clean) or not norm.tokens:
+                default_reason = "INPUT_BLANK"
+            elif _is_non_descriptive_tokens(norm.tokens):
+                default_reason = "INPUT_NON_DESCRIPTIVE"
+
+        if default_reason is not None:
+            language_primary = "English"
+            confidence_language = 1.0
+
+            ontology_primary = "UNK_"
+            ontology_secondary = None
+            confidence_ontology = 1.0
+
+            theme_primary = None
+            theme_secondary = None
+            confidence_theme = 1.0
+
+            flags_sorted = sorted(
+                {
+                    default_reason,
+                    "CLASSIFICATION_DEFAULTED",
+                }
+            )
+
+            review_required, review_reason, review_notes = _review_reason(
+                confidence_language=confidence_language,
+                confidence_ontology=confidence_ontology,
+                confidence_theme=confidence_theme,
+                ontology_primary=str(ontology_primary),
+                language_primary=str(language_primary),
+                flags=flags_sorted,
+                cfg=cfg,
+            )
+
+            if is_manual_priority:
+                flags_sorted = sorted(set(flags_sorted) | {"MANUAL_PRIORITY"})
+                review_required = False
+                review_reason = ""
+                review_notes = "Manual priority override"
+                manual_priority_count += 1
+
+            evidence = {
+                "run_id": run_id,
+                "pipeline_version": cfg.pipeline_version,
+                "dict_hashes": dict_hashes,
+                "normalise": {
+                    "clean": norm.clean,
+                    "normalised": norm.normalised,
+                    "tokens": norm.tokens,
+                },
+                "language": {
+                    "language_primary": language_primary,
+                    "confidence_language": confidence_language,
+                    "evidence": {"defaulted": True, "reason": default_reason},
+                },
+                "ontology": {
+                    "ontology_primary": ontology_primary,
+                    "ontology_secondary": ontology_secondary,
+                    "confidence_ontology": confidence_ontology,
+                    "evidence": {"defaulted": True, "reason": default_reason},
+                },
+                "theme": {
+                    "theme_primary": theme_primary,
+                    "theme_secondary": theme_secondary,
+                    "confidence_theme": confidence_theme,
+                    "evidence": {"defaulted": True, "reason": default_reason},
+                },
+                "manual": {
+                    "curated_language_override": getattr(row, "curated_language_override", None),
+                    "curated_ontology_hint": getattr(row, "curated_ontology_hint", None),
+                    "curated_theme_hint": getattr(row, "curated_theme_hint", None),
+                    "curated_alias": getattr(row, "curated_alias", None),
+                    "curated_notes": getattr(row, "curated_notes", None),
+                    "curated_priority_flag": curated_priority_flag,
+                    "is_manual_priority": is_manual_priority,
+                },
+                "review": {
+                    "review_required": review_required,
+                    "review_reason": review_reason,
+                    "review_notes": review_notes,
+                },
+            }
+
+            if review_required:
+                review_true_count += 1
+
+            records.append(
+                {
+                    "id": id_,
+                    "lodge_name_raw": raw,
+                    "lodge_name_clean": norm.clean,
+                    "language_primary": language_primary,
+                    "confidence_language": confidence_language,
+                    "ontology_primary": ontology_primary,
+                    "ontology_secondary": ontology_secondary,
+                    "confidence_ontology": confidence_ontology,
+                    "theme_primary": theme_primary,
+                    "theme_secondary": theme_secondary,
+                    "confidence_theme": confidence_theme,
+                    "flags": "|".join(flags_sorted) if flags_sorted else "",
+                    "review_required": bool(review_required),
+                    "review_reason": review_reason,
+                    "review_notes": review_notes,
+                    "evidence_json": json.dumps(evidence, ensure_ascii=False),
+                    "created_at": _utc_now_iso(),
+                }
+            )
+            continue
+
+        # Normal path: call classifiers.
         lang_res = detect_language_strict(
             tokens=norm.tokens,
             dicts_dir=cfg.paths.dicts_dir,

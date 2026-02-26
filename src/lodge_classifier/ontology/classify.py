@@ -85,7 +85,6 @@ def classify_ontology_v1(
         "LOC_REG",
         "LOC_LAN",
         "LOC_BDG",
-        "LOC_EST",
         # Misc fallbacks
         "ABS_LAT",
         "UNK_",
@@ -274,13 +273,18 @@ def classify_ontology_v1(
     religious_person_terms = cache.load_set("prs/prs_rel.csv", column="token")
     royals = cache.load_set("prs/prs_roy.csv", column="token")
 
-    # LOC
-    global_places = cache.load_set("loc/loc_cty_global_other.csv", column="token")
+    # LOC (auto + manual combined)
+    cty_auto = cache.load_set("loc/loc_cty_auto.csv", column="token")
+    cty_manual = cache.load_set("loc/loc_cty_manual.csv", column="token")
+    reg_auto = cache.load_set("loc/loc_reg_auto.csv", column="token")
+    reg_manual = cache.load_set("loc/loc_reg_manual.csv", column="token")
+
+    uk_loc_cty = set(cty_auto) | set(cty_manual)
+    uk_loc_reg = set(reg_auto) | set(reg_manual)
+
     religious_place_terms = cache.load_set("loc/loc_rel.csv", column="token")
-    uk_loc_reg = cache.load_set("loc/loc_reg.csv", column="token")
-    uk_loc_cty = cache.load_set("loc/loc_cty_auto.csv", column="token")
     uk_loc_lan = cache.load_set("loc/loc_lan.csv", column="token")
-    loc_buildings_estates = cache.load_set("loc/loc_est.csv", column="token")
+    loc_bdg_terms = cache.load_set("loc/loc_bdg.csv", column="token")
 
     # GRP
     edu_terms = cache.load_set("grp/grp_edu.csv", column="token")
@@ -297,12 +301,15 @@ def classify_ontology_v1(
 
     # OBJ
     obj_structure_terms = cache.load_set("obj/obj_str.csv", column="token")
+    obj_emblem_terms = cache.load_set("obj/obj_emb.csv", column="token")
+    obj_mythic_terms = cache.load_set("obj/obj_myth.csv", column="token")
+    obj_scientific_terms = cache.load_set("obj/obj_sci.csv", column="token")
 
     # ABS
     fraternal_terms = cache.load_set("abs/abs_frat.csv", column="token")
     philosophical_terms = cache.load_set("abs/abs_phi.csv", column="token")
     virtues = cache.load_set("abs/abs_vrt.csv", column="token")
-    temporal_terms = cache.load_set("abs/abs_vrt.csv", column="token")
+    temporal_terms = cache.load_set("abs/abs_tmp.csv", column="token")
 
     # --------------------
     # Precompute hits used across candidates (for evidence convenience)
@@ -311,16 +318,19 @@ def classify_ontology_v1(
     natl_hits = sorted(token_set.intersection(nationality_terms))
 
     obj_str_hits = _hits(obj_structure_terms, phrase_first=False)
+    obj_emb_hits = _hits(obj_emblem_terms, phrase_first=False)
+    obj_myth_hits = _hits(obj_mythic_terms, phrase_first=False)
+    obj_sci_hits = _hits(obj_scientific_terms, phrase_first=False)
 
     tmp_hits_phrase = sorted(phrases.intersection(temporal_terms))
     tmp_hits_token = sorted(token_set.intersection(temporal_terms))
     tmp_hits = sorted(set(tmp_hits_phrase + tmp_hits_token))
 
-    loc_hits_cty = sorted(phrases.intersection(uk_loc_cty))
-    loc_hits_reg = sorted(phrases.intersection(uk_loc_reg))
-    loc_hits_lan = sorted(phrases.intersection(uk_loc_lan))
-    loc_hits_bdg = sorted(phrases.intersection(loc_buildings_estates))
-    loc_hits_global = sorted(phrases.intersection(global_places))
+    # Updated location hit logic (auto+manual union, phrase + token)
+    loc_hits_cty = _hits(uk_loc_cty, phrase_first=True)
+    loc_hits_reg = _hits(uk_loc_reg, phrase_first=True)
+    loc_hits_lan = _hits(uk_loc_lan, phrase_first=True)
+    loc_hits_bdg = _hits(loc_bdg_terms, phrase_first=True) if loc_bdg_terms else []
 
     # --------------------
     # Build all candidates
@@ -336,7 +346,7 @@ def classify_ontology_v1(
             confidence=0.90,
             rule="prs_rel_terms",
             rule_ids=["ONT_PRS_REL_TERMS"],
-            sources=["prs_rel.csv"],
+            sources=["prs/prs_rel.csv"],
             hits=rel_person_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -349,7 +359,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="prs_roy_titles",
             rule_ids=["ONT_PRS_ROY_TITLES"],
-            sources=["prs_roy.csv"],
+            sources=["prs/prs_roy.csv"],
             hits=roy_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -362,7 +372,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="prs_myth_terms",
             rule_ids=["ONT_PRS_MYTH_TERMS"],
-            sources=["prs_myth.csv"],
+            sources=["prs/prs_myth.csv"],
             hits=myth_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -375,7 +385,7 @@ def classify_ontology_v1(
             confidence=0.86,
             rule="prs_people_list",
             rule_ids=["ONT_PRS_PEOPLE_LIST"],
-            sources=["prs_his.csv"],
+            sources=["prs/prs_his.csv"],
             hits=people_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -388,7 +398,7 @@ def classify_ontology_v1(
             confidence=0.90,
             rule="grp_mil_terms",
             rule_ids=["ONT_GRP_MIL_TERMS"],
-            sources=["grp_mil.csv"],
+            sources=["grp/grp_mil.csv"],
             hits=mil_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -401,7 +411,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="loc_rel_terms",
             rule_ids=["ONT_LOC_REL_TERMS"],
-            sources=["loc_rel.csv"],
+            sources=["loc/loc_rel.csv"],
             hits=rel_place_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -414,7 +424,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="grp_mas_terms",
             rule_ids=["ONT_GRP_MAS_TERMS"],
-            sources=["grp_mas.csv"],
+            sources=["grp/grp_mas.csv"],
             hits=mas_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -427,7 +437,7 @@ def classify_ontology_v1(
             confidence=0.88,
             rule="grp_int_terms",
             rule_ids=["ONT_GRP_INT_TERMS"],
-            sources=["grp_int.csv"],
+            sources=["grp/grp_int.csv"],
             hits=int_hits,
             extra={"edu_hits": edu_hits, "obj_str_hits": obj_str_hits, "tmp_hits": tmp_hits},
         )
@@ -441,7 +451,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="grp_job_terms",
             rule_ids=["ONT_GRP_JOB_TERMS"],
-            sources=["grp_job.csv"],
+            sources=["grp/grp_job.csv"],
             hits=job_hits,
         )
 
@@ -452,7 +462,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="grp_edu_terms",
             rule_ids=["ONT_GRP_EDU_TERMS"],
-            sources=["grp_edu.csv"],
+            sources=["grp/grp_edu.csv"],
             hits=edu_hits,
         )
 
@@ -463,7 +473,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="grp_nat_terms",
             rule_ids=["ONT_GRP_NAT_TERMS"],
-            sources=["grp_nat.csv"],
+            sources=["grp/grp_nat.csv"],
             hits=natl_hits,
         )
 
@@ -475,7 +485,7 @@ def classify_ontology_v1(
             confidence=0.83,
             rule="abs_tmp_terms",
             rule_ids=["ONT_ABS_TMP_TERMS"],
-            sources=["abs_tmp.csv"],
+            sources=["abs/abs_tmp.csv"],
             hits=tmp_hits,
             extra={
                 "tmp_hits_phrase": tmp_hits_phrase,
@@ -484,7 +494,6 @@ def classify_ontology_v1(
                 "loc_hits_reg": loc_hits_reg,
                 "loc_hits_lan": loc_hits_lan,
                 "loc_hits_bdg": loc_hits_bdg,
-                "loc_hits_global": loc_hits_global,
             },
         )
 
@@ -496,9 +505,8 @@ def classify_ontology_v1(
             confidence=0.85,
             rule="abs_vrt_terms",
             rule_ids=["ONT_ABS_VRT_TERMS"],
-            sources=["abs_vrt.csv"],
+            sources=["abs/abs_vrt.csv"],
             hits=vrt_hits,
-            extra={"loc_hits_global": loc_hits_global},
         )
 
     frat_hits = sorted(token_set.intersection(fraternal_terms))
@@ -509,9 +517,8 @@ def classify_ontology_v1(
             confidence=0.80,
             rule="abs_frat_terms",
             rule_ids=["ONT_ABS_FRAT_TERMS"],
-            sources=["abs_frat.csv"],
+            sources=["abs/abs_frat.csv"],
             hits=frat_hits,
-            extra={"loc_hits_global": loc_hits_global},
         )
 
     phi_hits = sorted(token_set.intersection(philosophical_terms))
@@ -522,9 +529,8 @@ def classify_ontology_v1(
             confidence=0.80,
             rule="abs_phi_terms",
             rule_ids=["ONT_ABS_PHI_TERMS"],
-            sources=["abs_phi.csv"],
+            sources=["abs/abs_phi.csv"],
             hits=phi_hits,
-            extra={"loc_hits_global": loc_hits_global},
         )
 
     # NAT
@@ -536,7 +542,7 @@ def classify_ontology_v1(
             confidence=0.75,
             rule="nat_bot_terms",
             rule_ids=["ONT_NAT_BOT_TERMS"],
-            sources=["abs_bot.csv"],
+            sources=["nat/nat_bot.csv"],
             hits=bot_hits,
         )
 
@@ -548,7 +554,7 @@ def classify_ontology_v1(
             confidence=0.75,
             rule="nat_ani_terms",
             rule_ids=["ONT_NAT_ANI_TERMS"],
-            sources=["abs_ani.csv"],
+            sources=["nat/nat_ani.csv"],
             hits=ani_hits,
         )
 
@@ -560,7 +566,7 @@ def classify_ontology_v1(
             confidence=0.75,
             rule="nat_ast_terms",
             rule_ids=["ONT_NAT_AST_TERMS"],
-            sources=["abs_ast.csv"],
+            sources=["nat/nat_ast.csv"],
             hits=ast_hits,
         )
 
@@ -572,7 +578,40 @@ def classify_ontology_v1(
             confidence=0.70,
             rule="obj_str_terms",
             rule_ids=["ONT_OBJ_STR_TERMS"],
-            sources=["obj_str.csv"],
+            sources=["obj/obj_str.csv"],
+            hits=obj_str_hits,
+        )
+
+    if obj_emb_hits:
+        _add_candidate(
+            candidates,
+            primary="OBJ_EMB",
+            confidence=0.70,
+            rule="obj_emb_terms",
+            rule_ids=["ONT_OBJ_EMB_TERMS"],
+            sources=["obj/obj_emb.csv"],
+            hits=obj_str_hits,
+        )
+
+    if obj_myth_hits:
+        _add_candidate(
+            candidates,
+            primary="OBJ_MYTH",
+            confidence=0.70,
+            rule="obj_myth_terms",
+            rule_ids=["ONT_OBJ_MYTH_TERMS"],
+            sources=["obj/obj_myth.csv"],
+            hits=obj_str_hits,
+        )
+
+    if obj_sci_hits:
+        _add_candidate(
+            candidates,
+            primary="OBJ_SCI",
+            confidence=0.70,
+            rule="obj_sci_terms",
+            rule_ids=["ONT_OBJ_SCI_TERMS"],
+            sources=["obj/obj_sci.csv"],
             hits=obj_str_hits,
         )
 
@@ -584,7 +623,7 @@ def classify_ontology_v1(
             confidence=0.86,
             rule="loc_uk_cty",
             rule_ids=["ONT_LOC_UK_CTY"],
-            sources=["loc_cty_auto.csv"],
+            sources=["loc/loc_cty_auto.csv", "loc/loc_cty_manual.csv"],
             hits=loc_hits_cty,
         )
 
@@ -595,7 +634,7 @@ def classify_ontology_v1(
             confidence=0.84,
             rule="loc_uk_reg",
             rule_ids=["ONT_LOC_UK_REG"],
-            sources=["loc_reg.csv"],
+            sources=["loc/loc_reg_auto.csv", "loc/loc_reg_manual.csv"],
             hits=loc_hits_reg,
         )
 
@@ -606,7 +645,7 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="loc_uk_lan",
             rule_ids=["ONT_LOC_UK_LAN"],
-            sources=["loc_lan.csv"],
+            sources=["loc/loc_lan.csv"],
             hits=loc_hits_lan,
         )
 
@@ -617,19 +656,8 @@ def classify_ontology_v1(
             confidence=0.82,
             rule="loc_uk_bdg",
             rule_ids=["ONT_LOC_UK_BDG"],
-            sources=["loc_bdg.csv"],
+            sources=["loc/loc_bdg.csv"],
             hits=loc_hits_bdg,
-        )
-
-    if loc_hits_global:
-        _add_candidate(
-            candidates,
-            primary="LOC_REG",
-            confidence=0.85,
-            rule="loc_global_places",
-            rule_ids=["ONT_LOC_GLOBAL_PLACES"],
-            sources=["loc_cty_global_other.csv"],
-            hits=loc_hits_global,
         )
 
     # Strict Latin fallback
