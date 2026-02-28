@@ -1,0 +1,337 @@
+{
+  "run_id": "6b7789468b",
+  "created_at": "2026-02-26T08:07:39+00:00",
+  "pipeline_version": "0.1.0",
+  "input_path": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/test_files/input/lodge_name_sample_03_n100_seed12345.csv",
+  "manual_curation_path": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/manual/manual_curation_template.csv",
+  "row_count_input": 100,
+  "dicts_dir": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/dicts",
+  "dict_hashes": {},
+  "review_confidence_threshold_language": 0.7,
+  "summary": {
+    "rows": 100,
+    "review_required_rows": 75,
+    "top_ontology_primary": [
+      {
+        "value": "UNK_",
+        "count": 47
+      },
+      {
+        "value": "LOC_CTY",
+        "count": 19
+      },
+      {
+        "value": "PRS_REL",
+        "count": 9
+      },
+      {
+        "value": "GRP_MAS",
+        "count": 4
+      },
+      {
+        "value": "GRP_EDU",
+        "count": 4
+      },
+      {
+        "value": "ABS_VRT",
+        "count": 3
+      },
+      {
+        "value": "LOC_REL",
+        "count": 3
+      },
+      {
+        "value": "NAT_AST",
+        "count": 2
+      },
+      {
+        "value": "ABS_PHI",
+        "count": 1
+      },
+      {
+        "value": "ABS_TMP",
+        "count": 1
+      },
+      {
+        "value": "PRS_HIS",
+        "count": 1
+      },
+      {
+        "value": "OBJ_STR",
+        "count": 1
+      },
+      {
+        "value": "PRS_ROY",
+        "count": 1
+      },
+      {
+        "value": "ABS_FRAT",
+        "count": 1
+      },
+      {
+        "value": "NAT_BOT",
+        "count": 1
+      },
+      {
+        "value": "PRS_MYTH",
+        "count": 1
+      },
+      {
+        "value": "LOC_REG",
+        "count": 1
+      }
+    ],
+    "top_theme_primary": [
+      {
+        "value": "Unknown",
+        "count": 45
+      },
+      {
+        "value": "Geographic / Civic",
+        "count": 22
+      },
+      {
+        "value": "Religious",
+        "count": 12
+      },
+      {
+        "value": "Virtue / Moral Ideal",
+        "count": 6
+      },
+      {
+        "value": "Masonic / Administrative",
+        "count": 4
+      },
+      {
+        "value": "Educational / Institutional",
+        "count": 4
+      },
+      {
+        "value": "Symbolic / Esoteric",
+        "count": 1
+      },
+      {
+        "value": "Royal / Aristocratic",
+        "count": 1
+      },
+      {
+        "value": "Nature",
+        "count": 1
+      },
+      {
+        "value": "Mythological / Classical",
+        "count": 1
+      }
+    ],
+    "top_language_primary": [
+      {
+        "value": "English",
+        "count": 97
+      },
+      {
+        "value": "Greek",
+        "count": 3
+      }
+    ],
+    "top_review_reason": [
+      {
+        "value": "LOW_LANGUAGE_CONFIDENCE",
+        "count": 69
+      },
+      {
+        "value": "ONTOLOGY_UNKNOWN",
+        "count": 6
+      }
+    ]
+  },
+  "cache_meta": {
+    "dicts_dir": "/Users/mjtriggs/Documents/Freemasonry/Research/lodge_classifier/data/dicts",
+    "loaded_sets": [
+      {
+        "filename": "language/french_tokens.csv",
+        "column": "token",
+        "size": 13
+      },
+      {
+        "filename": "language/german_tokens.csv",
+        "column": "token",
+        "size": 2
+      },
+      {
+        "filename": "language/italian_tokens.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "language/latin_tokens.csv",
+        "column": "token",
+        "size": 116
+      },
+      {
+        "filename": "language/greek_tokens.csv",
+        "column": "token",
+        "size": 183
+      },
+      {
+        "filename": "language/maori_tokens.csv",
+        "column": "token",
+        "size": 1
+      },
+      {
+        "filename": "language/portuguese_tokens.csv",
+        "column": "token",
+        "size": 1
+      },
+      {
+        "filename": "language/japanese_tokens.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "language/english_tokens.csv",
+        "column": "token",
+        "size": 27
+      },
+      {
+        "filename": "prs/prs_his.csv",
+        "column": "token",
+        "size": 10
+      },
+      {
+        "filename": "prs/prs_myth.csv",
+        "column": "token",
+        "size": 10
+      },
+      {
+        "filename": "prs/prs_rel.csv",
+        "column": "token",
+        "size": 8
+      },
+      {
+        "filename": "prs/prs_roy.csv",
+        "column": "token",
+        "size": 13
+      },
+      {
+        "filename": "loc/loc_cty_auto.csv",
+        "column": "token",
+        "size": 35424
+      },
+      {
+        "filename": "loc/loc_cty_manual.csv",
+        "column": "token",
+        "size": 23
+      },
+      {
+        "filename": "loc/loc_reg_auto.csv",
+        "column": "token",
+        "size": 153
+      },
+      {
+        "filename": "loc/loc_reg_manual.csv",
+        "column": "token",
+        "size": 9
+      },
+      {
+        "filename": "loc/loc_rel.csv",
+        "column": "token",
+        "size": 15
+      },
+      {
+        "filename": "loc/loc_lan.csv",
+        "column": "token",
+        "size": 16617
+      },
+      {
+        "filename": "loc/loc_bdg.csv",
+        "column": "token",
+        "size": 9
+      },
+      {
+        "filename": "grp/grp_edu.csv",
+        "column": "token",
+        "size": 9
+      },
+      {
+        "filename": "grp/grp_job.csv",
+        "column": "token",
+        "size": 4
+      },
+      {
+        "filename": "grp/grp_mas.csv",
+        "column": "token",
+        "size": 7
+      },
+      {
+        "filename": "grp/grp_mil.csv",
+        "column": "token",
+        "size": 12
+      },
+      {
+        "filename": "grp/grp_int.csv",
+        "column": "token",
+        "size": 8
+      },
+      {
+        "filename": "grp/grp_nat.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "nat/nat_ani.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "nat/nat_ast.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "nat/nat_bot.csv",
+        "column": "token",
+        "size": 7
+      },
+      {
+        "filename": "obj/obj_str.csv",
+        "column": "token",
+        "size": 10
+      },
+      {
+        "filename": "obj/obj_emb.csv",
+        "column": "token",
+        "size": 4
+      },
+      {
+        "filename": "obj/obj_myth.csv",
+        "column": "token",
+        "size": 1
+      },
+      {
+        "filename": "obj/obj_sci.csv",
+        "column": "token",
+        "size": 3
+      },
+      {
+        "filename": "abs/abs_frat.csv",
+        "column": "token",
+        "size": 18
+      },
+      {
+        "filename": "abs/abs_phi.csv",
+        "column": "token",
+        "size": 34
+      },
+      {
+        "filename": "abs/abs_vrt.csv",
+        "column": "token",
+        "size": 24
+      },
+      {
+        "filename": "abs/abs_tmp.csv",
+        "column": "token",
+        "size": 6
+      }
+    ]
+  }
+}

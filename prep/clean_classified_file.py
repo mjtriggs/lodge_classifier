@@ -123,7 +123,7 @@ def create_review_file(
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
 
-    INPUT_CSV = "data/test_files/output/test_2_2026_02_23/classified_b973d36a1e.csv"
+    INPUT_CSV = "data/test_files/output/test_3_2026_02_26/classified_6b7789468b.csv"
 
     created_path = create_review_file(INPUT_CSV, output_filename="test_review.csv")
     logger.info("Done. Review file available at: %s", created_path)

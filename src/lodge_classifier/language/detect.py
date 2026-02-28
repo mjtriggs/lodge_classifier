@@ -129,14 +129,16 @@ def detect_language_strict(
 
     # --- Non-English token dictionaries (including Japanese romaji) ---
     non_english_specs: list[_LangSpec] = [
+        _LangSpec("Welsh", "language/welsh_tokens.csv", "LANG_WELSH_DICT"),
         _LangSpec("French", "language/french_tokens.csv", "LANG_FRENCH_DICT"),
-        _LangSpec("German", "language/german_tokens.csv", "LANG_GERMAN_DICT"),
-        _LangSpec("Italian", "language/italian_tokens.csv", "LANG_ITALIAN_DICT"),
         _LangSpec("Latin", "language/latin_tokens.csv", "LANG_LATIN_DICT"),
         _LangSpec("Greek", "language/greek_tokens.csv", "LANG_GREEK_DICT"),
-        _LangSpec("Maori", "language/maori_tokens.csv", "LANG_MAORI_DICT"),
-        _LangSpec("Portuguese", "language/portuguese_tokens.csv", "LANG_PORTUGUESE_DICT"),
-        _LangSpec("Japanese", "language/japanese_tokens.csv", "LANG_JAPANESE_DICT"),
+        # _LangSpec("German", "language/german_tokens.csv", "LANG_GERMAN_DICT"),
+        # _LangSpec("Italian", "language/italian_tokens.csv", "LANG_ITALIAN_DICT"),
+        # _LangSpec("Maori", "language/maori_tokens.csv", "LANG_MAORI_DICT"),
+        # _LangSpec("Portuguese", "language/portuguese_tokens.csv", "LANG_PORTUGUESE_DICT"),
+        # _LangSpec("Japanese", "language/japanese_tokens.csv", "LANG_JAPANESE_DICT"),
+        _LangSpec("Other", "language/other_language_tokens.csv", "LANG_OTHER_DICT"),
     ]
 
     non_english_hits: dict[str, list[str]] = {}
