@@ -1,0 +1,101 @@
+new_id,lodge_name_raw,ontology_primary
+2081d36d5ea06f8338c0846678120465,Servimus Lodge,ABS_LAT
+9d9676bb6a97b3a556094976bbecb85f,Dorset Fairway Lodge,LOC_REG
+addeaf2288d6170cb3b34c4d15a23f00,Sutton Lodge,LOC_CTY
+4eee84db2f99b9f9962e87b5b351a8fa,Tower Hamlets Lodge,LOC_CTY
+31657b4e11fce99f1b94b4c2691b2044,Trafalgar Lodge,ABS_TMP
+4e78005cfa8f60a8ef655a375f34f03b,Yoden Lodge,LOC_CTY
+aa4e096cd5834035ac7ccad391db3511,Cecil Lodge,PRS_HIS
+34e9e268b0dce58c443a59904cede710,Marcellians Lodge,GRP_EDU
+46b1b55a900f64b6d9ad1e676097859f,Morden Park Lodge,LOC_CTY
+967225383a8ba31883a416aa5d811f34,Amity Lodge,ABS_VRT
+2741289ca9c53e2cbdb858696a7b6792,Richard Linnecar Lodge,PRS_HIS
+ba1080be2531ad13d05251993331044a,Arrowhead Lodge of Freedom,ABS_VRT
+6d0f801dbb28b3a1960a0009e5d8a7f6,Lodge of Benevolence,ABS_VRT
+ad129a53639d52de6e0dcab96f79eba8,South Esk Lodge,LOC_LAN
+0aab980ac194d492d21542fd224b9571,Smithills Lodge,LOC_BDG
+f556eddd6a5c9ad7065e2c63919f3f28,Llanilltud Fawr Lodge,LOC_CTY
+9918a7c7517c45af9aa3d406e4e20fa1,District Grand Stewards Lodge of Bahamas and Turks,GRP_MAS
+24a9b90d5efcc3f24bc505f0824c0a52,Diamond Jubilee Lodge,ABS_TMP
+5fa6f6c005e5c4c19fdbe182d278b706,Dona Conferentes Lodge,ABS_LAT
+f20bb434d23fa1f2678e4ed73b805216,Leavesden Lodge,LOC_CTY
+7ff9f9c6766898d147d2a98c59650992,Lodge of Sker,LOC_CTY
+2f104d56b1a8e58f3c322dda6a6d9993,Zetland Lodge,PRS_ROY
+00d2b81d3d334c407baea327d8d114c9,Sea Captains' Lodge,GRP_JOB
+bb5e94a979e45070514c533b017a0fa5,Lodge of Lu Pan,PRS_MYTH
+2071438e22622899dc9e976ebf91e074,North London Installed Masters Lodge,GRP_MAS
+5171064f87ef2cae5d4550e66581481c,Provincial Grand Lodge,GRP_MAS
+08903c7434db8b2e66c9cb2287080207,No. 3 Provincial,GRP_MAS
+f0abc28c6f23d6ebb09c45c33827e918,Lodge of Faith,ABS_VRT
+23a8e1998fa3c6176fb81e4a1b6f0bc1,Cosmopolitan Lodge,ABS_PHI
+5d5fd99bca420f389d47b9bffe026db2,Lodge of Virtue and Honour,ABS_VRT
+238638df79c6a5a775659c0d6dbd8615,Royal North Star,NAT_AST
+9cc45424b9420cc688b0113b268d648c,Jubilee Lodge,ABS_TMP
+bad30317f6f1d518c58d1097ef3580ca,Globe Lodge,OBJ_EMB
+e553824fa264d0c461a2b8ce02c16ec5,Downshire Lodge,PRS_ROY
+a76f9247e3ded06d95335af088f40f89,Danetre Lodge,LOC_CTY
+58f0af736ea2442e36fb71efc14afaed,Rottingdean Lodge,LOC_CTY
+bd30595072b22f6df1eae997e3cb9d8f,Lodge of Perfection,ABS_VRT
+280841338ecd239f44b6cdc826f06756,Goodacre Lodge,PRS_HIS
+4c1a835d5f15671d552fef13d94082b1,Star of the North Lodge,NAT_AST
+2033331c4a12b6aa4dd4700cdda82a34,Prince of Wales' Lodge,PRS_ROY
+db99d26e5c952da642d90ecd04b38243,Croydon Millenary Lodge,ABS_TMP
+70528d523e67e7bdfd9d0c0fadda17e8,Old Shirburnian Lodge,GRP_EDU
+5f0e57c8a01a28a1a871beefd2839eea,St. James' Lodge,PRS_REL
+51602d7c081092d8d6cfd89fc6a7712e,Old Bedfordian Lodge,GRP_EDU
+9224764812c2330aa00ee2fdbac6ce7c,Arklow Regis Lodge,LOC_CTY
+d2f481aa82c17707b20e7ea82e68877c,Composite Lodge,GRP_MAS
+20822ff1c4affbdd4871b640b5525f33,Lodge of Amity,ABS_VRT
+f943b486d5e873da863da2d01307bf8f,Mount Ida Lodge,LOC_LAN
+a71d69cd4dab2f4d08dbdf874ad84ba0,Lovekyn Chantry Lodge,LOC_BDG
+160a90d4d084148c658e7c2b60734042,Harmony Lodge,ABS_VRT
+f072838c763e0e387d1551e338168de2,Honor Deo Lodge,ABS_PHI
+26a4e7523770f9396322ae8246cbb724,Lodge of Love and Unity,ABS_VRT
+f59d797a8ef4ff00934049ba5c733dfd,Lodge of Security,ABS_VRT
+9e73242fc693507b0b78593163a76402,King Alfred Lodge,PRS_ROY
+366a8a303e294846cefc2fa39cbf8d26,Industry Lodge,ABS_VRT
+53cc31999edef38c9e765dd2a6a92395,Roger de Fery Lodge,PRS_HIS
+a7c2e7489ec1bf888865f37d31d7a0ce,Lodge Humility with Fortitude,ABS_VRT
+28601e71cb6d137b4027d7b45947b147,Fidentia et Lutine Lodge,ABS_VRT
+e07696eabcff155db1b65eca37c4a7b4,Nova Lodge,NAT_AST
+bf93f4fa1c61907c82d0d32d8eb9e234,No. 3 of Nova Scotia,LOC_REG
+190eb4a7fc36ceb0e85a908c3142bf1a,Basutoland Lodge,LOC_REG
+840469c87dab17c41321990dfc3600cc,Ystradyfodwg Lodge,LOC_CTY
+04b922bad21aee8d73b9767368737a7f,Temperantia Lodge,ABS_VRT
+bca074146abb1b0a87b2aabb92a53187,"St. James' Lodge, No. 14 Provincial",PRS_REL
+e9c74c6eee1c8b36336cb97c19988cee,Acacia Lodge,NAT_BOT
+71d519b0b7d34dd436527d3635ce1029,Martin Foss Lodge of Research,PRS_HIS
+9cd7acf06562571a92492a7a9b305a9e,Chelsea Manor Lodge,LOC_BDG
+16ac8b13d21c99c7a4d762194916dac4,Blackburn Temperance Lodge,LOC_CTY
+f73cbfa38921f15508ea909c2a4a7072,Golden Rule Lodge,ABS_VRT
+7877283c11b94a4c3b7ea928a12b02e3,Cantelupe Lodge,PRS_HIS
+8828b20bb357e46f35d9bc47fc854ee1,,UNK_
+9e1b92c48c218217994b0321d677dcb3,Brockley Lodge,LOC_CTY
+fe035db3bfe4ae89194e55c03961b5b2,Accrington Lodge,LOC_CTY
+cacab63b3812263435e1c7983f63f700,Waltheof Lodge,PRS_HIS
+36d832839cc7412743ee01a2e97583c9,Lodge of Friendship,ABS_VRT
+d81dcedc91a719bbc4c5eac367e120a8,Lodge of Friendship and Care,ABS_VRT
+1a80619ab8e221212d2c9e8a883111ad,Roodepoort Lodge,LOC_CTY
+93b49b47c0e804fc85e967bde254a4a1,Cambrensis Lodge,PRS_HIS
+bb0c11371db8b56fc74192673b24473a,Earl Bathurst Lodge,PRS_ROY
+62ca27d80a11dff8f1841ac5dabb8fe1,Romeland Lodge,LOC_CTY
+2af4b27b6a628d3c5be878cfd48210f2,Union Lodge,ABS_VRT
+be54c8b99860efe055a64628635405ae,Thistle and Rose Lodge of Bedfordshire,LOC_REG
+5eb899ad5736cd26522f2a8b3b8cf3e4,Ranelagh Lodge,LOC_CTY
+32d2f98ecc620b7ba7c44e654f08b83d,Cobham Lodge,LOC_CTY
+8b79da54a4068129b4dfa6c4479bc0f1,Exchange Lodge,OBJ_STR
+b1b38131fcfbf63ac0f1bedd7b3c378e,Waikouaiti Lodge,LOC_CTY
+a0049eb274cf42f5b2f15b75a8d8c004,Crogdæne Lodge,LOC_CTY
+e3fdd173849cce9baee88296e0fd64fd,Mount Edgcumbe Lodge,LOC_BDG
+585ca9efbb767ea9b62477ea603a41de,,UNK_
+5449948fdc987afcff2ec2d02d3c65e7,Lodge of the Perfect Ashlar,OBJ_EMB
+65f52c19e08048627fbc547d2bce722c,Pathfinder Lodge,ABS_VRT
+4e1d40a4655ea5aba75434ce19e4d55f,Clive Lodge,PRS_HIS
+dbd4b3b5dc9455280aaa8d9ca2b8fa36,Claremont Lodge,LOC_CTY
+37e72002b86a5bdb83005e32611f3838,The Club Lodge,GRP_INT
+2cc72d92645dff3e0aa0d11a2ebec201,Holden Lodge,PRS_HIS
+970a90598e4b6149d64fe69d0fc1767e,Lodge of Prudence,ABS_VRT
+1dbd36bd781581250fdf2fca154579a3,Castle Rock Lodge,LOC_LAN
+136eaced1acc43279beb9d90495e8905,,UNK_
+f3631cd78eea35b2956050d393539c55,Huntcliff Lodge,LOC_LAN
+1df38072889bad2bd87118a2dcdbac66,Arthur Jolly Lodge,PRS_HIS
