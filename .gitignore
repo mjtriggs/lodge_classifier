@@ -34,5 +34,5 @@ outputs/
 
 # Data Inputs
 data/input/
-data/processed/
-data/test_files/input/
+data/input/os_open_names/
+data/input/OS_Open_Names_Header.csv
