@@ -80,7 +80,7 @@ d81dcedc91a719bbc4c5eac367e120a8,Lodge of Friendship and Care,ABS_VRT,
 bb0c11371db8b56fc74192673b24473a,Earl Bathurst Lodge,PRS_ROY,
 62ca27d80a11dff8f1841ac5dabb8fe1,Romeland Lodge,LOC_CTY,
 2af4b27b6a628d3c5be878cfd48210f2,Union Lodge,ABS_VRT,
-be54c8b99860efe055a64628635405ae,Thistle and Rose Lodge of Bedfordshire,LOC_REG,OBJ_EMB
+be54c8b99860efe055a64628635405ae,Thistle and Rose Lodge of Bedfordshire,OBJ_EMB,LOC_REG
 5eb899ad5736cd26522f2a8b3b8cf3e4,Ranelagh Lodge,LOC_CTY,
 32d2f98ecc620b7ba7c44e654f08b83d,Cobham Lodge,LOC_CTY,
 8b79da54a4068129b4dfa6c4479bc0f1,Exchange Lodge,OBJ_STR,
