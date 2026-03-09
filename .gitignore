@@ -33,6 +33,6 @@ outputs/
 .DS_Store
 
 # Data Inputs
-data/input/
+# data/input/
 data/input/os_open_names/
 data/input/OS_Open_Names_Header.csv
