@@ -1,501 +1,501 @@
-id,lodge_name_raw,lodge_name_clean,language_primary,confidence_language,ontology_primary,ontology_secondary,confidence_ontology,theme_primary,theme_secondary,confidence_theme,flags,created_at,manual_ontology_correct,manual_notes
-10022,Saint Barbara Lodge,Saint Barbara Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,
-10028,Fernhill Lodge,Fernhill Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,
-10032,Clocktower from Haslemere Lodge,Clocktower from Haslemere Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,
-10043,Hundred of Axstane Lodge,Hundred of Axstane Lodge,English,0.9,ABS_VRT,NAT_GEO,0.85,Virtue / Moral Ideal,Nature,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,
-10063,Merton Abbey Lodge,Merton Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:09+00:00,,
-10069,Stevenage Lodge,Stevenage Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,
-10113,University of Technology Lodge,University of Technology Lodge,English,0.9,ABS_VRT,GRP_EDU,0.85,Virtue / Moral Ideal,Educational / Institutional,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,
-10115,Portsea Lodge,Portsea Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,
-10143,Granstone Lodge,Granstone Lodge,English,0.75,LOC_BDG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:09+00:00,,
-10151,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,
-10221,Southend-on-Sea Lodge,Southend-on-Sea Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,
-10245,Chedelintone Lodge,Chedelintone Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:09+00:00,,
-10298,Hitchin Lodge,Hitchin Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,
-10307,Nepos Lodge,Nepos Lodge,Latin,0.75,PRS_MYTH,ABS_FRAT,0.8,Mythological / Classical,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:09+00:00,,
-10317,Sutton Lodge,Sutton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,
-10354,Stone Squarer Lodge,Stone Squarer Lodge,English,0.75,GRP_JOB,OBJ_STR,0.8,Professional / Trade,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,
-1037,Lodge of Perfect Union,Lodge of Perfect Union,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:55+00:00,,
-10372,Luminary Lodge,Luminary Lodge,English,0.75,NAT_AST,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10388,Old Rectory Lodge,Old Rectory Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-104,Lodge of Attention,Lodge of Attention,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:55+00:00,,
-10402,Shoeburyness Lodge,Shoeburyness Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10437,Industria Cambrensis Lodge,Industria Cambrensis Lodge,Latin,0.9,GRP_NAT,ABS_LAT,0.82,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-10438,Lodge of Continued Friendship,Lodge of Continued Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-10473,Burlington Lodge,Burlington Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10508,Menevia Lodge,Menevia Lodge,Latin,0.75,LOC_REG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,
-10513,Old Grammarian Lodge of Waterloo,Old Grammarian Lodge of Waterloo,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-1056,No. 4 Provincial,No. 4 Provincial,English,0.75,GRP_MAS,,0.88,Masonic / Administrative,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:55+00:00,,
-10569,Waterloo Lodge,Waterloo Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10573,West Drayton Gatehouse Lodge,West Drayton Gatehouse Lodge,English,0.9,LOC_BDG,LOC_CTY,0.82,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-10587,Lodge of Justice,Lodge of Justice,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-10590,Lodge of Faith for Duty,Lodge of Faith for Duty,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-10591,Aarheus Lodge,Aarheus Lodge,Danish,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,
-10609,Mancunium Lodge,Mancunium Lodge,Latin,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,
-10616,Merston Culy Lodge,Merston Culy Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10624,Queeselet-St. James' Lodge,Queeselet-St. James' Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,
-10628,Beacon Lodge,Beacon Lodge,English,0.75,OBJ_STR,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10660,Rose Window Lodge,Rose Window Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,
-10673,Vectensian Lodge,Vectensian Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,
-1075,Lodge of Candour,Lodge of Candour,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:55+00:00,,
-10875,Lodge of Contentment ,Lodge of Contentment,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,
-10877,Bramley Lodge ,Bramley Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-10885,Old Windsor Lodge ,Old Windsor Lodge,English,0.9,LOC_CTY,GRP_EDU,0.86,Educational / Institutional,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,
-10903,Old Cedarians Lodge ,Old Cedarians Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,
-10924,Vespasian Lodge ,Vespasian Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-10926,Little Britain Lodge ,Little Britain Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-10932,Fleet River Lodge ,Fleet River Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-10951,Probatus Lodge ,Probatus Lodge,Latin,0.75,ABS_LAT,ABS_VRT,0.8,Virtue / Moral Ideal,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:11+00:00,,
-10972,Thamestide Lodge ,Thamestide Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:11+00:00,,
-10982,Heddon-on-the-Wall Lodge ,Heddon-on-the-Wall Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,
-10990,Freshfield Lodge ,Freshfield Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-11001,Ravenshead Lodge ,Ravenshead Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-1102,8th Lodge of Bengal,8th Lodge of Bengal,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-11024,Venture Lodge ,Venture Lodge,English,0.75,GRP_INT,ABS_VRT,0.88,Virtue / Moral Ideal,Clubs / Association,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-11032,Cedars Park Lodge ,Cedars Park Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-11073,Manor of Faversham Lodge ,Manor of Faversham Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,
-1108,Union Lodge,Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-11130,Shoreham Beach Lodge ,Shoreham Beach Lodge,English,0.75,LOC_CTY,LOC_LAN,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,
-1114,Lodge of Jehosaphat,Lodge of Jehosaphat,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-11172,Conception Lodge,Conception Lodge,English,0.75,ABS_VRT,PRS_REL,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:11+00:00,,
-11251,Athenian Lodge,Athenian Lodge,English,0.75,LOC_CTY,PRS_MYTH,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11280,Rivermead Lodge,Rivermead Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,
-11319,Ewenny Lodge,Ewenny Lodge,Welsh,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11324,Wayford Lodge,Wayford Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,
-11330,Minnis Bay Lodge ,Minnis Bay Lodge,English,0.75,LOC_LAN,NAT_GEO,0.82,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,
-11333,Old Marlingtonian Lodge,Old Marlingtonian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,
-11341,Five Heads Lodge,Five Heads Lodge,English,0.75,ABS_PHI,LOC_CTY,0.8,Virtue / Moral Ideal,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,
-11352,Richard Huish Lodge,Richard Huish Lodge,English,0.75,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,
-11359,Guyana Lodge of Research,Guyana Lodge of Research,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,
-11369,Lodge of St. Theodore,Lodge of St. Theodore,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,
-11374,Bramble Lodge,Bramble Lodge,English,0.75,NAT_BOT,,0.8,Nature,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11431,Umhlanga Lodge ,Umhlanga Lodge,Zulu,0.75,LOC_CTY,NAT_GEO,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11472,Roundhill Lodge,Roundhill Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11484,Wings Lodge,Wings Lodge,English,0.75,OBJ_EMB,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11485,Volta Lodge,Volta Lodge,Italian,0.75,PRS_HIS,OBJ_SCI,0.8,Professional / Trade,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11537,Mwana Lodge,Mwana Lodge,Swahili,0.75,NAT_ANI,,0.8,Nature,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11538,Breckland Lodge,Breckland Lodge,English,0.75,LOC_REG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-11551,Triumphant Lodge,Triumphant Lodge,English,0.75,ABS_VRT,,0.8,Virtue / Moral Ideal,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,
-1156,"Lodge of the Muse Clio, No. 5","Lodge of the Muse Clio, No. 5",English,0.9,PRS_MYTH,,0.88,Mythological / Classical,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-11568,Lodge of Discovery,Lodge of Discovery,English,0.9,GRP_INT,ABS_VRT,0.88,Virtue / Moral Ideal,Clubs / Association,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,
-11666,New Ripon Falls Lodge,New Ripon Falls Lodge,English,0.9,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-11723,Lodge of Good Heart,Lodge of Good Heart,English,0.9,ABS_VRT,OBJ_EMB,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-11731,New Temple Lodge,New Temple Lodge,English,0.9,LOC_BDG,LOC_REL,0.82,Religious,Geographic / Civic,0.85,DICT_MATCH|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:13+00:00,,
-11760,Air Vectura Lodge ,Air Vectura Lodge,English,0.75,GRP_MIL,,0.9,Military / Service,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,
-11769,Lodge of St. Andrew,Lodge of St. Andrew,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-11820,Hundred of Hoo Lodge,Hundred of Hoo Lodge,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-11830,Knole Lodge,Knole Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,
-11881,Lodge of Harmony ,Lodge of Harmony,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-11965,Celtic Eagle Lodge ,Celtic Eagle Lodge,English,0.75,LOC_CTY,NAT_ANI,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,
-11969,Copperbelt Lodge of Installed Masters ,Copperbelt Lodge of Installed Masters,English,0.9,LOC_REG,GRP_MAS,0.84,Masonic / Administrative,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-11980,St. Stephen’s Lodge ,St. Stephen's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-12002,White Ensign Lodge,White Ensign Lodge,English,0.75,OBJ_EMB,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,
-12059,St. Enodoc Lodge ,St. Enodoc Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-12078,Three Spires Lodge ,Three Spires Lodge,English,0.75,ABS_PHI,OBJ_STR,0.8,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,
-12102,Lodge of the Double Horizon ,Lodge of the Double Horizon,English,0.9,NAT_AST,,0.75,Nature,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,
-12178,East Lancashire Rotary Lodge,East Lancashire Rotary Lodge,English,0.9,GRP_INT,LOC_REG,0.88,Clubs / Association,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12213,Lodge of Progress,Lodge of Progress,English,0.9,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-1225,Ninety-second Regiment,Ninety-second Regiment,English,0.75,ABS_PHI,GRP_MIL,0.8,Virtue / Moral Ideal,Military / Service,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-12260,Lodge of the West Indies,Lodge of the West Indies,English,0.9,LOC_REG,,0.84,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12282,Cornish Ashlar Lodge,Cornish Ashlar Lodge,English,0.75,OBJ_EMB,GRP_NAT,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-1230,Eighteenth Royal Irish Regiment of Foot,Eighteenth Royal Irish Regiment of Foot,English,0.9,PRS_ROY,GRP_MIL,0.88,Royal / Aristocratic,Military / Service,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-12301,Achates Lodge,Achates Lodge,Latin,0.75,PRS_MYTH,,0.8,Mythological / Classical,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,
-12330,Lodge of Loyalty,Lodge of Loyalty,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12365,Royal Marines Plymouth Lodge,Royal Marines Plymouth Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12377,Lodge of Brothers in Arms ,Lodge of Brothers in Arms,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12390,Concord Lodge,Concord Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12399,Stockport Lodge of Installed Masters,Stockport Lodge of Installed Masters,English,0.9,LOC_CTY,GRP_MAS,0.86,Masonic / Administrative,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12476,Red Rose of Lancaster Lodge,Red Rose of Lancaster Lodge,English,0.9,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12490,Steadfast Lodge ,Steadfast Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12496,Regattas Lodge ,Regattas Lodge,English,0.75,GRP_INT,NAT_ANI,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,
-12521,Saint Cecilia Lodge ,Saint Cecilia Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12525,Brownsea Island Lodge ,Brownsea Island Lodge,English,0.75,LOC_LAN,NAT_GEO,0.82,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12545,Radio Millennium Lodge ,Radio Millennium Lodge,English,0.75,GRP_INT,ABS_TMP,0.88,Virtue / Moral Ideal,Clubs / Association,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12548,Dunston St. Nicholas Lodge,Dunston St. Nicholas Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12556,Noontide Lodge ,Noontide Lodge,English,0.75,ABS_TMP,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,
-12562,Lincolnshire Provincial Grand Stewards Lodge,Lincolnshire Provincial Grand Stewards Lodge,English,0.75,LOC_REG,GRP_MAS,0.84,Masonic / Administrative,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12569,John Hale Lodge ,John Hale Lodge,English,0.75,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12613,Ernest Sidney Larkin Lodge of Research and Instruction,Ernest Sidney Larkin Lodge of Research and Instruction,English,0.9,PRS_HIS,ABS_VRT,0.86,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12618,Lux Solis Lodge ,Lux Solis Lodge,Latin,0.9,NAT_AST,ABS_PHI,0.8,Nature,,0.8,DICT_MATCH|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,
-1264,Loyalty Lodge,Loyalty Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-12649,Rugby Football Lodge,Rugby Football Lodge,English,0.75,GRP_INT,LOC_CTY,0.88,Clubs / Association,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12652,Scout Lodge,Scout Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12670,Aequitas Lodge,Aequitas Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12678,Mike Hailwood Lodge,Mike Hailwood Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12709,Sir Adeyemo Alakija Lodge,Sir Adeyemo Alakija Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12711,Isle of Man Tourist Trophy,Isle of Man Tourist Trophy,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12725,St. Hilda's Lodge,St. Hilda's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12740,Rugby Bastion Lodge,Rugby Bastion Lodge,English,0.75,GRP_INT,OBJ_STR,0.88,Clubs / Association,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12761,Universitas Lodge,Universitas Lodge,Latin,0.75,GRP_EDU,,0.8,Educational / Institutional,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,
-12772,Santa Catarina Lodge,Santa Catarina Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12774,Lodge of True Aim,Lodge of True Aim,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,
-12828,Derbyshire Classic Car Lodge,Derbyshire Classic Car Lodge,English,0.75,GRP_INT,LOC_REG,0.88,Clubs / Association,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,
-12840,Didcot Lodge,Didcot Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:15+00:00,,
-12853,Gourmet Lodge,Gourmet Lodge,English,0.75,GRP_INT,,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:15+00:00,,
-12854,Cricket Lodge of Essex,Cricket Lodge of Essex,English,0.9,GRP_INT,LOC_REG,0.88,Clubs / Association,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,
-12866,Somerset Military Lodge,Somerset Military Lodge,English,0.75,LOC_REG,GRP_MIL,0.84,Military / Service,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:15+00:00,,
-12871,North Wales Motorcycle Lodge,North Wales Motorcycle Lodge,English,0.9,GRP_INT,LOC_CTY,0.88,Clubs / Association,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,
-12880,Nigeria Friendship Lodge,Nigeria Friendship Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:15+00:00,,
-12881,District Grand Stewards Lodge of Bahamas and Turks,District Grand Stewards Lodge of Bahamas and Turks,English,0.9,ABS_VRT,LOC_REG,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,
-12885,Armed Forces Lodge of Lincolnshire,Armed Forces Lodge of Lincolnshire,English,0.9,LOC_REG,GRP_MIL,0.84,Military / Service,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,
-1316,Lodge of Unanimity,Lodge of Unanimity,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1317,Lodge of Harmony,Lodge of Harmony,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1330,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1334,Lodge of Good-Will,Lodge of Good-Will,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1358,"No. 5, Coast of Coromandel","No. 5, Coast of Coromandel",English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1371,Lodge of Unanimity and Sincerity,Lodge of Unanimity and Sincerity,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1408,Lodge of Friendship,Lodge of Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1409,"7th Lodge of Bengal, 1793","7th Lodge of Bengal, 1793",English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1418,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1435,Bedford Lodge,Bedford Lodge,English,0.75,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-1467,Huddersfield Lodge,Huddersfield Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-1471,Shakespeare Lodge,Shakespeare Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-1493,Lodge of Unity and Friendship,Lodge of Unity and Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1543,Lodge of Fellowship,Lodge of Fellowship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1566,Moira Lodge of Honour,Moira Lodge of Honour,Greek,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1573,Lodge of Unity,Lodge of Unity,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1604,Wellington Lodge,Wellington Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-1636,St. Michael's Lodge,St. Michael's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1663,Lodge of Benevolence,Lodge of Benevolence,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1679,Cambrian Lodge,Cambrian Lodge,English,0.75,GRP_NAT,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-1684,St. George's Lodge of Unanimity and Fidelity,St. George's Lodge of Unanimity and Fidelity,English,0.9,PRS_REL,ABS_VRT,0.9,Virtue / Moral Ideal,Religious,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1754,St. Cuthbert's Lodge,St. Cuthbert's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1771,Albany Lodge,Albany Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-18,Westminster and Keystone Lodge,Westminster and Keystone Lodge,English,0.9,ABS_VRT,OBJ_EMB,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1852,Abbey Lodge,Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:56+00:00,,
-1884,Cecil Lodge,Cecil Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-190,Derwent Lodge,Derwent Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-1924,Lodge of Australia Felix,Lodge of Australia Felix,Latin,0.9,LOC_REG,GRP_NAT,0.84,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-1954,Wakefield Lodge,Wakefield Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2000,Lodge of Australasia,Lodge of Australasia,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-2012,Ancholme Lodge,Ancholme Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2030,Etruscan Lodge,Etruscan Lodge,English,0.75,LOC_REG,,0.84,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2042,Loyal Victoria Lodge,Loyal Victoria Lodge,English,0.75,PRS_ROY,ABS_VRT,0.88,Virtue / Moral Ideal,Royal / Aristocratic,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2056,Hammond Lodge,Hammond Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2103,North York Lodge,North York Lodge,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-2108,Segontium Lodge,Segontium Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2129,Beadon Lodge,Beadon Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2131,Independent Lodge,Independent Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2144,St. Kilda Lodge,St. Kilda Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,
-2165,Hoyle Lodge,Hoyle Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2193,Howard Lodge,Howard Lodge,English,0.75,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2215,Oriental Lodge,Oriental Lodge,English,0.75,NAT_GEO,GRP_NAT,0.75,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2253,Derby Lodge,Derby Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,
-2321,Pelham Pillar Lodge,Pelham Pillar Lodge,English,0.75,PRS_HIS,OBJ_EMB,0.86,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2324,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2357,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2367,Franklin Lodge,Franklin Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2380,Worthing Lodge of Friendship,Worthing Lodge of Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2385,Restormel Lodge,Restormel Lodge,English,0.75,LOC_BDG,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2424,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2449,Mountain Lodge of Bombala,Mountain Lodge of Bombala,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2460,Dunedin Lodge,Dunedin Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2463,Lodge of Merit,Lodge of Merit,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2465,Adair Lodge,Adair Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2528,Robert Burns' Lodge,Robert Burns' Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2544,St. George's Lodge,St. George's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2586,Loddon Lodge,Loddon Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2589,Marmion Lodge,Marmion Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2615,Walton Lodge,Walton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2629,Lodge of Emulation,Lodge of Emulation,English,0.9,ABS_VRT,GRP_MAS,0.85,Virtue / Moral Ideal,Masonic / Administrative,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2642,Anglesea Lodge,Anglesea Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-2647,Oxford  and  Cambridge University Lodge,Oxford  and  Cambridge University Lodge,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2651,Corinth Lodge,Corinth Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2662,Zenith Lodge,Zenith Lodge,English,0.75,NAT_AST,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-270,Parham Lodge,Parham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2702,Northern Star Lodge,Northern Star Lodge,English,0.75,NAT_GEO,NAT_AST,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2713,Abbey Lodge,Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:57+00:00,,
-2723,Villiers Lodge,Villiers Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-274,City Lodge,City Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2744,Lodge Ravee,Lodge Ravee,English,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-2756,Upton Lodge,Upton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2760,Savile Lodge,Savile Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2795,Lodge of Honour and Friendship,Lodge of Honour and Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2800,Lodge of Friendship and Unity,Lodge of Friendship and Unity,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2812,Ryburn Lodge,Ryburn Lodge,English,0.75,LOC_REG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-2833,Olive Union Lodge,Olive Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2839,Harrow Temple in Unity Lodge,Harrow Temple in Unity Lodge,English,0.9,ABS_FRAT,LOC_REL,0.8,Virtue / Moral Ideal,Religious,0.85,DICT_MATCH|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:57+00:00,,
-2852,Talbot Lodge,Talbot Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2882,Duke of Lancaster Lodge,Duke of Lancaster Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2897,Northern Star Lodge,Northern Star Lodge,English,0.75,NAT_GEO,NAT_AST,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-2900,Marangan Lodge,Marangan Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-2929,Curwen Lodge,Curwen Lodge,English,0.75,PRS_HIS,,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-2955,The Great City Lodge,The Great City Lodge,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2966,Liberty of Havering Lodge,Liberty of Havering Lodge,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2976,St. Matthew's Lodge,St. Matthew's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-2992,Northern Star Lodge,Northern Star Lodge,English,0.75,NAT_GEO,NAT_AST,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-3068,Cannon Lodge,Cannon Lodge,English,0.75,OBJ_STR,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-3069,Chaucer Lodge,Chaucer Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-3083,Mackay Lodge,Mackay Lodge,English,0.75,PRS_HIS,LOC_REG,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-3093,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-3098,Glen Innes Lodge,Glen Innes Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-3114,Royal Commemoration Lodge,Royal Commemoration Lodge,English,0.9,PRS_ROY,ABS_VRT,0.88,Virtue / Moral Ideal,Royal / Aristocratic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,
-3129,Hamilton Lodge,Hamilton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,
-3130,Ravensbourne Lodge,Ravensbourne Lodge,English,0.75,LOC_CTY,NAT_ANI,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,
-319,The Great Lodge,The Great Lodge,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:58+00:00,,
-3249,Greytown Lodge,Greytown Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:58+00:00,,
-3257,Temple Bar Lodge,Temple Bar Lodge,English,0.75,GRP_JOB,LOC_REL,0.86,Religious,Professional / Trade,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:58+00:00,,
-3279,Coleridge Lodge,Coleridge Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3317,Hervey Lodge,Hervey Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3318,Ubique Lodge,Ubique Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3319,Old England Lodge,Old England Lodge,English,0.9,LOC_REG,GRP_EDU,0.84,Educational / Institutional,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:58+00:00,,
-3333,Coborn Lodge,Coborn Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:58+00:00,,
-3338,Lodge Fidelis,Lodge Fidelis,English,0.75,ABS_VRT,ABS_LAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3370,Lodge Mysore,Lodge Mysore,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3378,Royal Leek Lodge,Royal Leek Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:58+00:00,,
-3381,Forest Lodge,Forest Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3388,Lodge Prudentia,Lodge Prudentia,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3407,Northern Light Lodge,Northern Light Lodge,English,0.75,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3427,Central Australia Lodge,Central Australia Lodge,English,0.75,LOC_REG,GRP_NAT,0.84,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3436,Notre Dame Lodge,Notre Dame Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3532,Albion Lodge,Albion Lodge,English,0.75,LOC_CTY,GRP_NAT,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3540,Marma Lodge,Marma Lodge,English,0.75,NAT_GEO,LOC_CTY,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:58+00:00,,
-3608,Romsey Lodge,Romsey Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,
-3647,York Lodge,York Lodge,English,0.75,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3663,Wilberforce Lodge,Wilberforce Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3693,St. German's Lodge,St. German's Lodge,English,0.9,PRS_REL,GRP_NAT,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-3725,Victoria Lodge,Victoria Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3735,Hendon Lodge,Hendon Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3762,Old Westminsters' Lodge,Old Westminsters' Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-3802,Natimuk Lodge,Natimuk Lodge,Unknown,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,
-3814,Eden Lodge,Eden Lodge,English,0.75,LOC_REL,NAT_GEO,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:59+00:00,,
-3842,Johannesberg Lodge,Johannesberg Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,
-385,Lodge of Eleusinian Mysteries,Lodge of Eleusinian Mysteries,English,0.9,ABS_VRT,OBJ_SCI,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-3886,Barry Lodge,Barry Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3906,Royal Connaught Lodge,Royal Connaught Lodge,English,0.9,PRS_HIS,PRS_ROY,0.86,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-3926,Columbia Lodge,Columbia Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3930,Klip River County Lodge,Klip River County Lodge,English,0.9,NAT_GEO,,0.75,Nature,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-3945,Hiram Lodge,Hiram Lodge,English,0.75,PRS_REL,,0.9,Religious,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3954,Ecclesburne Lodge,Ecclesburne Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,
-3974,Lodge Reunion,Lodge Reunion,English,0.75,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3985,Chancery Bar Lodge,Chancery Bar Lodge,English,0.75,GRP_JOB,LOC_CTY,0.86,Professional / Trade,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-3995,Cheerybles Lodge,Cheerybles Lodge,English,0.75,PRS_FIC,,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,
-4014,Zoutpansberg Liberty Lodge,Zoutpansberg Liberty Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-472,Lodge of Harmony and Industry,Lodge of Harmony and Industry,English,0.9,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-494,No. 2,No. 2,English,1.0,UNK_,,1.0,,,1.0,CLASSIFICATION_DEFAULTED|INPUT_BLANK,2026-03-12T12:22:59+00:00,,
-52,Fraternal Lodge,Fraternal Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-534,Social Lodge,Social Lodge,English,0.75,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-5368,St. Aldhelm's Lodge,St. Aldhelm's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-537,Second Division of Marines,Second Division of Marines,English,0.9,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-5373,Phoenix Lodge,Phoenix Lodge,Greek,0.9,PRS_MYTH,,0.88,Mythological / Classical,,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-5425,St. George Lodge,St. George Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-5437,Perseverance Lodge,Perseverance Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-5454,Palm Lodge,Palm Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-5465,Adam's Peak Lodge,Adam's Peak Lodge,English,0.9,PRS_REL,NAT_GEO,0.9,Religious,Nature,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-5482,Northern Star of China,Northern Star of China,English,0.9,LOC_REG,NAT_GEO,0.84,Geographic / Civic,Nature,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-549,Port Royal Lodge,Port Royal Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-556,Burlington Lodge,Burlington Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-5563,Thomas-à-Becket Lodge,Thomas-à-Becket Lodge,Other,0.9,PRS_HIS,PRS_REL,0.86,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,
-5571,Lindisfarne Lodge,Lindisfarne Lodge,English,0.75,LOC_CTY,PRS_HIS,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,
-5596,Kathiawar Lodge,Kathiawar Lodge,English,0.75,LOC_REG,NAT_GEO,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,
-5606,Lathom Lodge,Lathom Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-5762,Culham College Lodge,Culham College Lodge,English,0.75,LOC_CTY,GRP_EDU,0.86,Educational / Institutional,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-5763,Royal and Loyal Lodge,Royal and Loyal Lodge,English,0.9,PRS_ROY,ABS_VRT,0.88,Virtue / Moral Ideal,Royal / Aristocratic,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,
-5778,United Services Lodge of Pretoria,United Services Lodge of Pretoria,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,
-5781,Eastern Gate Lodge,Eastern Gate Lodge,English,0.75,OBJ_STR,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-5815,King Edward Lodge,King Edward Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-5835,Lodge of Newton,Lodge of Newton,English,0.9,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,
-5838,Kingsway Lodge,Kingsway Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-5883,Lodge of St. George,Lodge of St. George,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,
-5890,Rainham Lodge,Rainham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-590,Lodge of Unity,Lodge of Unity,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-5908,Valentia Lodge,Valentia Lodge,Latin,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,
-592,No name given,No name given,English,1.0,UNK_,,1.0,,,1.0,CLASSIFICATION_DEFAULTED|INPUT_NON_DESCRIPTIVE,2026-03-12T12:22:59+00:00,,
-5929,Civil Service Lodge,Civil Service Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-5936,Outeniqua Lodge,Outeniqua Lodge,English,0.75,LOC_REG,NAT_GEO,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,
-5962,Earl Roberts Lodge,Earl Roberts Lodge,English,0.75,PRS_HIS,PRS_ROY,0.86,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,
-6056,Wilma Lathom Lodge,Wilma Lathom Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6072,Emrys Lodge,Emrys Lodge,Welsh,0.75,PRS_MYTH,,0.8,Mythological / Classical,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,
-6073,Acacia Lodge,Acacia Lodge,English,0.75,OBJ_EMB,NAT_BOT,0.7,Nature,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6090,Homestreu Lodge,Homestreu Lodge,English,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,
-6100,St. Elphin Lodge,St. Elphin Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-6101,Good Fellowship Lodge,Good Fellowship Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6103,Clavering Lodge,Clavering Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-611,Temple Lodge,Temple Lodge,English,0.75,LOC_REL,LOC_CTY,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:59+00:00,,
-6144,St. Mary Lodge,St. Mary Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-6154,Abbey Lodge,Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:00+00:00,,
-6172,Edward VII Lodge,Edward VII Lodge,English,0.75,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6188,Roos- Keppel Lodge,Roos- Keppel Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-621,Lodge of Utility.,Lodge of Utility.,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-6222,Renaissance Lodge,Renaissance Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6249,Proscenium Lodge,Proscenium Lodge,English,0.75,GRP_INT,,0.88,Clubs / Association,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6259,Cranleigh Lodge,Cranleigh Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6291,Northumbrian Masters Lodge,Northumbrian Masters Lodge,English,0.75,GRP_MAS,,0.88,Masonic / Administrative,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6300,Cressbrook Lodge,Cressbrook Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6328,King George V Lodge,King George V Lodge,English,0.9,PRS_ROY,PRS_REL,0.88,Religious,Royal / Aristocratic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-6333,Albert Coveney Lodge,Albert Coveney Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6403,Fervency Lodge,Fervency Lodge,English,0.75,ABS_VRT,,0.8,Virtue / Moral Ideal,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,
-6404,Umfolozi Lodge,Umfolozi Lodge,Zulu,0.75,NAT_GEO,LOC_CTY,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,
-6412,West Norwood Lodge,West Norwood Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-6480,University Lodge of Hong Kong,University Lodge of Hong Kong,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-65,Robert Burns Lodge,Robert Burns Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-6512,Yachtsman's Lodge,Yachtsman's Lodge,English,0.9,GRP_INT,,0.8,Clubs / Association,,0.8,DICT_MATCH|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,
-6564,Bon Accord Lodge,Bon Accord Lodge,French,0.9,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-6570,Venables Llewelyn Lodge,Venables Llewelyn Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-6617,Empire Lodge,Empire Lodge,English,0.75,GRP_NAT,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6622,Ad Astra Lodge,Ad Astra Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6688,Red Triangle Lodge,Red Triangle Lodge,English,0.75,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6708,Blair Athol Lodge,Blair Athol Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6732,Knight Lodge,Knight Lodge,English,0.75,GRP_MIL,,0.9,Military / Service,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6757,West Bridgford Lodge,West Bridgford Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-6782,Croham Hurst Lodge,Croham Hurst Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6787,Ebute Metta Lodge,Ebute Metta Lodge,Yoruba,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:02+00:00,,
-6792,Marsden Lodge,Marsden Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6833,Fenham Lodge,Fenham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6836,Baghdad Lodge,Baghdad Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:02+00:00,,
-6846,Fraternity Lodge,Fraternity Lodge,English,0.75,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6868,John O'Gaunt Lodge,John O'Gaunt Lodge,English,0.9,PRS_HIS,PRS_REL,0.86,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,
-6884,Donyo Sabuk Lodge,Donyo Sabuk Lodge,Swahili,0.75,NAT_GEO,LOC_CTY,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:02+00:00,,
-6887,Doric Lodge,Doric Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,
-6907,Wessex Lodge,Wessex Lodge,English,0.75,GRP_NAT,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-6952,Rosendale Forest Lodge,Rosendale Forest Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-6988,Stafford Lodge,Stafford Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7016,Manor Lodge,Manor Lodge,English,0.75,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7111,Leadenhall Lodge,Leadenhall Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7113,Edric Lodge,Edric Lodge,English,0.75,PRS_HIS,,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,
-7117,South Kent Lodge,South Kent Lodge,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,
-7121,Royal Pavilion Lodge,Royal Pavilion Lodge,English,0.9,PRS_ROY,LOC_BDG,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,
-7139,Indus Lodge,Indus Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7191,Raynes Park Lodge,Raynes Park Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7205,Davenport Lodge,Davenport Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7220,Bounds Green Lodge,Bounds Green Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7255,Durham Lodge of Installed Masters,Durham Lodge of Installed Masters,English,0.9,LOC_CTY,GRP_MAS,0.86,Masonic / Administrative,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,
-7269,Almaston Lodge,Almaston Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7285,Lodge Iraq,Lodge Iraq,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,
-7302,Atherton Lodge,Atherton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7314,Old Etonian Lodge,Old Etonian Lodge,English,0.9,GRP_INT,GRP_EDU,0.88,Educational / Institutional,Clubs / Association,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,
-7319,Excelsior Lodge,Excelsior Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-732,Prince Edwin's Lodge,Prince Edwin's Lodge,English,0.9,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,
-7325,Antient Manor Lodge,Antient Manor Lodge,English,0.75,ABS_TMP,LOC_BDG,0.83,Virtue / Moral Ideal,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7329,Spen Vale Lodge,Spen Vale Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7333,Prince Edwin Lodge,Prince Edwin Lodge,English,0.75,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7361,Coulsdon Lodge,Coulsdon Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7366,Angelus Lodge,Angelus Lodge,Latin,0.75,PRS_REL,ABS_VRT,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,
-739,Provincial Grand Lodge,Provincial Grand Lodge,English,0.75,GRP_MAS,,0.88,Masonic / Administrative,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,
-7392,Okrika Lodge,Okrika Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,
-7396,Carleton Lodge,Carleton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7431,Seaton Delaval Lodge,Seaton Delaval Lodge,English,0.75,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7440,Port of Hercules Lodge,Port of Hercules Lodge,Latin,0.9,PRS_MYTH,ABS_VRT,0.88,Virtue / Moral Ideal,Mythological / Classical,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,
-7450,Captain Cook Lodge,Captain Cook Lodge,English,0.75,PRS_HIS,GRP_MIL,0.86,Military / Service,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7459,Abbots Langley Lodge,Abbots Langley Lodge,English,0.75,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7500,Pemberton Lodge,Pemberton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7502,Manor of Chatham Lodge,Manor of Chatham Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,
-7514,Luxborough Lodge,Luxborough Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7532,Queenswood Lodge,Queenswood Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7605,Fulcorn Lodge,Fulcorn Lodge,English,0.75,OBJ_EMB,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-7607,Concordia Lodge,Concordia Lodge,Latin,0.9,ABS_FRAT,ABS_LAT,0.8,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7621,Federation Lodge,Federation Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7642,Audenshaw Lodge,Audenshaw Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,
-7692,Archway Lodge,Archway Lodge,English,0.75,LOC_BDG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-7702,Heston Lodge,Heston Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7717,Old Berkhamstedian Lodge,Old Berkhamstedian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7734,Thoresby Lodge,Thoresby Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7736,Lumen Lodge,Lumen Lodge,Latin,0.9,ABS_LAT,,0.65,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7766,Vigilance Lodge,Vigilance Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7807,Orion Lodge,Orion Lodge,Latin,0.9,NAT_AST,ABS_LAT,0.75,Virtue / Moral Ideal,Nature,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7819,Selsdon Park Lodge,Selsdon Park Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7837,Thistle Lodge,Thistle Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7849,Francis Davies Lodge,Francis Davies Lodge,English,0.75,PRS_HIS,PRS_REL,0.86,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7858,Lodge of Permanence,Lodge of Permanence,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7860,Kenton Lodge,Kenton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-7863,Specula Lodge,Specula Lodge,Latin,0.75,ABS_PHI,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-7905,Ballards Lodge,Ballards Lodge,English,0.75,GRP_JOB,LOC_CTY,0.8,Professional / Trade,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-7915,Lodge of Impartiality,Lodge of Impartiality,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7921,Lodge of St. Julian,Lodge of St. Julian,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-7949,Merdon Lodge,Merdon Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-8011,Lodge of Rectitude,Lodge of Rectitude,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-8035,Taunton Deane Lodge,Taunton Deane Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8064,Camperdown Lodge,Camperdown Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8126,Serapeum Lodge,Serapeum Lodge,Latin,0.75,LOC_REL,OBJ_MYTH,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-8148,Crogdæne Lodge,Crogdæne Lodge,Danish,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-8174,Doric Lodge,Doric Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8182,Old Ellesmerian Lodge,Old Ellesmerian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-8187,Mowbray Lodge,Mowbray Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8211,Goodwill Lodge,Goodwill Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8236,Athene Lodge,Athene Lodge,English,0.75,PRS_MYTH,,0.88,Mythological / Classical,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8238,Orsett Lodge,Orsett Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8257,Guildford Lodge,Guildford Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8275,Universities Lodge Cardiff,Universities Lodge Cardiff,English,0.75,LOC_CTY,GRP_EDU,0.86,Educational / Institutional,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,
-8279,Pitzhanger Lodge,Pitzhanger Lodge,English,0.75,LOC_BDG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,
-8313,Old Chelmsfordian Lodge,Old Chelmsfordian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,
-8331,Nisi Dominus Lodge,Nisi Dominus Lodge,Latin,0.9,ABS_LAT,PRS_REL,0.8,Religious,,0.8,DICT_MATCH|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,
-8342,Corinthian Lodge,Corinthian Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8381,Penllergaer Lodge,Penllergaer Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8447,Oldham Mitre Lodge,Oldham Mitre Lodge,English,0.75,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8448,Hanworth Park Lodge,Hanworth Park Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8477,Fenchurch Lodge,Fenchurch Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8496,Old Oundelian Lodge,Old Oundelian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-8589,Dofra Lodge,Dofra Lodge,English,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,
-8622,Corinthian Lodge,Corinthian Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8669,Precision Lodge,Precision Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8679,Erdemont Lodge,Erdemont Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,
-8681,Semper Fidelis Lodge,Semper Fidelis Lodge,Latin,0.9,ABS_VRT,ABS_LAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:06+00:00,,
-8684,Liberty Lodge,Liberty Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8697,Slade Lodge,Slade Lodge,English,0.75,LOC_CTY,LOC_LAN,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-8791,Manor of Bexley Lodge,Manor of Bexley Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-8800,Maidenhead Lodge,Maidenhead Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8811,Dinas Powis Lodge,Dinas Powis Lodge,Welsh,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-8827,Friary Lodge,Friary Lodge,English,0.75,LOC_REL,,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:05+00:00,,
-8829,Observer Lodge,Observer Lodge,English,0.75,GRP_INT,,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:05+00:00,,
-8835,Chevron Lodge,Chevron Lodge,English,0.75,OBJ_EMB,GRP_MIL,0.8,Military / Service,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:05+00:00,,
-887,"Provincial Grand Lodge of York, Chester, and Lancaster.","Provincial Grand Lodge of York, Chester, and Lancaster.",English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
-8874,Broomwood Lodge,Broomwood Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8883,Bearsted Lodge,Bearsted Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8885,St. Bartholomew Lodge,St. Bartholomew Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-8888,Mancroft Lodge,Mancroft Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8891,Lodge of Grand Design,Lodge of Grand Design,English,0.9,GRP_INT,GRP_MAS,0.88,Masonic / Administrative,Clubs / Association,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-8899,Portcullis Lodge,Portcullis Lodge,English,0.75,OBJ_EMB,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8912,Shuttleworth Lodge,Shuttleworth Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-8952,Upper Thames Lodge,Upper Thames Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-9004,St. Cecilia Lodge,St. Cecilia Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-9005,Victory Lodge,Victory Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-9030,Borlase Lodge,Borlase Lodge,English,0.75,PRS_HIS,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:05+00:00,,
-9032,St. Martins Barnehurst Lodge,St. Martins Barnehurst Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-9053,The Seaton Valley Lodge,The Seaton Valley Lodge,English,0.9,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,
-9087,Saint Augustine Lodge of Contentment,Saint Augustine Lodge of Contentment,English,0.9,PRS_REL,ABS_VRT,0.9,Virtue / Moral Ideal,Religious,0.85,DICT_MATCH,2026-03-12T12:23:06+00:00,,
-9100,Lathom Abbey Lodge,Lathom Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:06+00:00,,
-9122,Hughenden Lodge,Hughenden Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,
-9151,Middleton Manor Lodge,Middleton Manor Lodge,English,0.75,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-9163,Regency Lodge,Regency Lodge,English,0.75,ABS_TMP,,0.83,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,
-9248,Lodge of Good Intention,Lodge of Good Intention,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:06+00:00,,
-9260,Kenilworth Lodge,Kenilworth Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,
-9267,Agnus Lodge,Agnus Lodge,Latin,0.75,OBJ_MYTH,PRS_REL,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:07+00:00,,
-9270,Mythe Lodge,Mythe Lodge,English,0.75,LOC_BDG,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9284,Old Worksopian Lodge,Old Worksopian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9293,Cleobury Lodge,Cleobury Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9342,Trinity Lodge,Trinity Lodge,English,0.75,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9373,The Compass Lodge,The Compass Lodge,English,0.9,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9387,Uxbridge Lodge,Uxbridge Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9402,Union Lodge,Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9415,Mansfield Lodge,Mansfield Lodge,English,0.75,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9435,Manor of Bensham Lodge,Manor of Bensham Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9449,The University Lodge of the West Indies,The University Lodge of the West Indies,English,0.9,LOC_REG,GRP_EDU,0.84,Educational / Institutional,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9451,New Tredegar Lodge,New Tredegar Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-946,Caveac Lodge,Caveac Lodge,Latin,0.75,ABS_LAT,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,
-9468,Scarborough Lodge,Scarborough Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9499,Lodge Singapore,Lodge Singapore,English,0.75,LOC_REG,,0.84,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9511,Maghull Lodge,Maghull Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-9532,Lodge of Aviation,Lodge of Aviation,English,0.9,ABS_VRT,GRP_MIL,0.85,Virtue / Moral Ideal,Military / Service,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9559,Lodge of Fidelity,Lodge of Fidelity,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,
-9561,Broad Oak Lodge,Broad Oak Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,
-958,Manchester Lodge,Manchester Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-9645,True Light Lodge,True Light Lodge,English,0.75,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9706,Pennant Lodge,Pennant Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9709,West Gate Lodge,West Gate Lodge,English,0.9,ABS_VRT,OBJ_STR,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,
-9719,Hackney Brook Lodge,Hackney Brook Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9728,St. Peter’s Lodge,St. Peter's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,
-9738,Netherpool Lodge,Netherpool Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9751,Cambridgeshire Installed Masters’ Lodge,Cambridgeshire Installed Masters' Lodge,English,0.75,LOC_REG,GRP_MAS,0.84,Masonic / Administrative,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9775,Lusignan Lodge,Lusignan Lodge,French,0.75,PRS_HIS,LOC_REG,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:08+00:00,,
-9797,Westerham Lodge,Westerham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9814,Eadgar Lodge,Eadgar Lodge,English,0.75,PRS_HIS,,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:08+00:00,,
-9834,Windle Lodge,Windle Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9855,Horsburgh Lodge,Horsburgh Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-986,Benevolent Lodge,Benevolent Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,
-9872,Union Lodge,Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,
-9877,Blackfriars' Lodge,Blackfriars' Lodge,English,0.75,PRS_REL,,0.9,Religious,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9908,Elms Lodge,Elms Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9945,Seymour Lodge,Seymour Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-9969,St. Peter Lodge,St. Peter Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,
-9975,Good Samaritan Lodge,Good Samaritan Lodge,English,0.75,PRS_REL,ABS_VRT,0.9,Virtue / Moral Ideal,Religious,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,
-998,Twenty-third Regiment of Foot (Royal Welsh Fusileers),Twenty-third Regiment of Foot (Royal Welsh Fusileers),English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,
+id,lodge_name_raw,lodge_name_clean,language_primary,confidence_language,ontology_primary,ontology_secondary,confidence_ontology,theme_primary,theme_secondary,confidence_theme,flags,created_at,manual_ontology_correct,manual_notes,language_correct,primary_ontology_correct,any_ontology_correct
+2839,Harrow Temple in Unity Lodge,Harrow Temple in Unity Lodge,English,0.9,ABS_FRAT,LOC_REL,0.8,Virtue / Moral Ideal,Religious,0.85,DICT_MATCH|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:57+00:00,,,1,1,1
+3974,Lodge Reunion,Lodge Reunion,English,0.75,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+534,Social Lodge,Social Lodge,English,0.75,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+6564,Bon Accord Lodge,Bon Accord Lodge,French,0.9,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,1,1
+6846,Fraternity Lodge,Fraternity Lodge,English,0.75,ABS_FRAT,,0.8,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+7607,Concordia Lodge,Concordia Lodge,Latin,0.9,ABS_FRAT,ABS_LAT,0.8,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+10951,Probatus Lodge ,Probatus Lodge,Latin,0.75,ABS_LAT,ABS_VRT,0.8,Virtue / Moral Ideal,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:11+00:00,,,1,1,1
+12670,Aequitas Lodge,Aequitas Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+12772,Santa Catarina Lodge,Santa Catarina Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,0,0
+3318,Ubique Lodge,Ubique Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,Latin - Everywhere,0,1,1
+3388,Lodge Prudentia,Lodge Prudentia,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,0,1,1
+6622,Ad Astra Lodge,Ad Astra Lodge,English,0.75,ABS_LAT,,0.72,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,0,1,1
+7736,Lumen Lodge,Lumen Lodge,Latin,0.9,ABS_LAT,,0.65,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8331,Nisi Dominus Lodge,Nisi Dominus Lodge,Latin,0.9,ABS_LAT,PRS_REL,0.8,Religious,,0.8,DICT_MATCH|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,,1,1,1
+946,Caveac Lodge,Caveac Lodge,Latin,0.75,ABS_LAT,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,,0,0,0
+11341,Five Heads Lodge,Five Heads Lodge,English,0.75,ABS_PHI,LOC_CTY,0.8,Virtue / Moral Ideal,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,,1,0,1
+12078,Three Spires Lodge ,Three Spires Lodge,English,0.75,ABS_PHI,OBJ_STR,0.8,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,,1,0,1
+1225,Ninety-second Regiment,Ninety-second Regiment,English,0.75,ABS_PHI,GRP_MIL,0.8,Virtue / Moral Ideal,Military / Service,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,0,1
+7863,Specula Lodge,Specula Lodge,Latin,0.75,ABS_PHI,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,Tr. Watchtower,1,0,0
+12556,Noontide Lodge ,Noontide Lodge,English,0.75,ABS_TMP,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,,1,1,1
+7325,Antient Manor Lodge,Antient Manor Lodge,English,0.75,ABS_TMP,LOC_BDG,0.83,Virtue / Moral Ideal,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,0,1
+9163,Regency Lodge,Regency Lodge,English,0.75,ABS_TMP,,0.83,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+10043,Hundred of Axstane Lodge,Hundred of Axstane Lodge,English,0.9,ABS_VRT,NAT_GEO,0.85,Virtue / Moral Ideal,Nature,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,Region,1,0,1
+10113,University of Technology Lodge,University of Technology Lodge,English,0.9,ABS_VRT,GRP_EDU,0.85,Virtue / Moral Ideal,Educational / Institutional,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,,1,0,1
+1037,Lodge of Perfect Union,Lodge of Perfect Union,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:55+00:00,,,1,0,1
+104,Lodge of Attention,Lodge of Attention,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:55+00:00,,,1,1,1
+10438,Lodge of Continued Friendship,Lodge of Continued Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,0,1
+10513,Old Grammarian Lodge of Waterloo,Old Grammarian Lodge of Waterloo,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,0,1
+10587,Lodge of Justice,Lodge of Justice,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,1,1
+10590,Lodge of Faith for Duty,Lodge of Faith for Duty,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,1,1
+1075,Lodge of Candour,Lodge of Candour,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:55+00:00,,,1,1,1
+10875,Lodge of Contentment ,Lodge of Contentment,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,,1,1,1
+1108,Union Lodge,Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,0,1
+11172,Conception Lodge,Conception Lodge,English,0.75,ABS_VRT,PRS_REL,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:11+00:00,,,1,1,1
+11359,Guyana Lodge of Research,Guyana Lodge of Research,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,GRP_MAS / GRP_EDU,1,0,0
+11551,Triumphant Lodge,Triumphant Lodge,English,0.75,ABS_VRT,,0.8,Virtue / Moral Ideal,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+11723,Lodge of Good Heart,Lodge of Good Heart,English,0.9,ABS_VRT,OBJ_EMB,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,1,1
+11820,Hundred of Hoo Lodge,Hundred of Hoo Lodge,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,0,1
+11881,Lodge of Harmony ,Lodge of Harmony,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,1,1
+12213,Lodge of Progress,Lodge of Progress,English,0.9,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12330,Lodge of Loyalty,Lodge of Loyalty,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12377,Lodge of Brothers in Arms ,Lodge of Brothers in Arms,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12390,Concord Lodge,Concord Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+12490,Steadfast Lodge ,Steadfast Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+1264,Loyalty Lodge,Loyalty Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+12774,Lodge of True Aim,Lodge of True Aim,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12880,Nigeria Friendship Lodge,Nigeria Friendship Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:15+00:00,,,1,1,1
+12881,District Grand Stewards Lodge of Bahamas and Turks,District Grand Stewards Lodge of Bahamas and Turks,English,0.9,ABS_VRT,LOC_REG,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,,1,1,1
+1316,Lodge of Unanimity,Lodge of Unanimity,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1317,Lodge of Harmony,Lodge of Harmony,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1334,Lodge of Good-Will,Lodge of Good-Will,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1371,Lodge of Unanimity and Sincerity,Lodge of Unanimity and Sincerity,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1408,Lodge of Friendship,Lodge of Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1493,Lodge of Unity and Friendship,Lodge of Unity and Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1543,Lodge of Fellowship,Lodge of Fellowship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1566,Moira Lodge of Honour,Moira Lodge of Honour,Greek,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,"Moira - Named after Lord Moira, so PRS_HIS",0,1,1
+1573,Lodge of Unity,Lodge of Unity,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1663,Lodge of Benevolence,Lodge of Benevolence,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+18,Westminster and Keystone Lodge,Westminster and Keystone Lodge,English,0.9,ABS_VRT,OBJ_EMB,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,0,1
+2000,Lodge of Australasia,Lodge of Australasia,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,0,0
+2131,Independent Lodge,Independent Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2380,Worthing Lodge of Friendship,Worthing Lodge of Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2449,Mountain Lodge of Bombala,Mountain Lodge of Bombala,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2463,Lodge of Merit,Lodge of Merit,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2629,Lodge of Emulation,Lodge of Emulation,English,0.9,ABS_VRT,GRP_MAS,0.85,Virtue / Moral Ideal,Masonic / Administrative,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2647,Oxford  and  Cambridge University Lodge,Oxford  and  Cambridge University Lodge,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,0,0
+2795,Lodge of Honour and Friendship,Lodge of Honour and Friendship,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2800,Lodge of Friendship and Unity,Lodge of Friendship and Unity,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2833,Olive Union Lodge,Olive Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2955,The Great City Lodge,The Great City Lodge,English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,0,1
+2966,Liberty of Havering Lodge,Liberty of Havering Lodge,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+319,The Great Lodge,The Great Lodge,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:58+00:00,,,1,0,0
+3338,Lodge Fidelis,Lodge Fidelis,English,0.75,ABS_VRT,ABS_LAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,0,1,1
+3407,Northern Light Lodge,Northern Light Lodge,English,0.75,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,NAT_AST,1,0,0
+385,Lodge of Eleusinian Mysteries,Lodge of Eleusinian Mysteries,English,0.9,ABS_VRT,OBJ_SCI,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,Religious Rites in Greece,1,0,0
+4014,Zoutpansberg Liberty Lodge,Zoutpansberg Liberty Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+472,Lodge of Harmony and Industry,Lodge of Harmony and Industry,English,0.9,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+52,Fraternal Lodge,Fraternal Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,0,1
+537,Second Division of Marines,Second Division of Marines,English,0.9,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,GRP_MIL,1,0,0
+5437,Perseverance Lodge,Perseverance Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+5778,United Services Lodge of Pretoria,United Services Lodge of Pretoria,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,,1,1,1
+590,Lodge of Unity,Lodge of Unity,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+5929,Civil Service Lodge,Civil Service Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,GRP_JOB,1,0,0
+6101,Good Fellowship Lodge,Good Fellowship Lodge,English,0.75,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,0,1
+621,Lodge of Utility.,Lodge of Utility.,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+6222,Renaissance Lodge,Renaissance Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,ABS_TMP,1,0,0
+6403,Fervency Lodge,Fervency Lodge,English,0.75,ABS_VRT,,0.8,Virtue / Moral Ideal,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,,1,1,1
+7319,Excelsior Lodge,Excelsior Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7621,Federation Lodge,Federation Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7766,Vigilance Lodge,Vigilance Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+7858,Lodge of Permanence,Lodge of Permanence,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+7915,Lodge of Impartiality,Lodge of Impartiality,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8011,Lodge of Rectitude,Lodge of Rectitude,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8211,Goodwill Lodge,Goodwill Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+8669,Precision Lodge,Precision Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+8681,Semper Fidelis Lodge,Semper Fidelis Lodge,Latin,0.9,ABS_VRT,ABS_LAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:06+00:00,,,1,1,1
+8684,Liberty Lodge,Liberty Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+887,"Provincial Grand Lodge of York, Chester, and Lancaster.","Provincial Grand Lodge of York, Chester, and Lancaster.",English,0.9,ABS_VRT,LOC_CTY,0.85,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,0,1
+9005,Victory Lodge,Victory Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+9248,Lodge of Good Intention,Lodge of Good Intention,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:06+00:00,,,1,1,1
+9402,Union Lodge,Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,1,1
+9532,Lodge of Aviation,Lodge of Aviation,English,0.9,ABS_VRT,GRP_MIL,0.85,Virtue / Moral Ideal,Military / Service,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,GRP_INT,1,0,0
+9559,Lodge of Fidelity,Lodge of Fidelity,English,0.9,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,1,1
+9645,True Light Lodge,True Light Lodge,English,0.75,ABS_VRT,ABS_PHI,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+9709,West Gate Lodge,West Gate Lodge,English,0.9,ABS_VRT,OBJ_STR,0.85,Virtue / Moral Ideal,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,OBJ_MAS,1,0,0
+986,Benevolent Lodge,Benevolent Lodge,English,0.75,ABS_VRT,,0.85,Virtue / Moral Ideal,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+9872,Union Lodge,Union Lodge,English,0.9,ABS_VRT,ABS_FRAT,0.85,Virtue / Moral Ideal,,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,,1,1,1
+10388,Old Rectory Lodge,Old Rectory Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,1,1
+10903,Old Cedarians Lodge ,Old Cedarians Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,,1,1,1
+11333,Old Marlingtonian Lodge,Old Marlingtonian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,,1,1,1
+12761,Universitas Lodge,Universitas Lodge,Latin,0.75,GRP_EDU,,0.8,Educational / Institutional,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,,1,1,1
+3762,Old Westminsters' Lodge,Old Westminsters' Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+7717,Old Berkhamstedian Lodge,Old Berkhamstedian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8182,Old Ellesmerian Lodge,Old Ellesmerian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8313,Old Chelmsfordian Lodge,Old Chelmsfordian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8496,Old Oundelian Lodge,Old Oundelian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,1,1
+9284,Old Worksopian Lodge,Old Worksopian Lodge,English,0.9,GRP_EDU,,0.82,Educational / Institutional,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,1,1
+11024,Venture Lodge ,Venture Lodge,English,0.75,GRP_INT,ABS_VRT,0.88,Virtue / Moral Ideal,Clubs / Association,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,0,1
+11568,Lodge of Discovery,Lodge of Discovery,English,0.9,GRP_INT,ABS_VRT,0.88,Virtue / Moral Ideal,Clubs / Association,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,,1,0,1
+12178,East Lancashire Rotary Lodge,East Lancashire Rotary Lodge,English,0.9,GRP_INT,LOC_REG,0.88,Clubs / Association,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12496,Regattas Lodge ,Regattas Lodge,English,0.75,GRP_INT,NAT_ANI,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,,1,,
+12545,Radio Millennium Lodge ,Radio Millennium Lodge,English,0.75,GRP_INT,ABS_TMP,0.88,Virtue / Moral Ideal,Clubs / Association,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+12649,Rugby Football Lodge,Rugby Football Lodge,English,0.75,GRP_INT,LOC_CTY,0.88,Clubs / Association,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+12740,Rugby Bastion Lodge,Rugby Bastion Lodge,English,0.75,GRP_INT,OBJ_STR,0.88,Clubs / Association,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,0,1
+12828,Derbyshire Classic Car Lodge,Derbyshire Classic Car Lodge,English,0.75,GRP_INT,LOC_REG,0.88,Clubs / Association,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,,
+12853,Gourmet Lodge,Gourmet Lodge,English,0.75,GRP_INT,,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:15+00:00,,,1,,
+12854,Cricket Lodge of Essex,Cricket Lodge of Essex,English,0.9,GRP_INT,LOC_REG,0.88,Clubs / Association,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,,1,,
+12871,North Wales Motorcycle Lodge,North Wales Motorcycle Lodge,English,0.9,GRP_INT,LOC_CTY,0.88,Clubs / Association,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,,1,,
+6249,Proscenium Lodge,Proscenium Lodge,English,0.75,GRP_INT,,0.88,Clubs / Association,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,,
+6512,Yachtsman's Lodge,Yachtsman's Lodge,English,0.9,GRP_INT,,0.8,Clubs / Association,,0.8,DICT_MATCH|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,,1,,
+7314,Old Etonian Lodge,Old Etonian Lodge,English,0.9,GRP_INT,GRP_EDU,0.88,Educational / Institutional,Clubs / Association,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,,1,0,1
+8829,Observer Lodge,Observer Lodge,English,0.75,GRP_INT,,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:05+00:00,,,1,,
+8891,Lodge of Grand Design,Lodge of Grand Design,English,0.9,GRP_INT,GRP_MAS,0.88,Masonic / Administrative,Clubs / Association,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,,
+10354,Stone Squarer Lodge,Stone Squarer Lodge,English,0.75,GRP_JOB,OBJ_STR,0.8,Professional / Trade,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,,1,,
+3257,Temple Bar Lodge,Temple Bar Lodge,English,0.75,GRP_JOB,LOC_REL,0.86,Religious,Professional / Trade,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:58+00:00,,,1,,
+3985,Chancery Bar Lodge,Chancery Bar Lodge,English,0.75,GRP_JOB,LOC_CTY,0.86,Professional / Trade,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,,
+7905,Ballards Lodge,Ballards Lodge,English,0.75,GRP_JOB,LOC_CTY,0.8,Professional / Trade,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,,1,,
+1056,No. 4 Provincial,No. 4 Provincial,English,0.75,GRP_MAS,,0.88,Masonic / Administrative,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:55+00:00,,,1,,
+6291,Northumbrian Masters Lodge,Northumbrian Masters Lodge,English,0.75,GRP_MAS,,0.88,Masonic / Administrative,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,,
+739,Provincial Grand Lodge,Provincial Grand Lodge,English,0.75,GRP_MAS,,0.88,Masonic / Administrative,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,,
+11760,Air Vectura Lodge ,Air Vectura Lodge,English,0.75,GRP_MIL,,0.9,Military / Service,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,,1,,
+6732,Knight Lodge,Knight Lodge,English,0.75,GRP_MIL,,0.9,Military / Service,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,,
+10437,Industria Cambrensis Lodge,Industria Cambrensis Lodge,Latin,0.9,GRP_NAT,ABS_LAT,0.82,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,,
+1679,Cambrian Lodge,Cambrian Lodge,English,0.75,GRP_NAT,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,,
+6617,Empire Lodge,Empire Lodge,English,0.75,GRP_NAT,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+6907,Wessex Lodge,Wessex Lodge,English,0.75,GRP_NAT,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,LOC_REG,1,0,0
+10143,Granstone Lodge,Granstone Lodge,English,0.75,LOC_BDG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:09+00:00,,,1,1,1
+10573,West Drayton Gatehouse Lodge,West Drayton Gatehouse Lodge,English,0.9,LOC_BDG,LOC_CTY,0.82,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,,
+11073,Manor of Faversham Lodge ,Manor of Faversham Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,,1,1,1
+11731,New Temple Lodge,New Temple Lodge,English,0.9,LOC_BDG,LOC_REL,0.82,Religious,Geographic / Civic,0.85,DICT_MATCH|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:13+00:00,,,1,1,1
+2385,Restormel Lodge,Restormel Lodge,English,0.75,LOC_BDG,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+7016,Manor Lodge,Manor Lodge,English,0.75,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7502,Manor of Chatham Lodge,Manor of Chatham Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,,1,1,1
+7692,Archway Lodge,Archway Lodge,English,0.75,LOC_BDG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,,1,1,1
+8279,Pitzhanger Lodge,Pitzhanger Lodge,English,0.75,LOC_BDG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,,1,,
+8791,Manor of Bexley Lodge,Manor of Bexley Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,1,1
+9151,Middleton Manor Lodge,Middleton Manor Lodge,English,0.75,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+9270,Mythe Lodge,Mythe Lodge,English,0.75,LOC_BDG,,0.82,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9435,Manor of Bensham Lodge,Manor of Bensham Lodge,English,0.9,LOC_BDG,OBJ_STR,0.82,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,1,1
+10028,Fernhill Lodge,Fernhill Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,,1,1,1
+10032,Clocktower from Haslemere Lodge,Clocktower from Haslemere Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,,1,1,1
+10069,Stevenage Lodge,Stevenage Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,,1,1,1
+10115,Portsea Lodge,Portsea Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,,1,1,1
+10221,Southend-on-Sea Lodge,Southend-on-Sea Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,,1,1,1
+10245,Chedelintone Lodge,Chedelintone Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:09+00:00,,,1,1,1
+10298,Hitchin Lodge,Hitchin Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,,1,1,1
+10317,Sutton Lodge,Sutton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:09+00:00,,,1,1,1
+10402,Shoeburyness Lodge,Shoeburyness Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,1,1
+10473,Burlington Lodge,Burlington Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,1,1
+10569,Waterloo Lodge,Waterloo Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,1,1
+10591,Aarheus Lodge,Aarheus Lodge,Danish,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,,1,1,1
+10609,Mancunium Lodge,Mancunium Lodge,Latin,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,,1,1,1
+10616,Merston Culy Lodge,Merston Culy Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,1,1
+10673,Vectensian Lodge,Vectensian Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,,1,1,1
+10877,Bramley Lodge ,Bramley Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,1,1
+10885,Old Windsor Lodge ,Old Windsor Lodge,English,0.9,LOC_CTY,GRP_EDU,0.86,Educational / Institutional,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,,1,1,1
+10926,Little Britain Lodge ,Little Britain Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,0,0
+10932,Fleet River Lodge ,Fleet River Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,0,1
+10972,Thamestide Lodge ,Thamestide Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:11+00:00,,,1,1,1
+10982,Heddon-on-the-Wall Lodge ,Heddon-on-the-Wall Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:11+00:00,,,1,1,1
+10990,Freshfield Lodge ,Freshfield Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,1,1
+11001,Ravenshead Lodge ,Ravenshead Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,1,1
+1102,8th Lodge of Bengal,8th Lodge of Bengal,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+11130,Shoreham Beach Lodge ,Shoreham Beach Lodge,English,0.75,LOC_CTY,LOC_LAN,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,1,1
+11251,Athenian Lodge,Athenian Lodge,English,0.75,LOC_CTY,PRS_MYTH,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+11280,Rivermead Lodge,Rivermead Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,,1,1,1
+11319,Ewenny Lodge,Ewenny Lodge,Welsh,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+11324,Wayford Lodge,Wayford Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,,1,1,1
+11431,Umhlanga Lodge ,Umhlanga Lodge,Zulu,0.75,LOC_CTY,NAT_GEO,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+11472,Roundhill Lodge,Roundhill Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+11830,Knole Lodge,Knole Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,,1,1,1
+11965,Celtic Eagle Lodge ,Celtic Eagle Lodge,English,0.75,LOC_CTY,NAT_ANI,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,,1,0,1
+12399,Stockport Lodge of Installed Masters,Stockport Lodge of Installed Masters,English,0.9,LOC_CTY,GRP_MAS,0.86,Masonic / Administrative,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12652,Scout Lodge,Scout Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,0,0
+12678,Mike Hailwood Lodge,Mike Hailwood Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,0,0
+12711,Isle of Man Tourist Trophy,Isle of Man Tourist Trophy,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,0,0
+12840,Didcot Lodge,Didcot Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:15+00:00,,,1,1,1
+1358,"No. 5, Coast of Coromandel","No. 5, Coast of Coromandel",English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1409,"7th Lodge of Bengal, 1793","7th Lodge of Bengal, 1793",English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1435,Bedford Lodge,Bedford Lodge,English,0.75,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+1467,Huddersfield Lodge,Huddersfield Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+1604,Wellington Lodge,Wellington Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+1771,Albany Lodge,Albany Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+1954,Wakefield Lodge,Wakefield Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2103,North York Lodge,North York Lodge,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+2108,Segontium Lodge,Segontium Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2165,Hoyle Lodge,Hoyle Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2253,Derby Lodge,Derby Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2460,Dunedin Lodge,Dunedin Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2586,Loddon Lodge,Loddon Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2615,Walton Lodge,Walton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2642,Anglesea Lodge,Anglesea Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,1,1
+2651,Corinth Lodge,Corinth Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+270,Parham Lodge,Parham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+274,City Lodge,City Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2756,Upton Lodge,Upton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2900,Marangan Lodge,Marangan Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,1,1
+3129,Hamilton Lodge,Hamilton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+3130,Ravensbourne Lodge,Ravensbourne Lodge,English,0.75,LOC_CTY,NAT_ANI,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,1,1
+3249,Greytown Lodge,Greytown Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:58+00:00,,,1,1,1
+3333,Coborn Lodge,Coborn Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:58+00:00,,,1,1,1
+3370,Lodge Mysore,Lodge Mysore,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,1,1
+3532,Albion Lodge,Albion Lodge,English,0.75,LOC_CTY,GRP_NAT,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,1,1
+3608,Romsey Lodge,Romsey Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,1,1
+3647,York Lodge,York Lodge,English,0.75,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+3735,Hendon Lodge,Hendon Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+3842,Johannesberg Lodge,Johannesberg Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,,1,1,1
+3886,Barry Lodge,Barry Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+3926,Columbia Lodge,Columbia Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+3954,Ecclesburne Lodge,Ecclesburne Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,,1,1,1
+556,Burlington Lodge,Burlington Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+5571,Lindisfarne Lodge,Lindisfarne Lodge,English,0.75,LOC_CTY,PRS_HIS,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,,1,1,1
+5606,Lathom Lodge,Lathom Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,1,1
+5762,Culham College Lodge,Culham College Lodge,English,0.75,LOC_CTY,GRP_EDU,0.86,Educational / Institutional,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,0,1
+5838,Kingsway Lodge,Kingsway Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,1,1
+5890,Rainham Lodge,Rainham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,1,1
+5908,Valentia Lodge,Valentia Lodge,Latin,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,Roman name for province north of hadrian's wall,1,0,0
+6056,Wilma Lathom Lodge,Wilma Lathom Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,"Edward Bootle-Wilbraham, 1st Earl of Lathom",1,0,0
+6103,Clavering Lodge,Clavering Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+6188,Roos- Keppel Lodge,Roos- Keppel Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+6259,Cranleigh Lodge,Cranleigh Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+6300,Cressbrook Lodge,Cressbrook Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+6412,West Norwood Lodge,West Norwood Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,1,1
+6480,University Lodge of Hong Kong,University Lodge of Hong Kong,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,0,1
+6757,West Bridgford Lodge,West Bridgford Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,1,1
+6782,Croham Hurst Lodge,Croham Hurst Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+6787,Ebute Metta Lodge,Ebute Metta Lodge,Yoruba,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:02+00:00,,,1,1,1
+6792,Marsden Lodge,Marsden Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+6833,Fenham Lodge,Fenham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+6836,Baghdad Lodge,Baghdad Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:02+00:00,,,1,1,1
+6952,Rosendale Forest Lodge,Rosendale Forest Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,0,1
+6988,Stafford Lodge,Stafford Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7111,Leadenhall Lodge,Leadenhall Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7117,South Kent Lodge,South Kent Lodge,English,0.9,LOC_CTY,LOC_REG,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,,1,0,1
+7191,Raynes Park Lodge,Raynes Park Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7205,Davenport Lodge,Davenport Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7220,Bounds Green Lodge,Bounds Green Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7255,Durham Lodge of Installed Masters,Durham Lodge of Installed Masters,English,0.9,LOC_CTY,GRP_MAS,0.86,Masonic / Administrative,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,,1,0,1
+7269,Almaston Lodge,Almaston Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7285,Lodge Iraq,Lodge Iraq,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,,1,0,0
+7302,Atherton Lodge,Atherton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7329,Spen Vale Lodge,Spen Vale Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7361,Coulsdon Lodge,Coulsdon Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7392,Okrika Lodge,Okrika Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,,1,1,1
+7396,Carleton Lodge,Carleton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7500,Pemberton Lodge,Pemberton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7514,Luxborough Lodge,Luxborough Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7532,Queenswood Lodge,Queenswood Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7642,Audenshaw Lodge,Audenshaw Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7702,Heston Lodge,Heston Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+7734,Thoresby Lodge,Thoresby Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+7819,Selsdon Park Lodge,Selsdon Park Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+7860,Kenton Lodge,Kenton Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+7949,Merdon Lodge,Merdon Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,,1,1,1
+8035,Taunton Deane Lodge,Taunton Deane Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+8064,Camperdown Lodge,Camperdown Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+8148,Crogdæne Lodge,Crogdæne Lodge,Danish,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,crogdaene = croydon,0,1,1
+8238,Orsett Lodge,Orsett Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+8257,Guildford Lodge,Guildford Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+8275,Universities Lodge Cardiff,Universities Lodge Cardiff,English,0.75,LOC_CTY,GRP_EDU,0.86,Educational / Institutional,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,0,1
+8381,Penllergaer Lodge,Penllergaer Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+8448,Hanworth Park Lodge,Hanworth Park Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+8477,Fenchurch Lodge,Fenchurch Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+8679,Erdemont Lodge,Erdemont Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,,1,1,1
+8697,Slade Lodge,Slade Lodge,English,0.75,LOC_CTY,LOC_LAN,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+8800,Maidenhead Lodge,Maidenhead Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+8811,Dinas Powis Lodge,Dinas Powis Lodge,Welsh,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,1,1
+8874,Broomwood Lodge,Broomwood Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+8883,Bearsted Lodge,Bearsted Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+8888,Mancroft Lodge,Mancroft Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+8912,Shuttleworth Lodge,Shuttleworth Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,1,1
+9053,The Seaton Valley Lodge,The Seaton Valley Lodge,English,0.9,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,0,1
+9122,Hughenden Lodge,Hughenden Lodge,English,0.75,LOC_CTY,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,,1,1,1
+9260,Kenilworth Lodge,Kenilworth Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,1,1
+9293,Cleobury Lodge,Cleobury Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9387,Uxbridge Lodge,Uxbridge Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9451,New Tredegar Lodge,New Tredegar Lodge,English,0.9,LOC_CTY,,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,1,1
+9468,Scarborough Lodge,Scarborough Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9511,Maghull Lodge,Maghull Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9561,Broad Oak Lodge,Broad Oak Lodge,English,0.75,LOC_CTY,NAT_GEO,0.86,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+958,Manchester Lodge,Manchester Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+9706,Pennant Lodge,Pennant Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,0,0
+9719,Hackney Brook Lodge,Hackney Brook Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+9738,Netherpool Lodge,Netherpool Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+9797,Westerham Lodge,Westerham Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+9834,Windle Lodge,Windle Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+9855,Horsburgh Lodge,Horsburgh Lodge,English,0.75,LOC_CTY,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+11330,Minnis Bay Lodge ,Minnis Bay Lodge,English,0.75,LOC_LAN,NAT_GEO,0.82,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,,1,1,1
+12525,Brownsea Island Lodge ,Brownsea Island Lodge,English,0.75,LOC_LAN,NAT_GEO,0.82,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+10508,Menevia Lodge,Menevia Lodge,Latin,0.75,LOC_REG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:10+00:00,,,1,1,1
+11538,Breckland Lodge,Breckland Lodge,English,0.75,LOC_REG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+11969,Copperbelt Lodge of Installed Masters ,Copperbelt Lodge of Installed Masters,English,0.9,LOC_REG,GRP_MAS,0.84,Masonic / Administrative,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,0,1
+12260,Lodge of the West Indies,Lodge of the West Indies,English,0.9,LOC_REG,,0.84,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12562,Lincolnshire Provincial Grand Stewards Lodge,Lincolnshire Provincial Grand Stewards Lodge,English,0.75,LOC_REG,GRP_MAS,0.84,Masonic / Administrative,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,0,1
+12866,Somerset Military Lodge,Somerset Military Lodge,English,0.75,LOC_REG,GRP_MIL,0.84,Military / Service,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:15+00:00,,,1,0,1
+12885,Armed Forces Lodge of Lincolnshire,Armed Forces Lodge of Lincolnshire,English,0.9,LOC_REG,GRP_MIL,0.84,Military / Service,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:15+00:00,,,1,0,1
+1924,Lodge of Australia Felix,Lodge of Australia Felix,Latin,0.9,LOC_REG,GRP_NAT,0.84,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+2030,Etruscan Lodge,Etruscan Lodge,English,0.75,LOC_REG,,0.84,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2812,Ryburn Lodge,Ryburn Lodge,English,0.75,LOC_REG,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,1,1
+3319,Old England Lodge,Old England Lodge,English,0.9,LOC_REG,GRP_EDU,0.84,Educational / Institutional,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:58+00:00,,,1,1,1
+3427,Central Australia Lodge,Central Australia Lodge,English,0.75,LOC_REG,GRP_NAT,0.84,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,1,1
+5482,Northern Star of China,Northern Star of China,English,0.9,LOC_REG,NAT_GEO,0.84,Geographic / Civic,Nature,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,1,1
+5596,Kathiawar Lodge,Kathiawar Lodge,English,0.75,LOC_REG,NAT_GEO,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,,1,1,1
+5936,Outeniqua Lodge,Outeniqua Lodge,English,0.75,LOC_REG,NAT_GEO,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:01+00:00,,,1,1,1
+9449,The University Lodge of the West Indies,The University Lodge of the West Indies,English,0.9,LOC_REG,GRP_EDU,0.84,Educational / Institutional,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,1,1
+9499,Lodge Singapore,Lodge Singapore,English,0.75,LOC_REG,,0.84,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9751,Cambridgeshire Installed Masters’ Lodge,Cambridgeshire Installed Masters' Lodge,English,0.75,LOC_REG,GRP_MAS,0.84,Masonic / Administrative,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,0,1
+10063,Merton Abbey Lodge,Merton Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:09+00:00,,,1,1,1
+1852,Abbey Lodge,Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:56+00:00,,,1,1,1
+2713,Abbey Lodge,Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:57+00:00,,,1,1,1
+3814,Eden Lodge,Eden Lodge,English,0.75,LOC_REL,NAT_GEO,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:59+00:00,,,0,1,1
+611,Temple Lodge,Temple Lodge,English,0.75,LOC_REL,LOC_CTY,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:22:59+00:00,,,1,1,1
+6154,Abbey Lodge,Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:00+00:00,,,1,1,1
+8126,Serapeum Lodge,Serapeum Lodge,Latin,0.75,LOC_REL,OBJ_MYTH,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,,1,1,1
+8827,Friary Lodge,Friary Lodge,English,0.75,LOC_REL,,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:05+00:00,,,1,1,1
+9100,Lathom Abbey Lodge,Lathom Abbey Lodge,English,0.75,LOC_REL,OBJ_STR,0.88,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK|TOKEN_RELIGIOUS_PLACE,2026-03-12T12:23:06+00:00,,,1,1,1
+11537,Mwana Lodge,Mwana Lodge,Swahili,0.75,NAT_ANI,,0.8,Nature,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,0,0
+10372,Luminary Lodge,Luminary Lodge,English,0.75,NAT_AST,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,1,1
+12102,Lodge of the Double Horizon ,Lodge of the Double Horizon,English,0.9,NAT_AST,,0.75,Nature,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,1,1
+12618,Lux Solis Lodge ,Lux Solis Lodge,Latin,0.9,NAT_AST,ABS_PHI,0.8,Nature,,0.8,DICT_MATCH|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,,1,1,1
+2662,Zenith Lodge,Zenith Lodge,English,0.75,NAT_AST,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+7807,Orion Lodge,Orion Lodge,Latin,0.9,NAT_AST,ABS_LAT,0.75,Virtue / Moral Ideal,Nature,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+10660,Rose Window Lodge,Rose Window Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,1,1
+11032,Cedars Park Lodge ,Cedars Park Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,,1,0,0
+11374,Bramble Lodge,Bramble Lodge,English,0.75,NAT_BOT,,0.8,Nature,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,1,1
+5454,Palm Lodge,Palm Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,1,1
+7837,Thistle Lodge,Thistle Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+9908,Elms Lodge,Elms Lodge,English,0.75,NAT_BOT,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+190,Derwent Lodge,Derwent Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2012,Ancholme Lodge,Ancholme Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2215,Oriental Lodge,Oriental Lodge,English,0.75,NAT_GEO,GRP_NAT,0.75,Geographic / Civic,Nature,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,0,1
+2702,Northern Star Lodge,Northern Star Lodge,English,0.75,NAT_GEO,NAT_AST,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,0,1
+2897,Northern Star Lodge,Northern Star Lodge,English,0.75,NAT_GEO,NAT_AST,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,0,1
+2992,Northern Star Lodge,Northern Star Lodge,English,0.75,NAT_GEO,NAT_AST,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,0,1
+3098,Glen Innes Lodge,Glen Innes Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+3381,Forest Lodge,Forest Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,,
+3540,Marma Lodge,Marma Lodge,English,0.75,NAT_GEO,LOC_CTY,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:58+00:00,,,1,,
+3930,Klip River County Lodge,Klip River County Lodge,English,0.9,NAT_GEO,,0.75,Nature,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,,
+6404,Umfolozi Lodge,Umfolozi Lodge,Zulu,0.75,NAT_GEO,LOC_CTY,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,,1,,
+6884,Donyo Sabuk Lodge,Donyo Sabuk Lodge,Swahili,0.75,NAT_GEO,LOC_CTY,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:02+00:00,,,1,,
+7139,Indus Lodge,Indus Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,,
+8952,Upper Thames Lodge,Upper Thames Lodge,English,0.75,NAT_GEO,,0.75,Nature,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,,
+11484,Wings Lodge,Wings Lodge,English,0.75,OBJ_EMB,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,,1,,
+12002,White Ensign Lodge,White Ensign Lodge,English,0.75,OBJ_EMB,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:13+00:00,,,1,,
+12282,Cornish Ashlar Lodge,Cornish Ashlar Lodge,English,0.75,OBJ_EMB,GRP_NAT,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,,
+12476,Red Rose of Lancaster Lodge,Red Rose of Lancaster Lodge,English,0.9,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,,
+6073,Acacia Lodge,Acacia Lodge,English,0.75,OBJ_EMB,NAT_BOT,0.7,Nature,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,,
+6688,Red Triangle Lodge,Red Triangle Lodge,English,0.75,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,,
+7605,Fulcorn Lodge,Fulcorn Lodge,English,0.75,OBJ_EMB,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:04+00:00,,,1,,
+8447,Oldham Mitre Lodge,Oldham Mitre Lodge,English,0.75,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,,
+8835,Chevron Lodge,Chevron Lodge,English,0.75,OBJ_EMB,GRP_MIL,0.8,Military / Service,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:05+00:00,,,1,,
+8899,Portcullis Lodge,Portcullis Lodge,English,0.75,OBJ_EMB,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,,
+9373,The Compass Lodge,The Compass Lodge,English,0.9,OBJ_EMB,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,DICT_MATCH,2026-03-12T12:23:07+00:00,,,1,,
+9267,Agnus Lodge,Agnus Lodge,Latin,0.75,OBJ_MYTH,PRS_REL,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:07+00:00,,Agnus = lamb (of God),1,1,1
+10628,Beacon Lodge,Beacon Lodge,English,0.75,OBJ_STR,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:10+00:00,,,1,,
+3068,Cannon Lodge,Cannon Lodge,English,0.75,OBJ_STR,,0.8,Symbolic / Esoteric,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,,
+5781,Eastern Gate Lodge,Eastern Gate Lodge,English,0.75,OBJ_STR,LOC_CTY,0.7,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,,
+6887,Doric Lodge,Doric Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,,
+8174,Doric Lodge,Doric Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,,
+8342,Corinthian Lodge,Corinthian Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:06+00:00,,,1,,
+8622,Corinthian Lodge,Corinthian Lodge,English,0.75,OBJ_STR,,0.7,Symbolic / Esoteric,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:05+00:00,,,1,,
+3995,Cheerybles Lodge,Cheerybles Lodge,English,0.75,PRS_FIC,,0.8,Clubs / Association,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,,1,,
+10924,Vespasian Lodge ,Vespasian Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:11+00:00,,Roman - Latin Language,0,1,1
+11352,Richard Huish Lodge,Richard Huish Lodge,English,0.75,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:12+00:00,,,1,1,1
+11485,Volta Lodge,Volta Lodge,Italian,0.75,PRS_HIS,OBJ_SCI,0.8,Professional / Trade,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:12+00:00,,Location in Ghana,1,0,0
+11666,New Ripon Falls Lodge,New Ripon Falls Lodge,English,0.9,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,0,0
+12613,Ernest Sidney Larkin Lodge of Research and Instruction,Ernest Sidney Larkin Lodge of Research and Instruction,English,0.9,PRS_HIS,ABS_VRT,0.86,Virtue / Moral Ideal,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12709,Sir Adeyemo Alakija Lodge,Sir Adeyemo Alakija Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+1471,Shakespeare Lodge,Shakespeare Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+1884,Cecil Lodge,Cecil Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2056,Hammond Lodge,Hammond Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,,
+2129,Beadon Lodge,Beadon Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,,
+2321,Pelham Pillar Lodge,Pelham Pillar Lodge,English,0.75,PRS_HIS,OBJ_EMB,0.86,Geographic / Civic,Symbolic / Esoteric,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+2367,Franklin Lodge,Franklin Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+2465,Adair Lodge,Adair Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+2528,Robert Burns' Lodge,Robert Burns' Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2589,Marmion Lodge,Marmion Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+2723,Villiers Lodge,Villiers Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+2760,Savile Lodge,Savile Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,,
+2852,Talbot Lodge,Talbot Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+2929,Curwen Lodge,Curwen Lodge,English,0.75,PRS_HIS,,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,1,1
+3069,Chaucer Lodge,Chaucer Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:57+00:00,,,1,1,1
+3083,Mackay Lodge,Mackay Lodge,English,0.75,PRS_HIS,LOC_REG,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,1,1
+3279,Coleridge Lodge,Coleridge Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,1,1
+3317,Hervey Lodge,Hervey Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,1,1,1
+3436,Notre Dame Lodge,Notre Dame Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:58+00:00,,,0,0,0
+3663,Wilberforce Lodge,Wilberforce Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+3906,Royal Connaught Lodge,Royal Connaught Lodge,English,0.9,PRS_HIS,PRS_ROY,0.86,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+5563,Thomas-à-Becket Lodge,Thomas-à-Becket Lodge,Other,0.9,PRS_HIS,PRS_REL,0.86,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,Thomas a Becket is old english - encoding error,0,1,1
+5835,Lodge of Newton,Lodge of Newton,English,0.9,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,,1,1,1
+5962,Earl Roberts Lodge,Earl Roberts Lodge,English,0.75,PRS_HIS,PRS_ROY,0.86,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,1,1
+65,Robert Burns Lodge,Robert Burns Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+6570,Venables Llewelyn Lodge,Venables Llewelyn Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,0,1,1
+6868,John O'Gaunt Lodge,John O'Gaunt Lodge,English,0.9,PRS_HIS,PRS_REL,0.86,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,1,1
+7113,Edric Lodge,Edric Lodge,English,0.75,PRS_HIS,,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,,1,1,1
+7431,Seaton Delaval Lodge,Seaton Delaval Lodge,English,0.75,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,0,1
+7450,Captain Cook Lodge,Captain Cook Lodge,English,0.75,PRS_HIS,GRP_MIL,0.86,Military / Service,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+7849,Francis Davies Lodge,Francis Davies Lodge,English,0.75,PRS_HIS,PRS_REL,0.86,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+8187,Mowbray Lodge,Mowbray Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,0,0
+9030,Borlase Lodge,Borlase Lodge,English,0.75,PRS_HIS,,0.8,Geographic / Civic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:05+00:00,,,1,1,1
+9415,Mansfield Lodge,Mansfield Lodge,English,0.75,PRS_HIS,LOC_CTY,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,0,1
+9775,Lusignan Lodge,Lusignan Lodge,French,0.75,PRS_HIS,LOC_REG,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:08+00:00,,,1,1,1
+9814,Eadgar Lodge,Eadgar Lodge,English,0.75,PRS_HIS,,0.8,Royal / Aristocratic,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:08+00:00,,,1,1,1
+9945,Seymour Lodge,Seymour Lodge,English,0.75,PRS_HIS,,0.86,Geographic / Civic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+10307,Nepos Lodge,Nepos Lodge,Latin,0.75,PRS_MYTH,ABS_FRAT,0.8,Mythological / Classical,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:09+00:00,,,1,1,1
+1156,"Lodge of the Muse Clio, No. 5","Lodge of the Muse Clio, No. 5",English,0.9,PRS_MYTH,,0.88,Mythological / Classical,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+12301,Achates Lodge,Achates Lodge,Latin,0.75,PRS_MYTH,,0.8,Mythological / Classical,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:14+00:00,,,1,1,1
+5373,Phoenix Lodge,Phoenix Lodge,Greek,0.9,PRS_MYTH,,0.88,Mythological / Classical,,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,1,1
+6072,Emrys Lodge,Emrys Lodge,Welsh,0.75,PRS_MYTH,,0.8,Mythological / Classical,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,,1,1,1
+7440,Port of Hercules Lodge,Port of Hercules Lodge,Latin,0.9,PRS_MYTH,ABS_VRT,0.88,Virtue / Moral Ideal,Mythological / Classical,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,port of hercules a port in monaco,0,0,0
+8236,Athene Lodge,Athene Lodge,English,0.75,PRS_MYTH,,0.88,Mythological / Classical,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:04+00:00,,,1,1,1
+10022,Saint Barbara Lodge,Saint Barbara Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,,1,1,1
+10151,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:09+00:00,,,1,1,1
+10624,Queeselet-St. James' Lodge,Queeselet-St. James' Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:10+00:00,,,1,0,1
+1114,Lodge of Jehosaphat,Lodge of Jehosaphat,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+11369,Lodge of St. Theodore,Lodge of St. Theodore,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:12+00:00,,,1,1,1
+11769,Lodge of St. Andrew,Lodge of St. Andrew,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,1,1
+11980,St. Stephen’s Lodge ,St. Stephen's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,1,1
+12059,St. Enodoc Lodge ,St. Enodoc Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:13+00:00,,,1,1,1
+12521,Saint Cecilia Lodge ,Saint Cecilia Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12548,Dunston St. Nicholas Lodge,Dunston St. Nicholas Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+12569,John Hale Lodge ,John Hale Lodge,English,0.75,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:14+00:00,,,1,1,1
+12725,St. Hilda's Lodge,St. Hilda's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,,1,1,1
+1330,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1418,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1636,St. Michael's Lodge,St. Michael's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+1684,St. George's Lodge of Unanimity and Fidelity,St. George's Lodge of Unanimity and Fidelity,English,0.9,PRS_REL,ABS_VRT,0.9,Virtue / Moral Ideal,Religious,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,0,1
+1754,St. Cuthbert's Lodge,St. Cuthbert's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+2144,St. Kilda Lodge,St. Kilda Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,1
+2324,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2357,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2424,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2544,St. George's Lodge,St. George's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+2976,St. Matthew's Lodge,St. Matthew's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+3093,St. John's Lodge,St. John's Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+3693,St. German's Lodge,St. German's Lodge,English,0.9,PRS_REL,GRP_NAT,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+3945,Hiram Lodge,Hiram Lodge,English,0.75,PRS_REL,,0.9,Religious,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+5368,St. Aldhelm's Lodge,St. Aldhelm's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,1,1
+5425,St. George Lodge,St. George Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,1,1
+5465,Adam's Peak Lodge,Adam's Peak Lodge,English,0.9,PRS_REL,NAT_GEO,0.9,Religious,Nature,0.85,DICT_MATCH,2026-03-12T12:23:02+00:00,,,1,0,1
+5883,Lodge of St. George,Lodge of St. George,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,,1,1,1
+6100,St. Elphin Lodge,St. Elphin Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,1,1
+6144,St. Mary Lodge,St. Mary Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,1,1
+7366,Angelus Lodge,Angelus Lodge,Latin,0.75,PRS_REL,ABS_VRT,0.8,Religious,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:03+00:00,,,1,1,1
+7459,Abbots Langley Lodge,Abbots Langley Lodge,English,0.75,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,0,1
+7921,Lodge of St. Julian,Lodge of St. Julian,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:04+00:00,,,1,1,1
+8885,St. Bartholomew Lodge,St. Bartholomew Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,1,1
+9004,St. Cecilia Lodge,St. Cecilia Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,1,1
+9032,St. Martins Barnehurst Lodge,St. Martins Barnehurst Lodge,English,0.9,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:05+00:00,,,1,1,1
+9087,Saint Augustine Lodge of Contentment,Saint Augustine Lodge of Contentment,English,0.9,PRS_REL,ABS_VRT,0.9,Virtue / Moral Ideal,Religious,0.85,DICT_MATCH,2026-03-12T12:23:06+00:00,,,1,0,1
+9342,Trinity Lodge,Trinity Lodge,English,0.75,PRS_REL,LOC_CTY,0.9,Religious,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:07+00:00,,,1,1,1
+9728,St. Peter’s Lodge,St. Peter's Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,,1,1,1
+9877,Blackfriars' Lodge,Blackfriars' Lodge,English,0.75,PRS_REL,,0.9,Religious,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,1,1
+9969,St. Peter Lodge,St. Peter Lodge,English,0.9,PRS_REL,,0.9,Religious,,0.85,DICT_MATCH,2026-03-12T12:23:08+00:00,,,1,1,1
+9975,Good Samaritan Lodge,Good Samaritan Lodge,English,0.75,PRS_REL,ABS_VRT,0.9,Virtue / Moral Ideal,Religious,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:08+00:00,,,1,0,1
+1230,Eighteenth Royal Irish Regiment of Foot,Eighteenth Royal Irish Regiment of Foot,English,0.9,PRS_ROY,GRP_MIL,0.88,Royal / Aristocratic,Military / Service,0.85,DICT_MATCH,2026-03-12T12:22:56+00:00,,,1,1,0
+12365,Royal Marines Plymouth Lodge,Royal Marines Plymouth Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:14+00:00,,GRP_MIL,1,0,0
+2042,Loyal Victoria Lodge,Loyal Victoria Lodge,English,0.75,PRS_ROY,ABS_VRT,0.88,Virtue / Moral Ideal,Royal / Aristocratic,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,1,1
+2193,Howard Lodge,Howard Lodge,English,0.75,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:56+00:00,,,1,0,0
+2882,Duke of Lancaster Lodge,Duke of Lancaster Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,,1,1,1
+3114,Royal Commemoration Lodge,Royal Commemoration Lodge,English,0.9,PRS_ROY,ABS_VRT,0.88,Virtue / Moral Ideal,Royal / Aristocratic,0.85,DICT_MATCH,2026-03-12T12:22:57+00:00,,ABS_TMP,1,0,0
+3378,Royal Leek Lodge,Royal Leek Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:58+00:00,,emblem,1,0,0
+3725,Victoria Lodge,Victoria Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:22:59+00:00,,,1,1,1
+549,Port Royal Lodge,Port Royal Lodge,English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,0,1
+5763,Royal and Loyal Lodge,Royal and Loyal Lodge,English,0.9,PRS_ROY,ABS_VRT,0.88,Virtue / Moral Ideal,Royal / Aristocratic,0.85,DICT_MATCH,2026-03-12T12:23:01+00:00,,,1,0,1
+5815,King Edward Lodge,King Edward Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:01+00:00,,,1,1,1
+6172,Edward VII Lodge,Edward VII Lodge,English,0.75,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,,1,1,1
+6328,King George V Lodge,King George V Lodge,English,0.9,PRS_ROY,PRS_REL,0.88,Religious,Royal / Aristocratic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,,1,1,1
+6333,Albert Coveney Lodge,Albert Coveney Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:00+00:00,,PRS_HIS,1,0,0
+6708,Blair Athol Lodge,Blair Athol Lodge,English,0.75,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:02+00:00,,,1,0,1
+7121,Royal Pavilion Lodge,Royal Pavilion Lodge,English,0.9,PRS_ROY,LOC_BDG,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:03+00:00,,,1,0,1
+732,Prince Edwin's Lodge,Prince Edwin's Lodge,English,0.9,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,DICT_MATCH,2026-03-12T12:22:59+00:00,,,1,1,1
+7333,Prince Edwin Lodge,Prince Edwin Lodge,English,0.75,PRS_ROY,,0.88,Royal / Aristocratic,,0.85,ENGLISH_FALLBACK,2026-03-12T12:23:03+00:00,,,1,1,1
+998,Twenty-third Regiment of Foot (Royal Welsh Fusileers),Twenty-third Regiment of Foot (Royal Welsh Fusileers),English,0.9,PRS_ROY,LOC_CTY,0.88,Royal / Aristocratic,Geographic / Civic,0.85,DICT_MATCH,2026-03-12T12:23:00+00:00,,military,1,0,0
+2744,Lodge Ravee,Lodge Ravee,English,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:57+00:00,,,1,0,0
+3802,Natimuk Lodge,Natimuk Lodge,Unknown,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:22:59+00:00,,,1,0,0
+494,No. 2,No. 2,English,1,UNK_,,1,,,1,CLASSIFICATION_DEFAULTED|INPUT_BLANK,2026-03-12T12:22:59+00:00,,,1,0,0
+592,No name given,No name given,English,1,UNK_,,1,,,1,CLASSIFICATION_DEFAULTED|INPUT_NON_DESCRIPTIVE,2026-03-12T12:22:59+00:00,,,1,0,0
+6090,Homestreu Lodge,Homestreu Lodge,English,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:00+00:00,,,1,0,0
+8589,Dofra Lodge,Dofra Lodge,English,0.75,UNK_,,0.8,Unknown,,0.8,ENGLISH_FALLBACK|REVIEW_REQUIRED|CLAUDE_ASSISTED,2026-03-12T12:23:06+00:00,,,0,0,0
